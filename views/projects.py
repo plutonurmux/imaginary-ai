@@ -14,7 +14,7 @@ from views import app
 
 @app.route('/projects/')
 def projects():
-    render_template('projects/index.html')
+    return render_template('projects/index.html')
 
 
 @app.route('/projects/image-classification/')

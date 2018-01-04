@@ -21,3 +21,18 @@ from views.research import *
 @app.route('/')
 def index():
     return render_template('index.html')
+
+
+@app.route('/elements/')
+def elements():
+    return render_template('elements.html')
+
+
+@app.route('/landing/')
+def landing():
+    return render_template('landing.html')
+
+
+@app.route('/generic/')
+def generic():
+    return render_template('generic.html')
