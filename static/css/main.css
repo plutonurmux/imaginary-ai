@@ -1478,8 +1478,8 @@ textarea {
   -webkit-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  resize: none;
   background: rgba(212, 212, 255, 0.035);
+  resize: none;
   border: none;
   border-radius: 0;
   color: inherit;
@@ -1487,7 +1487,8 @@ textarea {
   outline: 0;
   padding: 0 1em;
   text-decoration: none;
-  width: 100%; }
+  width: 100%;
+  height: 200px; }
   input[type="text"]:invalid,
   input[type="password"]:invalid,
   input[type="email"]:invalid,
