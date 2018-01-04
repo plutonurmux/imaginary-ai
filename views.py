@@ -32,3 +32,49 @@ def elements():
 @app.route('/generic/')
 def generic():
     return render_template('generic.html')
+
+
+################################################################################################
+# +———————————————————————————————————————————————————————————————————————————————————————————+
+# | Projects
+# +———————————————————————————————————————————————————————————————————————————————————————————+
+################################################################################################
+@app.route('/projects/image-classification/')
+def image_classification():
+    return render_template('projects/image-classification.html')
+
+
+@app.route('/projects/generative-models/')
+def generative_models():
+    return render_template('projects/generative-models.html')
+
+
+@app.route('/projects/ai-articles/')
+def ai_articles():
+    return render_template('projects/ai-articles.html')
+
+
+@app.route('/projects/word-embeddings/')
+def word_embeddings():
+    return render_template('projects/word-embeddings.html')
+
+
+@app.route('/projects/auto-encoding/')
+def auto_encoding():
+    return render_template('projects/auto-encoding.html')
+
+
+@app.route('/projects/reinforcement-learning/')
+def reinforcement_learning():
+    return render_template('projects/reinforcement-learning.html')
+
+
+################################################################################################
+# +———————————————————————————————————————————————————————————————————————————————————————————+
+# | Research
+# |     /research/*
+# +———————————————————————————————————————————————————————————————————————————————————————————+
+################################################################################################
+@app.route('/research/a-language-model/')
+def research():
+    return render_template('research/a-language-model.html')
