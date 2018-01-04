@@ -26,13 +26,3 @@ def index():
 @app.route('/elements/')
 def elements():
     return render_template('elements.html')
-
-
-@app.route('/landing/')
-def landing():
-    return render_template('landing.html')
-
-
-@app.route('/generic/')
-def generic():
-    return render_template('generic.html')
