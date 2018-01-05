@@ -67,3 +67,6 @@ class ConvolutionalNeuralNetwork(NeuralNetwork):
         result = self._model.evaluate(x=X, y=y)
         # {'loss': 0.550, 'acc': 0.9821}
         return dict(zip(self._model.metrics_names, result))
+
+    def save(self, filename):
+        pass
