@@ -101,7 +101,7 @@ class ImageDataset(Dataset):
                     self._X[counter, :] = img
                     self._y[counter, :] = hot_label
                 except Exception as e:
-                    sys.stderr.write(f'{e}')
+                    sys.stderr.write(f'\r{i} - {e}')
                     sys.stderr.flush()
                 finally:
                     counter += 1

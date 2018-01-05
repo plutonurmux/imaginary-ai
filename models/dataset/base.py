@@ -41,10 +41,12 @@ class Dataset(object):
         self._epochs_completed = 0
         self._index_in_epoch = 0
 
-    def create(self):
+    def create(self, save_file=None):
         """Create datasets"""
         self._process()
         self._num_examples = self._X.shape[0]
+        if save_file:
+            self.save(save_file=save_file, force=True)
 
     def save(self, save_file, force=False):
         """
