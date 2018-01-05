@@ -27,14 +27,14 @@ def generative_models():
     return render_template('projects/generative-models.html')
 
 
+@app.route('/projects/image-search/')
+def image_search():
+    return render_template('projects/image-search.html')
+
+
 @app.route('/projects/ai-articles/')
 def ai_articles():
     return render_template('projects/ai-articles.html')
-
-
-@app.route('/projects/word-embeddings/')
-def word_embeddings():
-    return render_template('projects/word-embeddings.html')
 
 
 @app.route('/projects/auto-encoding/')

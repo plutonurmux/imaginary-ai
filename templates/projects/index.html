@@ -1,6 +1,7 @@
 {% extends '_includes/_layout.html' %}
 
 {% block body %}
+  <!-- Header -->
   <header id="header" class="alt style2">
     <a href="/" class="logo">
       <strong>Imaginary A.I.</strong> <span>by Victor</span>
@@ -10,6 +11,7 @@
 
   {% include '_includes/_main_menu.html' %}
 
+  <!-- Banner -->
   <section id="banner" class="style2">
     <div class="inner">
       <span class="image">
@@ -101,10 +103,31 @@
           </div>
         </div>
       </section>
+      <!-- Image Search -->
+      <section>
+        <a href="/projects/image-search/" class="image">
+          <img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt="" data-position="25% 25%"/>
+        </a>
+        <div class="content">
+          <div class="inner">
+            <header class="major">
+              <h3>Image Search</h3>
+            </header>
+            <p>
+              Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem.
+              In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor.
+              Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.
+            </p>
+            <ul class="actions">
+              <li><a href="/projects/image-search/" class="button">Learn more</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
       <!-- A.I. Articles -->
       <section>
         <a href="/projects/ai-articles/" class="image">
-          <img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt="" data-position="25% 25%"/>
+          <img src="{{ url_for('static', filename='images/pic09.jpg') }}" alt="" data-position="top center"/>
         </a>
         <div class="content">
           <div class="inner">
@@ -118,27 +141,6 @@
             </p>
             <ul class="actions">
               <li><a href="/projects/ai-articles/" class="button">Learn more</a></li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <!-- Word Embeddings -->
-      <section>
-        <a href="/projects/word-embeddings/" class="image">
-          <img src="{{ url_for('static', filename='images/pic09.jpg') }}" alt="" data-position="top center"/>
-        </a>
-        <div class="content">
-          <div class="inner">
-            <header class="major">
-              <h3>Word Embeddings</h3>
-            </header>
-            <p>
-              Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem.
-              In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor.
-              Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.
-            </p>
-            <ul class="actions">
-              <li><a href="/projects/word-embeddings/" class="button">Learn more</a></li>
             </ul>
           </div>
         </div>

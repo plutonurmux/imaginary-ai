@@ -2,7 +2,6 @@
 
 {% block body %}
   <!-- Header -->
-  <!-- Note: The "styleN" class below should match that of the banner element. -->
   <header id="header" class="alt style2">
     <a href="/" class="logo">
       <strong>Imaginary A.I.</strong> <span>by Victor</span>
@@ -13,11 +12,10 @@
   {% include '_includes/_main_menu.html' %}
 
   <!-- Banner -->
-  <!-- Note: The "styleN" class below should match that of the header element. -->
   <section id="banner" class="style2">
     <div class="inner">
       <span class="image">
-        <img src="images/pic07.jpg" alt=""/>
+        <img src="{{ url_for('static', filename='images/pic07.jpg') }}" alt=""/>
       </span>
       <header class="major">
         <h1>My Research</h1>
@@ -34,11 +32,11 @@
   <!-- Main -->
   <div id="main">
 
-    <!-- One -->
+    <!-- Deep Learning research -->
     <section id="one">
       <div class="inner">
         <header class="major">
-          <h2>Sed amet aliquam</h2>
+          <h2>Deep Learning Research</h2>
         </header>
         <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In
           efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem
@@ -47,29 +45,31 @@
       </div>
     </section>
 
-    <!-- Two -->
+    <!-- list of DL research -->
     <section id="two" class="spotlights">
+      <!-- A language model -->
       <section>
-        <a href="generic.html" class="image">
-          <img src="images/pic08.jpg" alt="" data-position="center center"/>
+        <a href="/research/a-language-model/" class="image">
+          <img src="{{ url_for('static', filename='images/pic08.jpg') }}" alt="" data-position="center center"/>
         </a>
         <div class="content">
           <div class="inner">
             <header class="major">
-              <h3>Orci maecenas</h3>
+              <h3>A Language Model</h3>
             </header>
             <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem.
               In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor.
               Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
             <ul class="actions">
-              <li><a href="generic.html" class="button">Learn more</a></li>
+              <li><a href="/research/a-language-model/" class="button">Learn more</a></li>
             </ul>
           </div>
         </div>
       </section>
+      <!--  -->
       <section>
-        <a href="generic.html" class="image">
-          <img src="images/pic09.jpg" alt="" data-position="top center"/>
+        <a href="/research/" class="image">
+          <img src="{{ url_for('static', filename='images/pic09.jpg') }}" alt="" data-position="top center"/>
         </a>
         <div class="content">
           <div class="inner">
@@ -80,14 +80,15 @@
               In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor.
               Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
             <ul class="actions">
-              <li><a href="generic.html" class="button">Learn more</a></li>
+              <li><a href="/research/" class="button">Learn more</a></li>
             </ul>
           </div>
         </div>
       </section>
+      <!--  -->
       <section>
-        <a href="generic.html" class="image">
-          <img src="images/pic10.jpg" alt="" data-position="25% 25%"/>
+        <a href="/research/" class="image">
+          <img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt="" data-position="25% 25%"/>
         </a>
         <div class="content">
           <div class="inner">
@@ -98,25 +99,25 @@
               In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor.
               Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
             <ul class="actions">
-              <li><a href="generic.html" class="button">Learn more</a></li>
+              <li><a href="/research/" class="button">Learn more</a></li>
             </ul>
           </div>
         </div>
       </section>
     </section>
 
-    <!-- Three -->
+    <!-- Reinforcement Learning Research -->
     <section id="three">
       <div class="inner">
         <header class="major">
-          <h2>Massa libero</h2>
+          <h2>Reinforcement Learning Research</h2>
         </header>
         <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc
           rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel
           lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
           libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
         <ul class="actions">
-          <li><a href="generic.html" class="button next">Get Started</a></li>
+          <li><a href="/research/" class="button next">Get Started</a></li>
         </ul>
       </div>
     </section>
