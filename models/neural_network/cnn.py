@@ -36,7 +36,6 @@ class ConvolutionalNeuralNetwork(NeuralNetwork):
         # self._img_size_flat = np.prod(self._img_shape)
 
     def fit(self, X, y, epochs=5):
-        print('Failed!')
         # Input layer
         self._model.add(InputLayer(input_shape=[self._img_size_flat]))
         self._model.add(Reshape(target_shape=self._img_shape))
@@ -63,3 +62,8 @@ class ConvolutionalNeuralNetwork(NeuralNetwork):
         y_pred = self._model.predict(x=X)
         cls_pred = np.argmax(y_pred, axis=1)
         return y_pred, cls_pred
+
+    def score(self, X, y):
+        result = self._model.evaluate(x=X, y=y)
+        # {'loss': 0.550, 'acc': 0.9821}
+        return dict(zip(self._model.metrics_names, result))
