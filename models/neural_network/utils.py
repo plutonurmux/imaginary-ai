@@ -7,7 +7,8 @@
   
   Copyright © 2018. Victor. All rights reserved.
 """
+# import cv2
 
 
-def preprocess_img():
+def preprocess_img(filename, size=50):
     pass

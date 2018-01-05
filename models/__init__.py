@@ -7,6 +7,8 @@
   
   Copyright © 2018. Victor. All rights reserved.
 """
-__all__ = [
+from models import neural_network
 
+__all__ = [
+    'neural_network',
 ]

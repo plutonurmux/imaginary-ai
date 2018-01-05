@@ -12,6 +12,6 @@ from models.neural_network import utils
 from models.neural_network.cnn import ConvolutionalNeuralNetwork
 
 __all__ = [
-    'utils',
     'ConvolutionalNeuralNetwork',
+    'utils',
 ]
