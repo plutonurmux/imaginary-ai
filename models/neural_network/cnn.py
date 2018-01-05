@@ -35,7 +35,7 @@ class ConvolutionalNeuralNetwork(NeuralNetwork):
         self._img_size_flat = self._img_size * self._img_size * self._img_channel
         # self._img_size_flat = np.prod(self._img_shape)
 
-    def fit(self, X, y, epochs=10):
+    def fit(self, X, y, epochs=5):
         print('Failed!')
         # Input layer
         self._model.add(InputLayer(input_shape=[self._img_size_flat]))
