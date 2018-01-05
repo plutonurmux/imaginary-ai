@@ -14,6 +14,8 @@ from helpers import config as cfg
 app = Flask(cfg.APP_NAME)
 
 # External routes/views
+from views.error import *
+from views.pages import *
 from views.projects import *
 from views.research import *
 
