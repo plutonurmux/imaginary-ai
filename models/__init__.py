@@ -8,7 +8,9 @@
   Copyright © 2018. Victor. All rights reserved.
 """
 from models import neural_network
+from models import dataset
 
 __all__ = [
     'neural_network',
+    'dataset',
 ]
