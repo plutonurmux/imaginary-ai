@@ -18,9 +18,19 @@ def projects():
     return render_template('projects/index.html')
 
 
-@app.route('/projects/image-classification/')
+@app.route('/projects/image-classification/', methods=['GET', 'POST'])
 @back.anchor
 def image_classification():
+    # TODO: Image classification UI/UX
+    # Retrieve all available image datasets
+    # Options for next dataset upload
+    # Verify uploaded dataset [At least 2 classes]
+    # Process selection on the UI of the dataset needed
+    # Room for training and testing a new dataset
+    # Retrieve dataset classes and one random image
+    # for each class
+    # Write a JavaScript snippet to show training progress
+    # And testing in case of  delay
     return render_template('projects/image-classification.html')
 
 
