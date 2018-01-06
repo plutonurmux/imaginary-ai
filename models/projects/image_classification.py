@@ -21,7 +21,7 @@ def __list_dir(directory, full_path=True):
 
 def __get_random_image(class_path):
     image_paths = __list_dir(class_path, full_path=True)
-    return image_paths[random.randint(len(image_paths))]
+    return image_paths[random.randrange(0, len(image_paths))]
 
 
 def all_datasets(full_path=False):
@@ -35,7 +35,9 @@ def dataset_classes(dataset_dir, full_path=False):
 # {'anchor': '/path/to/anchor.jpg', ..., 'barrel': 'path/to/barrel.jpg'}
 def classes_and_image(dataset_dir):
     ds_classes = dataset_classes(dataset_dir, full_path=True)
-    one_random_image = [img for img in __get_random_image(ds_classes)]
+    # one_random_image = [img for img in __get_random_image(ds_classes)]
+    one_random_image = [__get_random_image(cls) for cls in ds_classes]
     # Just the basename
     ds_classes = [os.path.basename(dc) for dc in ds_classes]
-    return dict(zip(ds_classes, one_random_image))
+    ret_dict = dict(zip(ds_classes, one_random_image))
+    return ret_dict

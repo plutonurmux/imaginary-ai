@@ -9,6 +9,7 @@
 """
 from flask import render_template
 
+from models.projects.image_classification import *
 from views import app, back
 
 
@@ -21,17 +22,20 @@ def projects():
 @app.route('/projects/image-classification/', methods=['GET', 'POST'])
 @back.anchor
 def image_classification():
+    data = dict()
     # TODO: Image classification UI/UX
     # Retrieve all available image datasets
+    data['datasets'] = all_datasets(full_path=False)
+    data['datasets_full'] = all_datasets(full_path=True)
     # Options for next dataset upload
     # Verify uploaded dataset [At least 2 classes]
-    # Process selection on the UI of the dataset needed
+    # Process selection on the UI for the requested dataset
     # Room for training and testing a new dataset
-    # Retrieve dataset classes and one random image
-    # for each class
+    # Retrieve dataset classes and one random image for each class
+    data['class_n_image'] = classes_and_image(dataset_dir=data['datasets_full'][0])
     # Write a JavaScript snippet to show training progress
     # And testing in case of  delay
-    return render_template('projects/image-classification.html')
+    return render_template('projects/image-classification.html', data=data)
 
 
 @app.route('/projects/generative-models/')

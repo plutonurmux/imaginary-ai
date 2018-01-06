@@ -57,71 +57,85 @@
 
     <!-- Datasets -->
     <div class="6u$ 12u$(medium)">
-      <h3>101 Objects Categories</h3>
-      <div class="box alt">
-        <!-- Images -->
-        <div class="row 50% uniform">
-          <div class="4u">
-            <span class="image fit">
-              <img src="{{ url_for('static', filename='images/pic08.jpg') }}" alt=""/>
-            </span>
-          </div>
-          <div class="4u">
-            <span class="image fit">
-              <img src="{{ url_for('static', filename='images/pic09.jpg') }}" alt=""/>
-            </span>
-          </div>
-          <div class="4u$">
-            <span class="image fit">
-              <img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt=""/>
-            </span>
-          </div>
-          <!-- Break -->
-          <div class="4u">
-            <span class="image fit">
-              <img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt=""/>
-            </span>
-          </div>
-          <div class="4u">
-            <span class="image fit">
-              <img src="{{ url_for('static', filename='images/pic08.jpg') }}" alt=""/>
-            </span>
-          </div>
-          <div class="4u$">
-            <span class="image fit">
-              <img src="{{ url_for('static', filename='images/pic09.jpg') }}" alt=""/>
-            </span>
-          </div>
-          <!-- Break -->
-          <div class="4u">
-            <span class="image fit">
-              <img src="{{ url_for('static', filename='images/pic09.jpg') }}" alt=""/>
-            </span>
-          </div>
-          <div class="4u">
-            <span class="image fit">
-              <img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt=""/>
-            </span>
-          </div>
-          <div class="4u$">
-            <span class="image fit">
-              <img src="{{ url_for('static', filename='images/pic08.jpg') }}" alt=""/>
-            </span>
+      <div class="row uniform">
+        <div class="12u$">
+          <div class="select-wrapper">
+            <select name="demo-category" id="demo-category">
+              <option hidden>- Select preferred dataset -</option>
+              {% for ds in data['datasets'] %}
+                <option value="{{ ds }}">{{ ds|replace('_', ' ')|replace('-', ' ') }}</option>
+              {% endfor %}
+            </select>
           </div>
         </div>
       </div>
-      {# Pagination #}
-      <ul class="pagination">
-        <li><span class="button small disabled">Prev</span></li>
-        <li><a href="#" class="page active">1</a></li>
-        <li><a href="#" class="page">2</a></li>
-        <li><a href="#" class="page">3</a></li>
-        <li><span>&hellip;</span></li>
-        <li><a href="#" class="page">8</a></li>
-        <li><a href="#" class="page">9</a></li>
-        <li><a href="#" class="page">10</a></li>
-        <li><a href="#" class="button small">Next</a></li>
-      </ul>
+      <div class="row uniform">
+        <h3>101 Objects Categories</h3>
+        <div class="box alt">
+          <!-- Images -->
+          <div class="row 50% uniform">
+            <div class="4u">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic08.jpg') }}" alt=""/>
+            </span>
+            </div>
+            <div class="4u">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic09.jpg') }}" alt=""/>
+            </span>
+            </div>
+            <div class="4u$">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt=""/>
+            </span>
+            </div>
+            <!-- Break -->
+            <div class="4u">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt=""/>
+            </span>
+            </div>
+            <div class="4u">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic08.jpg') }}" alt=""/>
+            </span>
+            </div>
+            <div class="4u$">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic09.jpg') }}" alt=""/>
+            </span>
+            </div>
+            <!-- Break -->
+            <div class="4u">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic09.jpg') }}" alt=""/>
+            </span>
+            </div>
+            <div class="4u">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt=""/>
+            </span>
+            </div>
+            <div class="4u$">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic08.jpg') }}" alt=""/>
+            </span>
+            </div>
+          </div>
+        </div>
+        {# Pagination #}
+        <ul class="pagination">
+          <li><span class="button small disabled">Prev</span></li>
+          <li><a href="#" class="page active">1</a></li>
+          <li><a href="#" class="page">2</a></li>
+          <li><a href="#" class="page">3</a></li>
+          <li><span>&hellip;</span></li>
+          <li><a href="#" class="page">8</a></li>
+          <li><a href="#" class="page">9</a></li>
+          <li><a href="#" class="page">10</a></li>
+          <li><a href="#" class="button small">Next</a></li>
+        </ul>
+      </div>
     </div>
 
   </div>
