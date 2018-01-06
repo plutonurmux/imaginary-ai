@@ -1,8 +1,129 @@
 {% extends '_includes/_generic_page.html' %}
 {% block heading %}Image Classification{% endblock %}
+{# {% block image %}
+  <img src="{{ url_for('static', filename='images/image.jpg') }}" alt="" />
+{% endblock %} #}
 {% block content %}
   <p>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet ea ipsa iste numquam perspiciatis placeat vel
     voluptatum. Aperiam blanditiis eligendi id, ipsa laborum magni molestias porro quasi, quod rerum, soluta.
   </p>
+
+  <div class="row 200%">
+    <!-- Results and testing -->
+    <div class="6u 12u$(medium)">
+      <h3>Image</h3>
+      <span class="image fit"><img src="{{ url_for('static', filename='images/pic03.jpg') }}" alt=""/></span>
+      <h4>Best (3) Match</h4>
+      <div class="table-wrapper">
+        <table class="alt">
+          <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Image Class</th>
+            <th>Score</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>1</td>
+            <td>Scorpion</td>
+            <td>83.64%</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Anchor</td>
+            <td>8.68%</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Beaver</td>
+            <td>3.75%</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Barrel</td>
+            <td>2.48%</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Ant</td>
+            <td>1.45%</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Datasets -->
+    <div class="6u$ 12u$(medium)">
+      <h3>101 Objects Categories</h3>
+      <div class="box alt">
+        <!-- Images -->
+        <div class="row 50% uniform">
+          <div class="4u">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic08.jpg') }}" alt=""/>
+            </span>
+          </div>
+          <div class="4u">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic09.jpg') }}" alt=""/>
+            </span>
+          </div>
+          <div class="4u$">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt=""/>
+            </span>
+          </div>
+          <!-- Break -->
+          <div class="4u">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt=""/>
+            </span>
+          </div>
+          <div class="4u">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic08.jpg') }}" alt=""/>
+            </span>
+          </div>
+          <div class="4u$">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic09.jpg') }}" alt=""/>
+            </span>
+          </div>
+          <!-- Break -->
+          <div class="4u">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic09.jpg') }}" alt=""/>
+            </span>
+          </div>
+          <div class="4u">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt=""/>
+            </span>
+          </div>
+          <div class="4u$">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic08.jpg') }}" alt=""/>
+            </span>
+          </div>
+        </div>
+      </div>
+      {# Pagination #}
+      <ul class="pagination">
+        <li><span class="button small disabled">Prev</span></li>
+        <li><a href="#" class="page active">1</a></li>
+        <li><a href="#" class="page">2</a></li>
+        <li><a href="#" class="page">3</a></li>
+        <li><span>&hellip;</span></li>
+        <li><a href="#" class="page">8</a></li>
+        <li><a href="#" class="page">9</a></li>
+        <li><a href="#" class="page">10</a></li>
+        <li><a href="#" class="button small">Next</a></li>
+      </ul>
+    </div>
+
+  </div>
+
 {% endblock %}
