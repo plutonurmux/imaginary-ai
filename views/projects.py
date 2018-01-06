@@ -9,30 +9,35 @@
 """
 from flask import render_template
 
-from views import app
+from views import app, back
 
 
 @app.route('/projects/')
+@back.anchor
 def projects():
     return render_template('projects/index.html')
 
 
 @app.route('/projects/image-classification/')
+@back.anchor
 def image_classification():
     return render_template('projects/image-classification.html')
 
 
 @app.route('/projects/generative-models/')
+@back.anchor
 def generative_models():
     return render_template('projects/generative-models.html')
 
 
 @app.route('/projects/image-search/')
+@back.anchor
 def image_search():
     return render_template('projects/image-search.html')
 
 
 @app.route('/projects/ai-articles/')
+@back.anchor
 def ai_articles():
     return render_template('projects/ai-articles.html')
 
@@ -43,5 +48,6 @@ def auto_encoding():
 
 
 @app.route('/projects/reinforcement-learning/')
+@back.anchor
 def reinforcement_learning():
     return render_template('projects/reinforcement-learning.html')

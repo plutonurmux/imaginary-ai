@@ -7,8 +7,8 @@
   
   Copyright © 2018. Victor. All rights reserved.
 """
-import helpers.config
+from helpers.back import back
 
 __all__ = [
-    'config',
+    'back',
 ]

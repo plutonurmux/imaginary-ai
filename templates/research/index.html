@@ -3,7 +3,7 @@
 {% block body %}
   <!-- Header -->
   <header id="header" class="alt style2">
-    <a href="/" class="logo">
+    <a href="{{ url_for('index') }}" class="logo">
       <strong>Imaginary A.I.</strong> <span>by Victor</span>
     </a>
     <nav><a href="#menu">Menu</a></nav>
@@ -49,7 +49,7 @@
     <section id="two" class="spotlights">
       <!-- A language model -->
       <section>
-        <a href="/research/a-language-model/" class="image">
+        <a href="{{ url_for('a_language_model') }}" class="image">
           <img src="{{ url_for('static', filename='images/pic08.jpg') }}" alt="" data-position="center center"/>
         </a>
         <div class="content">
@@ -61,7 +61,7 @@
               In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor.
               Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
             <ul class="actions">
-              <li><a href="/research/a-language-model/" class="button">Learn more</a></li>
+              <li><a href="{{ url_for('a_language_model') }}" class="button">Learn more</a></li>
             </ul>
           </div>
         </div>
@@ -79,7 +79,7 @@
           lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
           libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
         <ul class="actions">
-          <li><a href="/research/" class="button next">Get Started</a></li>
+          <li><a href="{{ url_for('research') }}" class="button next">Get Started</a></li>
         </ul>
       </div>
     </section>

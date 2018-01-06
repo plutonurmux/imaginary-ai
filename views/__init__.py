@@ -9,10 +9,11 @@
 """
 from flask import Flask
 
-from helpers import config as cfg
+app = Flask('__main__')
+app.config.from_object('models.config.Development')
 
-app = Flask(cfg.APP_NAME)
-
+# Helper
+from helpers import back
 # External routes/views
 from views.error import *
 from views.pages import *
@@ -21,6 +22,7 @@ from views.research import *
 
 
 @app.route('/')
+@back.anchor
 def index():
     return render_template('index.html')
 

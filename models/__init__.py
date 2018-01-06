@@ -9,8 +9,10 @@
 """
 from models import neural_network
 from models import dataset
+from models import config
 
 __all__ = [
-    'neural_network',
+    'config',
     'dataset',
+    'neural_network',
 ]

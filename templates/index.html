@@ -3,7 +3,7 @@
 {% block body %}
   <!-- Header -->
   <header id="header" class="alt">
-    <a href="/" class="logo">
+    <a href="{{ url_for('index') }}" class="logo">
       <strong>Imaginary A.I.</strong> <span>by Victor</span>
     </a>
     <nav><a href="#menu">Menu</a></nav>
@@ -38,7 +38,7 @@
         <img src="{{ url_for('static', filename='images/pic01.jpg') }}" alt=""/>
       </span>
         <header class="major">
-          <h3><a href="/projects/image-classification/" class="link">Image Classification</a></h3>
+          <h3><a href="{{ url_for('image_classification') }}" class="link">Image Classification</a></h3>
           <p>Image classification with <span>Convolutional Neural Networks</span></p>
         </header>
       </article>
@@ -48,7 +48,7 @@
         <img src="{{ url_for('static', filename='images/pic02.jpg') }}" alt=""/>
       </span>
         <header class="major">
-          <h3><a href="/projects/generative-models/" class="link">Generative Models</a></h3>
+          <h3><a href="{{ url_for('generative_models') }}" class="link">Generative Models</a></h3>
           <p>Generate photo realistic images with <span>Generative Adversarial Networks</span></p>
         </header>
       </article>
@@ -58,7 +58,7 @@
         <img src="{{ url_for('static', filename='images/pic03.jpg') }}" alt=""/>
       </span>
         <header class="major">
-          <h3><a href="/projects/image-search/" class="link">Image Search</a></h3>
+          <h3><a href="{{ url_for('image_search') }}" class="link">Image Search</a></h3>
           <p>Let's see how we can search the web by image after we know what's in it. Thanks to
             <span>Convolutional Neural Network</span></p>
         </header>
@@ -69,7 +69,7 @@
         <img src="{{ url_for('static', filename='images/pic04.jpg') }}" alt=""/>
       </span>
         <header class="major">
-          <h3><a href="/projects/ai-articles/" class="link">A.I. Articles</a></h3>
+          <h3><a href="{{ url_for('ai_articles') }}" class="link">A.I. Articles</a></h3>
           <p>Articles written by A.I. with <span>Recurrent Neural Networks</span></p>
         </header>
       </article>
@@ -79,7 +79,7 @@
         <img src="{{ url_for('static', filename='images/pic05.jpg') }}" alt=""/>
       </span>
         <header class="major">
-          <h3><a href="/projects/auto-encoding/" class="link">Auto-encoding</a></h3>
+          <h3><a href="{{ url_for('auto_encoding') }}" class="link">Auto-encoding</a></h3>
           <p>Create variations of a single image with <span>Variational Auto Encoders</span></p>
         </header>
       </article>
@@ -89,7 +89,7 @@
         <img src="{{ url_for('static', filename='images/pic06.jpg') }}" alt=""/>
       </span>
         <header class="major">
-          <h3><a href="/projects/reinforcement-learning/" class="link">Reinforcement Learning</a></h3>
+          <h3><a href="{{ url_for('reinforcement_learning') }}" class="link">Reinforcement Learning</a></h3>
           <p>Checkout this A.I. agent that learns through the process of <span>Trial &amp; Error</span></p>
         </header>
       </article>
@@ -108,7 +108,7 @@
           sense but it's really a cool concepts which is what humans do unconsciously.
           I've always wanted to build and do sth amazing and meaningful for the whole world...</p>
         <ul class="actions">
-          <li><a href="/research/a-language-model/" class="button next">Learn More</a></li>
+          <li><a href="{{ url_for('a_language_model') }}" class="button next">Learn More</a></li>
         </ul>
       </div>
     </section>

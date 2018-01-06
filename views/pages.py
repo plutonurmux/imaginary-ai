@@ -10,14 +10,7 @@
 from flask import redirect, url_for, request, escape, flash
 from flask_mail import Mail, Message
 
-from views import app
-
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'javafolabi@gmail.com'
-app.config['MAIL_PASSWORD'] = 'itsprivate'
-app.config['MAIL_USE_TLS'] = False
-app.config['MAIL_USE_SSL'] = True
+from views import app, back
 
 mail = Mail(app)
 
@@ -35,4 +28,4 @@ def contact():
     msg.body = message
     mail.send(msg)
     flash('Message successfully sent')
-    return redirect(url_for('index'))
+    return back.redirect()

@@ -3,7 +3,7 @@
 {% block body %}
   <!-- Header -->
   <header id="header">
-    <a href="/" class="logo"><strong>Imaginary A.I.</strong> <span>by Victor</span></a>
+    <a href="{{ url_for('index') }}" class="logo"><strong>Imaginary A.I.</strong> <span>by Victor</span></a>
     <nav>
       <a href="#menu">Menu</a>
     </nav>
@@ -412,73 +412,101 @@
             <span class="image fit"><img src="{{ url_for('static', filename='images/pic03.jpg') }}" alt=""/></span>
             <div class="box alt">
               <div class="row 50% uniform">
-                <div class="4u"><span class="image fit"><img src="{{ url_for('static', filename='images/pic08.jpg') }}"
-                                                             alt=""/></span></div>
-                <div class="4u"><span class="image fit"><img src="{{ url_for('static', filename='images/pic09.jpg') }}"
-                                                             alt=""/></span></div>
-                <div class="4u$"><span class="image fit"><img src="{{ url_for('static', filename='images/pic10
-                .jpg') }}"
-                                                              alt=""/></span></div>
+                <div class="4u">
+                  <span class="image fit">
+                    <img src="{{ url_for('static', filename='images/pic08.jpg') }}" alt=""/>
+                  </span>
+                </div>
+                <div class="4u">
+                  <span class="image fit">
+                    <img src="{{ url_for('static', filename='images/pic09.jpg') }}" alt=""/>
+                  </span>
+                </div>
+                <div class="4u$">
+                  <span class="image fit">
+                    <img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt=""/>
+                  </span>
+                </div>
                 <!-- Break -->
-                <div class="4u"><span class="image fit"><img src="{{ url_for('static', filename='images/pic10.jpg') }}"
-                                                             alt=""/></span></div>
-                <div class="4u"><span class="image fit"><img src="{{ url_for('static', filename='images/pic08.jpg') }}"
-                                                             alt=""/></span></div>
-                <div class="4u$"><span class="image fit"><img src="{{ url_for('static', filename='images/pic09
-                .jpg') }}"
-                                                              alt=""/></span></div>
+                <div class="4u">
+                  <span class="image fit">
+                    <img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt=""/>
+                  </span>
+                </div>
+                <div class="4u">
+                  <span class="image fit">
+                    <img src="{{ url_for('static', filename='images/pic08.jpg') }}" alt=""/>
+                  </span>
+                </div>
+                <div class="4u$">
+                  <span class="image fit">
+                    <img src="{{ url_for('static', filename='images/pic09.jpg') }}" alt=""/>
+                  </span>
+                </div>
                 <!-- Break -->
-                <div class="4u"><span class="image fit"><img src="{{ url_for('static', filename='images/pic09.jpg') }}"
-                                                             alt=""/></span></div>
-                <div class="4u"><span class="image fit"><img src="{{ url_for('static', filename='images/pic10.jpg') }}"
-                                                             alt=""/></span></div>
-                <div class="4u$"><span class="image fit"><img src="{{ url_for('static', filename='images/pic08
-                .jpg') }}"
-                                                              alt=""/></span></div>
+                <div class="4u">
+                  <span class="image fit">
+                    <img src="{{ url_for('static', filename='images/pic09.jpg') }}" alt=""/>
+                  </span>
+                </div>
+                <div class="4u">
+                  <span class="image fit">
+                    <img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt=""/>
+                  </span>
+                </div>
+                <div class="4u$">
+                  <span class="image fit">
+                    <img src="{{ url_for('static', filename='images/pic08.jpg') }}" alt=""/>
+                  </span>
+                </div>
               </div>
             </div>
 
             <h4>Left &amp; Right</h4>
-            <p><span class="image left"><img src="{{ url_for('static', filename='images/pic09.jpg') }}"
-                                             alt=""/></span>Lorem
-              ipsum
-              dolor
-              sit
-              accumsan
+            <p>
+              <span class="image left">
+                <img src="{{ url_for('static', filename='images/pic09.jpg') }}" alt=""/>
+              </span>
+              Lorem ipsum dolor sit accumsan
               interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in
               faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus.
               Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum
               primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit
               adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent
               tincidunt felis sagittis eget tempus vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu
-              felis iaculis.</p>
-            <p><span class="image right"><img src="{{ url_for('static', filename='images/pic10.jpg') }}"
-                                              alt=""/></span>Lorem
-              ipsum
-              dolor
-              sit
-              accumsan
+              felis iaculis.
+            </p>
+            <p>
+              <span class="image right">
+                <img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt=""/>
+              </span>
+              Lorem ipsum dolor sit accumsan
               interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in
               faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus.
               Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum
               primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit
               adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent
               tincidunt felis sagittis eget tempus vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu
-              felis iaculis.</p>
+              felis iaculis.
+            </p>
 
             <!-- Box -->
             <h3>Box</h3>
             <div class="box">
-              <p>Felis sagittis eget tempus primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat
+              <p>
+                Felis sagittis eget tempus primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat
                 ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget.
                 tempus euismod. Magna sed etiam ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu ipsum
                 primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu
-                faucibus lorem ipsum.</p>
+                faucibus lorem ipsum.
+              </p>
             </div>
 
             <!-- Preformatted Code -->
             <h3>Preformatted</h3>
-            <pre><code>i = 0;
+            <pre>
+<code>
+i = 0;
 
 while (!deck.isInOrder()) {
     print 'Iteration ' + i;
@@ -487,7 +515,8 @@ while (!deck.isInOrder()) {
 }
 
 print 'It took ' + i + ' iterations to sort the deck.';
-</code></pre>
+</code>
+            </pre>
 
           </div>
         </div>

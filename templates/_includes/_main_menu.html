@@ -1,10 +1,10 @@
 <!-- Menu -->
 <nav id="menu">
   <ul class="links">
-    <li><a href="/">Home</a></li>
-    <li><a href="/projects/">Projects</a></li>
-    <li><a href="/research/">Research</a></li>
-    <li><a href="/elements/">Elements</a></li>
+    <li><a href="{{ url_for('index') }}">Home</a></li>
+    <li><a href="{{ url_for('projects') }}">Projects</a></li>
+    <li><a href="{{ url_for('research') }}">Research</a></li>
+    <li><a href="{{ url_for('elements') }}">Elements</a></li>
   </ul>
   <ul class="actions vertical">
     <li><a href="#" class="button special fit">Get Started</a></li>

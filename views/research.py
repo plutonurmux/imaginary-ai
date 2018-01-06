@@ -9,14 +9,16 @@
 """
 from flask import render_template
 
-from views import app
+from views import app, back
 
 
 @app.route('/research/')
+@back.anchor
 def research():
     return render_template('research/index.html')
 
 
 @app.route('/research/a-language-model/')
+@back.anchor
 def a_language_model():
     return render_template('research/a-language-model.html')
