@@ -13,7 +13,9 @@ app = Flask('__main__')
 app.config.from_object('models.config.Development')
 
 # Helper
+# noinspection PyUnresolvedReferences
 from helpers import back
+
 # External routes/views
 from views.error import *
 from views.pages import *

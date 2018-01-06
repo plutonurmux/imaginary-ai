@@ -7,7 +7,7 @@
   
   Copyright © 2018. Victor. All rights reserved.
 """
-from flask import redirect, url_for, request, escape, flash
+from flask import request, escape, flash
 from flask_mail import Mail, Message
 
 from views import app, back

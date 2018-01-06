@@ -20,7 +20,11 @@
         <header class="major">
           <h1>{% block heading %}New Page{% endblock %}</h1>
         </header>
-        <span class="image main">{% block image %}<img src="images/pic11.jpg" alt=""/>{% endblock %}</span>
+        <span class="image main">
+          {% block image %}
+            <img src="{{ url_for('static', filename='images/pic11.jpg') }}" alt=""/>
+          {% endblock %}
+        </span>
         {% block content %}
           <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis
             dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet.

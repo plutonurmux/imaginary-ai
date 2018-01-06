@@ -10,7 +10,7 @@
 from models.config.base import Config
 from models.config.mode import Production, Development, Testing
 
-APP_NAME = 'Imaginary A.I.'
+APP_NAME = 'imaginary'
 
 __all__ = [
     'Config',
