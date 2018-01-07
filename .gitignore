@@ -54,4 +54,5 @@ instance/
 
 ### Project specific
 datasets/
+uploads/
 saved/

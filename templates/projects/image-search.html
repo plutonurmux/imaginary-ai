@@ -3,32 +3,25 @@
 {% block heading %}Image Search{% endblock %}
 {% block content %}
 
-  <form class="form-wrapper" action="" method="POST" enctype="multipart/form-data">
+  <form action="{{ url_for('image_search') }}" method="post" enctype="multipart/form-data">
     <div class="row uniform">
       <div class="8u 12u$(medium)">
-        <input type="text" name="image-url" id="image-url" placeholder="Image URL">
+        <input type="text" name="image-url" id="image-url" placeholder="Enter image URL" />
       </div>
       <div class="2u 12u$(medium)">
-        <label class="button icon fa-folder" id="upload-button" for="upload-file">
+        <label class="button icon fa-folder" for="upload-file">
           <input type="file" accept="image/*" id="upload-file" name="upload-file">
         </label>
       </div>
       <div class="2u 12u$(medium)">
-        <label class="button icon fa-camera" id="camera-button" for="camera-file">
+        <label class="button icon fa-camera" for="camera-file">
           <input type="file" accept="image/*" capture="*" id="camera-file" name="camera-file">
         </label>
       </div>
       <!-- Break -->
       <div class="8u 12u$(medium)">
-        <ul class="actions fit">
-          <li>
-            <button type="submit" class="button fit icon fa-search">Search</button>
-          </li>
-          <!-- <li>
-            <label class="button icon fa-camera" id="label-open-camera" for="open-camera"> Open Camera
-              <input type="file" accept="image/*" capture="*" id="open-camera" name="img-camera">
-            </label>
-          </li> -->
+        <ul class="actions">
+          <li><button type="submit" class="button icon fa-search">Search</button></li>
         </ul>
       </div>
     </div>

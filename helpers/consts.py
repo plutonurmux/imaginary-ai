@@ -9,5 +9,10 @@
 """
 import os
 
+
 PROJECT_DIR = os.getcwd()
-DATASETS_DIR = os.path.join(PROJECT_DIR, 'static/datasets')
+STATIC_DIR = os.path.join(PROJECT_DIR, 'static')
+DATASETS_DIR = os.path.join(STATIC_DIR, 'datasets')
+UPLOAD_DIR = os.path.join(STATIC_DIR, 'images/uploads')
+
+ALLOWED_EXTENSIONS = ['png', 'jpg', 'jpeg']

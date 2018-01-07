@@ -7,9 +7,10 @@
   
   Copyright © 2018. Victor. All rights reserved.
 """
-from flask import render_template
+from flask import render_template, request
 
-from models.projects.image_classification import *
+from models.projects.image_classification import all_datasets, classes_and_image
+from models.projects.image_search import upload
 from views import app, back
 
 
@@ -44,9 +45,22 @@ def generative_models():
     return render_template('projects/generative-models.html')
 
 
-@app.route('/projects/image-search/')
+@app.route('/projects/image-search/', methods=['GET', 'POST'])
 @back.anchor
 def image_search():
+    if request.method == 'POST':
+        image = None
+        if 'upload-file' not in request.form:
+            image = {'file': request.files['upload-file'], 'type': 'upload'}
+        elif 'camera-file' not in request.form:
+            image = {'file': request.files['camera-file'], 'type': 'upload'}
+        elif request.form['image-url']:
+            image = {'file': request.form['image-url'], 'type': 'url'}
+        if upload(image):
+            # Start searching...
+            print('Upload successful!')
+        else:
+            print('Error with the upload')
     return render_template('projects/image-search.html')
 
 
@@ -57,6 +71,7 @@ def ai_articles():
 
 
 @app.route('/projects/auto-encoding/')
+@back.anchor
 def auto_encoding():
     return render_template('projects/auto-encoding.html')
 

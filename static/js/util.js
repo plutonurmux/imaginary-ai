@@ -589,7 +589,7 @@
     var file = $(this)[0].files;
     if (file.length === 1) {
       var filename = e.target.value.split('\\').pop();
-      $('#image-url').attr('value', filename);
+      $('#image-url').attr('placeholder', filename);
     }
   });
 
@@ -597,7 +597,7 @@
     var file = $(this)[0].files;
     if (file.length === 1) {
       var filename = e.target.value.split('\\').pop();
-      $('#image-url').attr('value', filename);
+      $('#image-url').attr('placeholder', filename);
     }
   });
 
