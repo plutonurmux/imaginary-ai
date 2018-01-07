@@ -17,14 +17,14 @@ def bad_request(error):
     return render_template('error/400.html', error=error, back=back), 400
 
 
-@app.errorhandler(404)
-def page_not_found(error):
-    return render_template('error/404.html', error=error, back=back), 404
-
-
 @app.errorhandler(403)
 def forbidden(error):
     return render_template('error/403.html', error=error, back=back), 403
+
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('error/404.html', error=error, back=back), 404
 
 
 @app.errorhandler(405)
