@@ -12,6 +12,11 @@ from flask import render_template
 from views import app, back
 
 
+@app.errorhandler(400)
+def bad_request(error):
+    return render_template('error/400.html', error=error, back=back), 400
+
+
 @app.errorhandler(404)
 def page_not_found(error):
     return render_template('error/404.html', error=error, back=back), 404
