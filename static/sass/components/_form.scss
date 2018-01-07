@@ -101,6 +101,8 @@ textarea {
   }
 }
 
+input[type='file'] { display: none; }
+
 .select-wrapper {
   @include icon;
   display: block;

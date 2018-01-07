@@ -1509,6 +1509,9 @@ textarea {
     border-color: #9bf1ff;
     box-shadow: 0 0 0 2px #9bf1ff; }
 
+input[type='file'] {
+  display: none; }
+
 .select-wrapper {
   text-decoration: none;
   display: block;

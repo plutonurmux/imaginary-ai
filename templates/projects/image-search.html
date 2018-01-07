@@ -1,8 +1,43 @@
 {% extends '_includes/_generic_page.html' %}
+{% block image %}{% endblock %}
 {% block heading %}Image Search{% endblock %}
 {% block content %}
+
+  <form class="form-wrapper" action="" method="POST" enctype="multipart/form-data">
+    <div class="row uniform">
+      <div class="8u 12u$(medium)">
+        <input type="text" name="image-url" id="image-url" placeholder="Image URL">
+      </div>
+      <div class="2u 12u$(medium)">
+        <label class="button icon fa-folder" id="upload-button" for="upload-file">
+          <input type="file" accept="image/*" id="upload-file" name="upload-file">
+        </label>
+      </div>
+      <div class="2u 12u$(medium)">
+        <label class="button icon fa-camera" id="camera-button" for="camera-file">
+          <input type="file" accept="image/*" capture="*" id="camera-file" name="camera-file">
+        </label>
+      </div>
+      <!-- Break -->
+      <div class="8u 12u$(medium)">
+        <ul class="actions fit">
+          <li>
+            <button type="submit" class="button fit icon fa-search">Search</button>
+          </li>
+          <!-- <li>
+            <label class="button icon fa-camera" id="label-open-camera" for="open-camera"> Open Camera
+              <input type="file" accept="image/*" capture="*" id="open-camera" name="img-camera">
+            </label>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </form>
+
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet ea ipsa iste numquam perspiciatis placeat vel
-    voluptatum. Aperiam blanditiis eligendi id, ipsa laborum magni molestias porro quasi, quod rerum, soluta.
+    Image search is one of the many applications of image recognition. We can now search the <em>World Wide Web</em> by
+    using image as search query. The possibilities are endless: Doctor searching X-ray scans for deficiencies, chat bot
+    giving best replies after image inputs, self-driving car making optimal decisions on never before seen obstacles
+    on the road.
   </p>
 {% endblock %}
