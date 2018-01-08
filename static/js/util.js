@@ -20,8 +20,8 @@
       b.push(
         '<a ' +
         'class="link depth-' + indent + '"' +
-        ((typeof target !== == 'undefined' && target !== '') ? ' target="' + target + '"' : '') +
-        ((typeof href !== == 'undefined' && href !== '') ? ' href="' + href + '"' : '') +
+        ((typeof target !== 'undefined' && target !== '') ? ' target="' + target + '"' : '') +
+        ((typeof href !== 'undefined' && href !== '') ? ' href="' + href + '"' : '') +
         '>' +
         '<span class="indent-' + indent + '"></span>' +
         $this.text() +
@@ -590,12 +590,9 @@
    * +–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––+
    */
   $('#upload-file').on('change', function (e) {
-    console.log($(this)[0].files);
-    var file = $(this)[0].files;
-    if (file.length === 1) {
-      var filename = e.target.value.split('\\').pop();
-      $('#image-url').attr('placeholder', filename);
-    }
+    var $upload_file = $('#upload-file');
+    set_upload_placeholder({input_file: $upload_file, input_id: 'image-url', value: e.target.value});
+    preview_upload($upload_file, 'preview');
   });
 
   /**
@@ -604,37 +601,61 @@
    * +–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––+
    */
   $('#camera-file').on('change', function (e) {
-    var file = $(this)[0].files;
-    if (file.length === 1) {
-      var filename = e.target.value.split('\\').pop();
-      $('#image-url').attr('placeholder', filename);
-    }
+    var $cam_file = $('#camera-file');
+    set_upload_placeholder({
+      input_file: $cam_file,
+      input_id: 'image-url',
+      value: e.target.value
+    });
+    preview_upload($cam_file, 'preview');
   });
 
   /**
-   * +–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––+
-   * | Preview uploads
-   * +–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––+
+   * Display upload filename in an input box as a placeholder
+   * @param params {object} [input_file, [input_id, [value, [attr,]]]]
    */
-  function show_preview(file_id) {
-    var preview_image = $('#preview-image');
-    new AjaxUpload(file_id, {
-      action: $('image-search-form').attr('action'),
-      name: 'image',
-      onSubmit: function (file, extension) {
-        $('#preview').addClass('loading');
-      },
-      onComplete: function (file, response) {
-        preview_image.load(function () {
-          $('#preview').removeClass('loading');
-          preview_image.unbind();
-        });
-        preview_image.attr('src', response)
-      }
-    })
+  function set_upload_placeholder(params) {
+    var input_file = params.input_file;
+    var input_id = params.input_id;
+    var value = params.value;
+    var attr = params.attr || 'placeholder';
+    var file = input_file[0].files;
+    if (file.length === 1) {
+      var filename = value.split('\\').pop();
+      $('#' + input_id).attr(attr, filename);
+    }
   }
 
-  show_preview('upload-file');
-  show_preview('camera-file');
+  /**
+   * Display upload preview
+   * @param {jQuery} $input_file - selector instance for the input file
+   * @param {string} preview_holder_id -the preview window/div id
+   */
+  function preview_upload($input_file, preview_holder_id) {
+    var img_path = $input_file[0].value;
+    var extn = img_path.substring(img_path.lastIndexOf('.') + 1).toLowerCase();
+    if (['jpg', 'gif', 'jpeg', 'png'].includes(extn)) {
+      if (typeof (FileReader) !== 'undefined') {
+        var preview_holder = $('#' + preview_holder_id);
+        preview_holder.empty();
+
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          $('<img />', {
+            'src': e.target.result,
+            'class': 'preview-image',
+            'alt': 'Upload preview'
+          }).appendTo(preview_holder);
+        };
+        preview_holder.show();
+        reader.readAsDataURL($input_file[0].files[0]);
+      } else {
+        console.error('Your browser does not support FileReader.')
+      }
+    } else {
+      console.error('Invalid extension.');
+    }
+
+  }
 
 })(jQuery);
