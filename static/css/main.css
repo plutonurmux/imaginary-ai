@@ -1709,6 +1709,10 @@ a.icon.alt:active:before {
       .image.main {
         margin: 1.5em 0; } }
 
+#preview-image {
+  width: 200px;
+  height: 200px; }
+
 /* List */
 ol {
   list-style: decimal;

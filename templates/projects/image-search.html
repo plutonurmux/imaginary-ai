@@ -3,10 +3,10 @@
 {% block heading %}Image Search{% endblock %}
 {% block content %}
 
-  <form action="{{ url_for('image_search') }}" method="post" enctype="multipart/form-data">
+  <form action="{{ url_for('image_search') }}" method="post" enctype="multipart/form-data" id="image-search-form">
     <div class="row uniform">
       <div class="8u 12u$(medium)">
-        <input type="text" name="image-url" id="image-url" placeholder="Enter image URL" />
+        <input type="text" name="image-url" id="image-url" placeholder="Enter image URL"/>
       </div>
       <div class="2u 12u$(medium)">
         <label class="button icon fa-folder" for="upload-file">
@@ -21,8 +21,21 @@
       <!-- Break -->
       <div class="8u 12u$(medium)">
         <ul class="actions">
-          <li><button type="submit" class="button icon fa-search">Search</button></li>
+          <li>
+            <button type="submit" class="button icon fa-search">Search</button>
+          </li>
         </ul>
+      </div>
+      <!-- Break -->
+      {# Image preview #}
+      <h3>Image preview</h3>
+      <div class="5u 12u$(small)">
+        <img id="preview-image" src="{{ url_for('static', filename='images/pic03.jpg') }}" alt=""/>
+      </div>
+      <div class="7u 12u$(small)">
+        <h4>Image filename</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi culpa dolore ducimus eligendi enim eos ex
+          expedita facere hic id ipsa iusto minima quae quis quo rem totam, velit voluptatibus!</p>
       </div>
     </div>
   </form>
