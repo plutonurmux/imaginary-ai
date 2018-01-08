@@ -12,3 +12,7 @@ from models.projects.utils import *
 
 def upload(file, folder=''):
     return maybe_download_or_upload(file, folder)
+
+
+def load_image():
+    pass

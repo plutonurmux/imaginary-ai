@@ -7,7 +7,6 @@
   
   Copyright © 2018. Victor. All rights reserved.
 """
-from flask import flash
 from werkzeug.utils import secure_filename
 
 from helpers.consts import *
@@ -18,19 +17,19 @@ def allowed_file(filename):
 
 
 def maybe_download_or_upload(file, folder=''):
+    status = False
     try:
         if file['type'] == 'upload':
-            upload_file(file['file'], folder)
+            status = upload_file(file['file'], folder)
         elif file['type'] == 'url':
-            download_file(file['file'], folder)
-        return True
+            status = download_file(file['file'], folder)
     except Exception as e:
         print(f'{e}')
-        return False
+    return status
 
 
 def download_file(url, download_folder=''):
-    print('Download file not implemented!')
+    print(f'TODO: Download from {url} into {UPLOAD_DIR + "/" + download_folder}!')
     return False
 
 

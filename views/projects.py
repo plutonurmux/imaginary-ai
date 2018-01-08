@@ -24,7 +24,6 @@ def projects():
 @back.anchor
 def image_classification():
     data = dict()
-    # TODO: Image classification UI/UX
     # Retrieve all available image datasets
     data['datasets'] = all_datasets(full_path=False)
     data['datasets_full'] = all_datasets(full_path=True)
