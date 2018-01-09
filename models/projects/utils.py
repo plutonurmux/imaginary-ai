@@ -41,5 +41,5 @@ def upload_file(file, upload_folder=''):
         if not os.path.isdir(upload_folder):
             os.makedirs(upload_folder)
         file.save(path)
-        return True
+        return path
     raise Exception(f'Image extension can be one of {", ".join(ALLOWED_EXTENSIONS)}')

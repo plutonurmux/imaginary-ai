@@ -11,6 +11,7 @@ from flask import render_template, request
 
 from models.projects.image_classification import all_datasets, classes_and_image
 from models.projects.image_search import upload
+from models.neural_network.pre_trained import Inception
 from views import app, back
 
 
@@ -55,9 +56,14 @@ def image_search():
             image = {'file': request.files['camera-file'], 'type': 'upload'}
         elif request.form['image-url']:
             image = {'file': request.form['image-url'], 'type': 'url'}
-        if upload(image):
+        path = upload(image)
+        if path and type(path) == str:
             # Start searching...
-            print('Upload successful!')
+            print('Waiting...')
+            model = Inception()
+            result = model.predict(path)
+            print('Image prediction', result)
+
         else:
             print('Error with the upload')
     return render_template('projects/image-search.html')
