@@ -7,7 +7,7 @@
   
   Copyright © 2018. Victor. All rights reserved.
 """
-from models.projects.utils import *
+from models.projects.utils import maybe_download_or_upload
 
 
 def upload(file, folder=''):

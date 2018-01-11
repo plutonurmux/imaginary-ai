@@ -10,11 +10,8 @@
 from models.neural_network.pre_trained import base
 from models.neural_network.pre_trained.resnet import ResNet
 from models.neural_network.pre_trained.inception import Inception
-from models.neural_network.pre_trained.vgg import VGG16, VGG19
 
 __all__ = [
     'Inception',
     'ResNet',
-    'VGG16',
-    'VGG19',
 ]
