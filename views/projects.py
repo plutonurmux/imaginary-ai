@@ -61,8 +61,8 @@ def image_search():
             # Start searching...
             print('Loading pre-trained inception model...')
             model = Inception(weights='imagenet')
-            result = model.predict(path)
-            print('Image prediction', result)
+            results = model.predict(path)
+            print('Image prediction', results)
 
         else:
             print('Error with the upload')
