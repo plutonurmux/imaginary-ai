@@ -16,7 +16,7 @@ PROJECT_DIR = os.getcwd()
 # | Saved models directories
 # +———————————————————————————————————————————————————————————————————————————————————————————+
 ################################################################################################
-MODEL_DIR = os.path.join(PROJECT_DIR, 'model')
+MODEL_DIR = os.path.join(PROJECT_DIR, 'models')
 SAVED_MODEL_DIR = os.path.join(MODEL_DIR, 'saved')
 PRE_TRAINED_DIR = os.path.join(SAVED_MODEL_DIR, 'pre-trained')
 
@@ -36,8 +36,8 @@ UPLOAD_DIR = os.path.join(STATIC_DIR, 'images/uploads')
 # +———————————————————————————————————————————————————————————————————————————————————————————+
 ################################################################################################
 PRE_TRAINED_MODELS = {
-    'INCEPTION': os.path.join(PRE_TRAINED_DIR, 'inception.pkl'),
-    'RESNET': os.path.join(PRE_TRAINED_DIR, 'resnet.pkl'),
+    'INCEPTION': os.path.join(PRE_TRAINED_DIR, 'inception.model'),
+    'RESNET': os.path.join(PRE_TRAINED_DIR, 'resnet.model'),
 }
 
 ALLOWED_EXTENSIONS = ['png', 'jpg', 'jpeg']

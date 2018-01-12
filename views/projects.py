@@ -9,11 +9,9 @@
 """
 from flask import render_template, request
 
-from helpers.consts import PRE_TRAINED_MODELS
-from models.neural_network.utils import load
 from models.projects.image_classification import all_datasets, classes_and_image
 from models.projects.image_search import upload
-# from models.neural_network.pre_trained import Inception
+from models.neural_network.pre_trained import Inception
 from views import app, back
 
 
@@ -62,7 +60,7 @@ def image_search():
         if path and type(path) == str:
             # Start searching...
             print('Loading pre-trained inception model...')
-            model = load(PRE_TRAINED_MODELS['INCEPTION'])
+            model = Inception(weights='imagenet')
             result = model.predict(path)
             print('Image prediction', result)
 

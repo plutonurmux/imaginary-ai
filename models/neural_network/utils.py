@@ -11,8 +11,11 @@
 import os
 import pickle
 
+import keras.models
+
 
 def preprocess_img(filename, size=50):
+    print(f'Processing {filename}. size = {size}')
     pass
 
 
@@ -20,12 +23,18 @@ def save(obj, file, force=False):
     if force or not os.path.isfile(file):
         if not os.path.isdir(os.path.dirname(file)):
             os.makedirs(os.path.dirname(file))
-        pickle.dump(obj=obj, file=file)
+        with open(file, mode='wb') as f:
+            pickle.dump(obj=obj, file=f)
     raise Exception('Not saved!')
 
 
 def load(file):
     if os.path.isfile(file):
-        obj = pickle.load(file=file)
-        return obj
+        with open(file, mode='rb') as f:
+            obj = pickle.load(file=f)
+            return obj
     raise FileNotFoundError(f'{file} was not found.')
+
+
+def load_model(path):
+    return keras.models.load_model(filepath=path)

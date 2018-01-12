@@ -21,8 +21,8 @@ class Inception(PreTrained):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+        self._model = kwargs.get('model', InceptionV3(weights=self._weights))
         self.size = kwargs.get('size', 224)
-        self._model = InceptionV3(weights=self._weights)
 
     def predict(self, path, top=5):
         img = image.load_img(path, target_size=(self.size, self.size))
