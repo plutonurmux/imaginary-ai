@@ -10,8 +10,7 @@
 from flask import render_template, request
 
 from models.projects.image_classification import all_datasets, classes_and_image
-from models.projects.image_search import upload
-from models.neural_network.pre_trained import Inception
+from models.projects.image_search import process
 from views import app, back
 
 
@@ -49,23 +48,12 @@ def generative_models():
 @back.anchor
 def image_search():
     if request.method == 'POST':
-        image = None
-        if 'upload-file' not in request.form:
-            image = {'file': request.files['upload-file'], 'type': 'upload'}
-        elif 'camera-file' not in request.form:
-            image = {'file': request.files['camera-file'], 'type': 'upload'}
-        elif request.form['image-url']:
-            image = {'file': request.form['image-url'], 'type': 'url'}
-        path = upload(image)
-        if path and type(path) == str:
-            # Start searching...
-            print('Loading pre-trained inception model...')
-            model = Inception(weights='imagenet')
-            results = model.predict(path)
-            print('Image prediction', results)
-
-        else:
-            print('Error with the upload')
+        try:
+            data = process(request)
+            return render_template('projects/image-search.html', data=data)
+        except Exception as e:
+            return render_template('projects/image-search.html', error=e)
+    # !- request.method == 'GET'
     return render_template('projects/image-search.html')
 
 
