@@ -1,8 +1,2 @@
-{% extends '_includes/_generic_page.html' %}
+{% extends 'layouts/error.html' %}
 {% block heading %}ERROR 500: Internal Server Error{% endblock %}
-{% block content %}
-  <p>{{ error }}</p>
-  <ul class="actions">
-    <li><a href="{{ back.url() }}" class="button icon fa-arrow-left">Take me back</a></li>
-  </ul>
-{% endblock %}

@@ -1,16 +1,6 @@
-{% extends '_includes/_layout.html' %}
-
+{% extends 'layouts/main.html' %}
+{% block title %}Elements{% endblock %}
 {% block body %}
-  <!-- Header -->
-  <header id="header">
-    <a href="{{ url_for('index') }}" class="logo"><strong>Imaginary A.I.</strong> <span>by Victor</span></a>
-    <nav>
-      <a href="#menu">Menu</a>
-    </nav>
-  </header>
-
-  {% include '_includes/_main_menu.html' %}
-
   <!-- Main -->
   <div id="main" class="alt">
 

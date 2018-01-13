@@ -1,21 +1,17 @@
-{% extends '_includes/_layout.html' %}
+{% extends 'layouts/main.html' %}
+
+{# Page title #}
 {% block title %} Research | A Language Model {% endblock %}
+
+{# Page body #}
 {% block body %}
-  <!-- Header -->
-  <header id="header">
-    <a href="{{ url_for('index') }}" class="logo"><strong>Imaginary A.I.</strong> <span>by Victor</span></a>
-    <nav>
-      <a href="#menu">Menu</a>
-    </nav>
-  </header>
-  {% include '_includes/_main_menu.html' %}
   <!-- Main -->
   <div id="main" class="alt">
     <div class="inner">
       <header class="major">
         <h1>A Language Model</h1>
       </header>
-
+      {# Background study #}
       <h3>Some Background Knowledge</h3>
       <div class="row">
         <div class="">
@@ -29,12 +25,13 @@
             </li>
             <li>
               There are also models that takes as inputs images and produces a caption of what's going on in that
-              image... (TLDR; convnet + Dynamic Memory Augmented Networks).
+              image... <em>(TLDR; Convolutional Neural Network + Dynamic Memory Augmented Networks).</em>
             </li>
           </ul>
         </div>
       </div>
 
+      {# The model #}
       <h3>The Model</h3>
       <dl>
         <dt>My Inception</dt>
@@ -61,7 +58,7 @@
           </p>
         </dd>
       </dl>
-
+      {# Advantages #}
       <div class="row">
         <div class="">
           <h4>What is the real world use-case and Advantages</h4>
@@ -87,7 +84,7 @@
           </ol>
         </div>
       </div>
-
+      {# Disadvantages #}
       <div class="row">
         <div class="">
           <h4>Disadvantages</h4>
@@ -102,7 +99,7 @@
           </ol>
         </div>
       </div>
-
+      {# Futher research #}
       <div class="row">
         <div class="">
           <h4>Further Research</h4>

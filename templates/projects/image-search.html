@@ -1,6 +1,9 @@
-{% extends '_includes/_generic_page.html' %}
-{% block image %}{% endblock %}
-{% block heading %}Image Search{% endblock %}
+{% extends 'layouts/generic.html' %}
+
+{# Page title #}
+{% block title %}Image Search{% endblock %}
+
+{# Page conent #}
 {% block content %}
 
   <form action="{{ url_for('image_search') }}" method="post" enctype="multipart/form-data" id="image-search-form">
