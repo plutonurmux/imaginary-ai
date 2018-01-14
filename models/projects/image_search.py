@@ -21,14 +21,14 @@ def process(request):
         pred = predict(path)
         print('Classify success!', pred)
         # Search image
-        s = list(pred.keys())[0]
-        results = search(s)
-        print('Search success!', results)
+        # s = list(pred.keys())[0]
+        # results = search(s)
+        # print('Search success!', results)
 
         return {
             'image_path': path,
             'predictions': pred,
-            'search_results': results
+            # 'search_results': results
         }
     except Exception as e:
         raise Exception(e)
