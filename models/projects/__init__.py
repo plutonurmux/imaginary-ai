@@ -7,8 +7,10 @@
   
   Copyright © 2018. Victor. All rights reserved.
 """
-from models.projects import image_classification
 
 __all__ = [
     'image_classification',
+    'image_search',
+    'search',
+    'utils',
 ]

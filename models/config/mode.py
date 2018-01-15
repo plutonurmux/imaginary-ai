@@ -7,11 +7,11 @@
   
   Copyright © 2018. Victor. All rights reserved.
 """
-from models.config import Config
+from models.config.base import Config, APP_NAME
 
 
 class Production(Config):
-    DATABASE_URI = 'mysql://victor@localhost/imaginary'
+    DATABASE_URI = f'mysql://victor@localhost/{APP_NAME}'
 
 
 class Development(Config):

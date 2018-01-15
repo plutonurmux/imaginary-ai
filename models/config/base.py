@@ -9,13 +9,13 @@
 """
 from passlib.hash import sha256_crypt
 
-# from models import config as cfg
+from helpers.consts import APP_NAME
 
 
 class Config(object):
     DEBUG = False
     TESTING = False
-    SECRET_KEY = sha256_crypt.encrypt('Imaginary A.I.')
+    SECRET_KEY = sha256_crypt.encrypt(APP_NAME)
     # Flask Mail
     MAIL_SERVER = 'smtp.gmail.com'
     MAIL_PORT = 465

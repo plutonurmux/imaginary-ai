@@ -10,6 +10,7 @@
 import os
 
 PROJECT_DIR = os.getcwd()
+APP_NAME = os.path.basename(PROJECT_DIR)
 
 ################################################################################################
 # +———————————————————————————————————————————————————————————————————————————————————————————+
@@ -28,7 +29,6 @@ PRE_TRAINED_DIR = os.path.join(SAVED_MODEL_DIR, 'pre-trained')
 STATIC_DIR = os.path.join(PROJECT_DIR, 'static')
 DATASETS_DIR = os.path.join(STATIC_DIR, 'datasets')
 UPLOAD_DIR = os.path.join(STATIC_DIR, 'images/uploads')
-
 
 ################################################################################################
 # +———————————————————————————————————————————————————————————————————————————————————————————+

@@ -7,9 +7,11 @@
   
   Copyright © 2018. Victor. All rights reserved.
 """
+import os.path
+
 from werkzeug.utils import secure_filename
 
-from helpers.consts import *
+from helpers.consts import UPLOAD_DIR, STATIC_DIR, ALLOWED_EXTENSIONS
 
 
 def allowed_file(filename):

@@ -8,10 +8,10 @@
   Copyright © 2018. Victor. All rights reserved.
 """
 
-from models.neural_network import utils
-from models.neural_network.cnn import ConvolutionalNeuralNetwork
+# from models.neural_network import utils
+# from models.neural_network.cnn import CNN
 
 __all__ = [
-    'ConvolutionalNeuralNetwork',
+    'cnn',
     'utils',
 ]

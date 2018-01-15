@@ -9,12 +9,14 @@
 """
 from flask import Flask
 
-app = Flask('__main__')
-app.config.from_object('models.config.Development')
+from helpers.consts import APP_NAME
+
+app = Flask(APP_NAME)
+app.config.from_object('models.config.mode.Development')
 
 # Helper
 # noinspection PyUnresolvedReferences
-from helpers import back
+from helpers.back import back
 
 # External routes/views
 from views.error import *

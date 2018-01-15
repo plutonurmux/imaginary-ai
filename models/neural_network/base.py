@@ -7,14 +7,14 @@
   
   Copyright © 2018. Victor. All rights reserved.
 """
-from models.dataset import Dataset, ImageDataset
+from models.dataset.image import ImageDataset
 
 
 class NeuralNetwork(object):
 
     def __init__(self, dataset, **kwargs):
         # Raise an error if dataset is not an instance of dataset
-        if not isinstance(dataset, (Dataset, ImageDataset)):
+        if not isinstance(dataset, ImageDataset):
             raise TypeError('dataset must be an instance of models.dataset.Dataset class')
         self._dataset = dataset
 

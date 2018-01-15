@@ -12,9 +12,7 @@ from keras.applications.inception_v3 import InceptionV3
 from keras.applications.inception_v3 import preprocess_input, decode_predictions
 from keras.preprocessing import image
 
-from helpers.consts import PRE_TRAINED_MODELS
 from models.neural_network.pre_trained.base import PreTrained
-from models.neural_network.utils import save
 
 
 class Inception(PreTrained):
@@ -34,8 +32,9 @@ class Inception(PreTrained):
         pred = decode_predictions(pred, top=top)[0]
         return pred
 
-
-if __name__ == '__main__':
-    model = Inception(weight='imagenet')
-    save(model, PRE_TRAINED_MODELS['INCEPTION'])
-    print('Saved')
+# if __name__ == '__main__':
+#     import models.neural_network as nn
+#     from helpers.consts import PRE_TRAINED_MODELS
+#     model = Inception(weight='imagenet')
+#     nn.utils.save(model, PRE_TRAINED_MODELS['INCEPTION'])
+#     print('Saved')

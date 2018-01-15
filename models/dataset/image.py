@@ -12,7 +12,7 @@ import sys
 
 import numpy as np
 
-from models.dataset import Dataset
+from models.dataset.base import Dataset
 
 
 ################################################################################################

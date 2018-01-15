@@ -7,13 +7,5 @@
   
   Copyright © 2018. Victor. All rights reserved.
 """
-from models.dataset.base import Dataset
-from models.dataset.image import ImageDataset
-from models.dataset.text import TextDataset, WordVectorization
 
-__all__ = [
-    'Dataset',
-    'ImageDataset',
-    'TextDataset',
-    'WordVectorization',
-]
+__all__ = ['image', 'text']

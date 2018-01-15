@@ -17,7 +17,7 @@ from keras.models import Sequential
 from models.neural_network.base import NeuralNetwork
 
 
-class ConvolutionalNeuralNetwork(NeuralNetwork):
+class CNN(NeuralNetwork):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)

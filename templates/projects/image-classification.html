@@ -65,11 +65,11 @@
       <div class="row uniform">
         <div class="12u$">
           <div class="select-wrapper">
-            <select name="demo-category" id="demo-category">
+            <select name="demo-category" id="demo-category" title="Dataset categories">
               <option hidden>- Select preferred dataset -</option>
-              {% for ds in data['datasets'] %}
+              {% for ds in data['datasets'] -%}
                 <option value="{{ ds }}">{{ ds|replace('_', ' ')|replace('-', ' ') }}</option>
-              {% endfor %}
+              {%- endfor %}
             </select>
           </div>
         </div>

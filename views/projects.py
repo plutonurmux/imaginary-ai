@@ -9,8 +9,8 @@
 """
 from flask import render_template, request
 
-from models.projects.image_classification import all_datasets, classes_and_image
-from models.projects.image_search import process
+import models.projects.image_classification as img_class
+import models.projects.image_search as img_search
 from views import app, back
 
 
@@ -23,16 +23,17 @@ def projects():
 @app.route('/projects/image-classification/', methods=['GET', 'POST'])
 @back.anchor
 def image_classification():
-    data = dict()
+    data = {
+        'datasets': img_class.all_datasets(full_path=False),
+        'datasets_full': img_class.all_datasets(full_path=True)
+    }
+    data['class_n_image'] = img_class.classes_and_image(dataset_dir=data['datasets_full'][0])
     # Retrieve all available image datasets
-    data['datasets'] = all_datasets(full_path=False)
-    data['datasets_full'] = all_datasets(full_path=True)
     # Options for next dataset upload
     # Verify uploaded dataset [At least 2 classes]
     # Process selection on the UI for the requested dataset
     # Room for training and testing a new dataset
     # Retrieve dataset classes and one random image for each class
-    data['class_n_image'] = classes_and_image(dataset_dir=data['datasets_full'][0])
     # Write a JavaScript snippet to show training progress
     # And testing in case of  delay
     return render_template('projects/image-classification.html', data=data)
@@ -49,7 +50,7 @@ def generative_models():
 def image_search():
     if request.method == 'POST':
         try:
-            data = process(request)
+            data = img_search.process(request)
             return render_template('projects/image-search.html', data=data)
         except Exception as e:
             print(f'ERROR: {e}')

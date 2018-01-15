@@ -14,7 +14,7 @@ import sys
 import numpy as np
 from nltk.tokenize import word_tokenize, sent_tokenize
 
-from models.dataset import Dataset
+from models.dataset.base import Dataset
 
 
 ################################################################################################

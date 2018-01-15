@@ -8,10 +8,12 @@
   Copyright © 2018. Victor. All rights reserved.
 """
 
+# Contains helper models for `/projects/image-classification/`
+
+import os.path
 import random
 
-# Contains helper models for `/projects/image-classification/`
-from helpers.consts import *
+from helpers.consts import DATASETS_DIR
 
 
 def __list_dir(directory, full_path=True):

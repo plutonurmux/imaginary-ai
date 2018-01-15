@@ -9,10 +9,13 @@
 """
 import os.path
 
-from helpers.consts import STATIC_DIR
-from models.neural_network.pre_trained import Inception
-from models.projects.search import Search
+# import models.neural_network.pre_trained as pre_trained
+# import models.projects as projects
+# TODO: Fix this code leak. This is where keras is imported automatically when project starts
+from models.neural_network.pre_trained.inception import Inception
 from models.projects.utils import maybe_download_or_upload
+from models.projects.search import Search
+from helpers.consts import STATIC_DIR
 
 
 def process(request):
