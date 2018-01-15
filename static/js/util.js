@@ -641,10 +641,15 @@
 
         var reader = new FileReader();
         reader.onload = function (e) {
+          // Preview title
+          $('<h3></h3>', {
+            text: 'Preview Image'
+          }).appendTo(preview_holder);
+          // Preview image
           $('<img />', {
-            'src': e.target.result,
-            'class': 'preview-image',
-            'alt': 'Upload preview'
+            src: e.target.result,
+            class: 'preview-image',
+            alt: 'Upload preview'
           }).appendTo(preview_holder);
         };
         preview_holder.show();

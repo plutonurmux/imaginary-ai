@@ -52,6 +52,7 @@ def image_search():
             data = process(request)
             return render_template('projects/image-search.html', data=data)
         except Exception as e:
+            print(f'ERROR: {e}')
             return render_template('projects/image-search.html', error=e)
     # !- request.method == 'GET'
     return render_template('projects/image-search.html')

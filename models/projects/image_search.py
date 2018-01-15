@@ -7,6 +7,9 @@
   
   Copyright © 2018. Victor. All rights reserved.
 """
+import os.path
+
+from helpers.consts import STATIC_DIR
 from models.neural_network.pre_trained import Inception
 from models.projects.search import Search
 from models.projects.utils import maybe_download_or_upload
@@ -14,21 +17,21 @@ from models.projects.utils import maybe_download_or_upload
 
 def process(request):
     try:
-        # Upload image
-        path = upload(request)
-        print('Upload success!', path)
-        # Classify image
-        pred = predict(path)
-        print('Classify success!', pred)
-        # Search image
-        # s = list(pred.keys())[0]
-        # results = search(s)
-        # print('Search success!', results)
+        # Upload image.
+        image_path = upload(request)
+
+        # Classify image.
+        predictions = predict(image_path, top=5)
+
+        # Search top prediction label
+        # s = predictions['top']['label']
+        # print(f'Searching for {s}')
+        # search_results = search(s)
 
         return {
-            'image_path': path,
-            'predictions': pred,
-            # 'search_results': results
+            'image_path': image_path,
+            'predictions': predictions,
+            # 'search_results': search_results
         }
     except Exception as e:
         raise Exception(e)
@@ -49,16 +52,64 @@ def upload(request):
         raise Exception('Trouble uploading image')
 
 
-def predict(path):
+def predict(path, top=5):
+    """
+    Predicts what class an image input belongs to using the imagenet
+    pre-trained weights.
+
+    :param path: str,
+        Image path relative to the static directory
+        e.g.
+        >>> path = 'images/uploads/elephant.jpg'
+        >>> results = model.predict(path=path, top=3)
+
+    :param top: int,
+        How many class predictions to be returned.
+
+    :return: results, dict
+        Results containing to items: top prediction & all predictions
+        top prediction contains a dictionary of the score and label.
+        all predictions is a dictionary of labels and scores of `top`
+        number of classes.
+
+        e.g.
+        >>> results['top']
+        >>> # {'label': 'african_elephant', 'score': 0.832}
+        >>> results['all']
+        >>> # {'african_elephant': 0.832, 'zambia_elephant': 0.132, ...}
+    """
     print('Loading pre-trained inception model...')
+    # Full/absolute image path
+    full_img_path = os.path.join(STATIC_DIR, path)
+
+    # Loading the a pre-trained InceptionV3 model.
     model = Inception(weights='imagenet')
-    pred = model.predict(path, top=3)
-    # pred = {'Image class': 'confidence score %'}
-    pred = dict((p[1].replace('_', ' ').capitalize(), f'{p[2]:.2%}') for p in pred)
-    return pred
+
+    # Predict the image label.
+    pred = model.predict(full_img_path, top=top)
+
+    # Clean up predictions
+    pred = list(map(_predict_pprint, pred))
+
+    # Top prediction's labels and their scores
+    top_label = pred[0][0]
+    top_score = pred[0][1]
+
+    return {
+        'top': {'label': top_label, 'score': top_score},
+        'all': dict(pred)
+    }
 
 
 def search(prediction):
     search = Search()
     results = search.search(prediction)
     return results
+
+
+def _predict_pprint(label_score):
+    # label_score[0] = imagenet class id
+    label = label_score[1]
+    score = f'{label_score[2]:.2%}'
+    label = label.replace('_', ' ').capitalize()
+    return label, score
