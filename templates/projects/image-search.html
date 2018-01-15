@@ -6,7 +6,10 @@
 {# Page conent #}
 {% block content -%}
 
-  <p class="error">{{ error }}</p>
+  {# Display error #}
+  {% if error -%}
+    <p class="error icon fa-warning"> {{ error }}</p>
+  {%- endif %}
 
   {# Image form #}
   <form action="{{ url_for('image_search') }}" method="post" enctype="multipart/form-data" id="image-search-form">
