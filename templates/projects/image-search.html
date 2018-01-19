@@ -1,17 +1,26 @@
-{% extends 'layouts/generic.html' %}
+{%- extends 'layouts/generic.html' %}
 
-{# Page title #}
-{% block title %}Image Search{% endblock %}
+{#- Page title #}
+{% block title -%}Image Search{%- endblock %}
 
-{# Page conent #}
+{#- Page conent #}
 {% block content -%}
 
-  {# Display error #}
+  <p>
+    Search through a thousand image categories (from the <a href="https://imagenet.com">ImageNet</a> database).
+    <a href="">InceptionV3</a> model is used to classify a given image and returns top 5 predictions of what the
+    content of the image. We then crawl Google to search for the top prediction class. <br/>
+
+    <strong>NOTE:</strong> It is important to note that the image classes are the ones present in the ImageNet dataset,
+    anything apart from that might give a mis-classification. Nevertheless, it's smart enough to give you a close enough
+    class label, because of the awesomeness of the InceptionV3 model.
+  </p>
+  {#- Display error #}
   {% if error -%}
     <p class="error icon fa-warning"> {{ error }}</p>
   {%- endif %}
 
-  {# Image form #}
+  {#- Image form #}
   <form action="{{ url_for('image_search') }}" method="post" enctype="multipart/form-data" id="image-search-form">
     <div class="row uniform">
       <div class="8u 12u$(medium)">
@@ -38,7 +47,7 @@
     </div>
   </form>
 
-  {# Previews and search results#}
+  {#- Previews and search results#}
   <div class="row 200%">
     {# Preview and scores #}
     <div class="6u 12u$(medium)">
@@ -53,7 +62,7 @@
       </div>
       {# Top results & accuracy #}
       {% if data and data['predictions'] -%}
-        <h4>Best ({{ data['predictions']['all']|length }}) Match</h4>
+        <h4>Top ({{ data['predictions']['all']|length }}) Matches</h4>
         <div class="table-wrapper">
           <table class="alt">
             <thead>

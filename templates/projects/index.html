@@ -1,19 +1,19 @@
-{% extends 'layouts/sub-main.html' %}
+{%- extends 'layouts/sub-main.html' %}
 
-{# Page title #}
-{% block title %}My Projects{% endblock %}
+{#- Page title #}
+{% block title -%}My Projects{%- endblock %}
 
-{# Page description #}
-{% block description %}
+{#- Page description #}
+{% block description -%}
   <p>
     I started working on some personal A.I. projects<br/>
     mostly after learning some new concepts but also <br/>
     during the process of learning and research.
   </p>
-{% endblock %}
+{%- endblock %}
 
-{# Page content #}
-{% block content %}
+{#- Page content #}
+{% block content -%}
   <!-- Deep Learning -->
   <section id="one">
     <div class="inner">
@@ -165,4 +165,4 @@
     </div>
   </section>
 
-{% endblock %}
+{%- endblock %}

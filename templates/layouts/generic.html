@@ -1,6 +1,6 @@
-{% extends 'layouts/main.html' %}
+{%- extends 'layouts/main.html' %}
 
-{% block body %}
+{% block body -%}
 
   <!-- Main -->
   <div id="main" class="alt">
@@ -12,14 +12,14 @@
           <h1>{{ self.title() }}</h1>
         </header>
         <span class="image main">
-          {% block image %}
+          {% block image -%}
             <img src="{{ url_for('static', filename='images/pic11.jpg') }}" alt=""/>
-          {% endblock %}
+          {%- endblock %}
         </span>
-        {% block content %}
-        {% endblock %}
+        {% block content -%}
+        {%- endblock %}
       </div>
     </section>
 
   </div>
-{% endblock %}
+{%- endblock body %}

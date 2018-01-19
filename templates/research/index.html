@@ -1,17 +1,18 @@
-{% extends 'layouts/sub-main.html' %}
-{# Page title #}
-{% block title %}My Research {% endblock %}
+{%- extends 'layouts/sub-main.html' %}
 
-{# Page description #}
-{% block description %}
+{#- Page title #}
+{% block title -%}My Research {%- endblock %}
+
+{#- Page description #}
+{% block description -%}
   <p>
     Here are some research ideas which has the <br/>
     potential to revolutionize this field.
   </p>
-{% endblock %}
+{%- endblock %}
 
-{# Page conent #}
-{% block content %}
+{#- Page conent #}
+{% block content -%}
   <!-- Deep Learning research -->
   <section id="one">
     <div class="inner">
@@ -64,4 +65,4 @@
     </div>
   </section>
 
-{% endblock %}
+{%- endblock %}

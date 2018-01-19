@@ -1,8 +1,8 @@
-{% extends 'layouts/main.html' %}
+{%- extends 'layouts/main.html' %}
 
-{% block title %}Home{% endblock %}
+{% block title -%}Home{%- endblock %}
 
-{% block body %}
+{% block body -%}
 
   <!-- Banner -->
   <section id="banner" class="major">
@@ -25,7 +25,7 @@
 
     <!-- One -->
     <section id="one" class="tiles">
-      {# Image Classification #}
+      {#- Image Classification #}
       <article>
       <span class="image">
         <img src="{{ url_for('static', filename='images/pic01.jpg') }}" alt=""/>
@@ -35,7 +35,7 @@
           <p>Image classification with <span>Convolutional Neural Networks</span></p>
         </header>
       </article>
-      {# Generative Models #}
+      {#- Generative Models #}
       <article>
       <span class="image">
         <img src="{{ url_for('static', filename='images/pic02.jpg') }}" alt=""/>
@@ -45,7 +45,7 @@
           <p>Generate photo realistic images with <span>Generative Adversarial Networks</span></p>
         </header>
       </article>
-      {# Image Search #}
+      {#- Image Search #}
       <article>
       <span class="image">
         <img src="{{ url_for('static', filename='images/pic03.jpg') }}" alt=""/>
@@ -56,7 +56,7 @@
             <span>Convolutional Neural Network</span></p>
         </header>
       </article>
-      {# A.I. Articles #}
+      {#- A.I. Articles #}
       <article>
       <span class="image">
         <img src="{{ url_for('static', filename='images/pic04.jpg') }}" alt=""/>
@@ -66,7 +66,7 @@
           <p>Articles written by A.I. with <span>Recurrent Neural Networks</span></p>
         </header>
       </article>
-      {# Auto-encoding #}
+      {#- Auto-encoding #}
       <article>
       <span class="image">
         <img src="{{ url_for('static', filename='images/pic05.jpg') }}" alt=""/>
@@ -76,7 +76,7 @@
           <p>Create variations of a single image with <span>Variational Auto Encoders</span></p>
         </header>
       </article>
-      {# Reinforcement learning #}
+      {#- Reinforcement learning #}
       <article>
       <span class="image">
         <img src="{{ url_for('static', filename='images/pic06.jpg') }}" alt=""/>
@@ -108,4 +108,4 @@
 
   </div>
 
-{% endblock %}
+{%- endblock %}
