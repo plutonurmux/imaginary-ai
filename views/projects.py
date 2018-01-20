@@ -2,9 +2,9 @@
   @author Victor I. Afolabi
   A.I. engineer/researcher & Software engineer
   javafolabi@gmail.com
-  
+
   Created on 04 January, 2018 @ 7:28 PM.
-  
+
   Copyright © 2018. Victor. All rights reserved.
 """
 from flask import render_template, request
@@ -27,7 +27,9 @@ def image_classification():
         'datasets': img_class.all_datasets(full_path=False),
         'datasets_full': img_class.all_datasets(full_path=True)
     }
-    data['class_n_image'] = img_class.classes_and_image(dataset_dir=data['datasets_full'][0])
+    data['class_n_image'] = img_class.classes_and_image(
+                                dataset_dir=data['datasets_full'][0]
+                            )
     return render_template('projects/image-classification.html', data=data)
 
 
