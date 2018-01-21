@@ -7,6 +7,7 @@
 
   Copyright © 2018. Victor. All rights reserved.
 """
+
 from flask import render_template, request
 # helper module for image classification
 import models.projects.image_classification as img_class
@@ -43,14 +44,7 @@ def image_classification():
     Returns:
         [type] -- [description]
     """
-
-    data = {
-        'datasets': img_class.all_datasets(full_path=False),
-        'datasets_full': img_class.all_datasets(full_path=True)
-    }
-    data['class_n_image'] = img_class.classes_and_image(
-        dataset_dir=data['datasets_full'][0])
-    return render_template('projects/image-classification.html', data=data)
+    return render_template('projects/image-classification.html')
 
 
 @app.route('/projects/generative-models/')
