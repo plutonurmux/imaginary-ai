@@ -68,9 +68,9 @@
           <div class="select-wrapper">
             <select name="demo-category" id="demo-category" title="Available datasets">
               <option hidden>- Select preferred dataset -</option>
-              {% for ds in data['datasets'] -%}
-                <option value="{{ ds }}">{{ ds|replace('_', ' ')|replace('-', ' ') }}</option>
-              {%- endfor %}
+              {# {% for ds in data['datasets'] -%} #}
+                {# <option value="{{ ds }}">{{ ds|replace('_', ' ')|replace('-', ' ') }}</option> #}
+              {# {%- endfor %} #}
             </select>
           </div>
         </div>
