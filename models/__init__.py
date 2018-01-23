@@ -7,10 +7,6 @@
   
   Copyright © 2018. Victor. All rights reserved.
 """
-from models import config
-from models import dataset
-from models import neural_network
-from models import projects
 
 __all__ = [
     'config',

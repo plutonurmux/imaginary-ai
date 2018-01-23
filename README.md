@@ -1,6 +1,6 @@
 # Imaginary A.I.
 
-> by _Victor I. Afolabi_
+> by _[Victor I. Afolabi](https://github.com/victor-iyiola/)_
 
 A portfolio-ish platform that helps visualize some of my interesting Artificial Intelligence projects and researches.
 
@@ -25,3 +25,11 @@ Resources: You'll find interesting datasets on [deeplearning.net](http://deeplea
 
 - A language model
 
+## Dependencies
+
+- [Python3](http://python.org/)
+- [Flask](http://flask.pocoo.org/) – ```pip3 install flask```
+- [Keras](http://keras.io/) – ```pip3 install keras```
+- [Numpy](http://www.numpy.org/) – ```pip3 install numpy```
+- [Pandas](https://pandas.pydata.org/) – ```pip3 install pandas```
+- [Cython](http://cython.org/) – ```pip3 install cython```
