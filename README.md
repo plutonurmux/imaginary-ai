@@ -27,7 +27,7 @@ Resources: You'll find interesting datasets on [deeplearning.net](http://deeplea
 
 ## Dependencies
 
-- [Python3](http://python.org/)
+- [Python ^3.6.4](http://python.org/)
 - [Flask](http://flask.pocoo.org/) – ```pip3 install flask```
 - [Keras](http://keras.io/) – ```pip3 install keras```
 - [Numpy](http://www.numpy.org/) – ```pip3 install numpy```
