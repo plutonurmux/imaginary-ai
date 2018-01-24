@@ -28,8 +28,35 @@ Resources: You'll find interesting datasets on [deeplearning.net](http://deeplea
 ## Dependencies
 
 - [Python ^3.6.4](http://python.org/)
-- [Flask](http://flask.pocoo.org/) – ```pip3 install flask```
-- [Keras](http://keras.io/) – ```pip3 install keras```
-- [Numpy](http://www.numpy.org/) – ```pip3 install numpy```
-- [Pandas](https://pandas.pydata.org/) – ```pip3 install pandas```
-- [Cython](http://cython.org/) – ```pip3 install cython```
+- [Flask](http://flask.pocoo.org/) – ```pip install flask```
+- [Keras](http://keras.io/) – ```pip install keras```
+- [Numpy](http://www.numpy.org/) – ```pip install numpy```
+- [Pandas](https://pandas.pydata.org/) – ```pip install pandas```
+- [Cython](http://cython.org/) – ```pip install cython```
+
+```
+$ sudo pip install --upgrade pip
+```
+
+Then you probably want to work from your local PC:
+
+Start by cloning the project from github:
+```
+$ cd ~/Documents/
+$ git clone https://github.com/victor-iyiola/imaginary-ai.git
+$ cd imaginary-ai
+``` 
+
+Then install these requirements:
+```
+$ pip install --upgrade -r requirements.txt
+```
+     
+Finally, start the project:
+```
+$ python __init__.py
+```
+
+## Contributions
+
+This project is opened under MIT 2.0 license.

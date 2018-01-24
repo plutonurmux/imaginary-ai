@@ -10,19 +10,24 @@
 -->
 <html>
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#2a2f4a">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
 
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
   <title>{{ title }} &bull; Imaginary A.I.</title>
 
-  <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
   <!--[if lte IE 8]>
-  <script src="{{ url_for('static', filename='js/ie/html5shiv.js') }}"></script><![endif]-->
+  <script src="{{ url_for('static', filename='js/ie/html5shiv.js') }}"></script>
+  <![endif]-->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"/>
   <!--[if lte IE 9]>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/ie9.css') }}"/><![endif]-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/ie9.css') }}"/>
+  <![endif]-->
   <!--[if lte IE 8]>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/ie8.css') }}"/><![endif]-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/ie8.css') }}"/>
+  <![endif]-->
 </head>
 <body>
 <!-- Wrapper -->

@@ -1,0 +1,26 @@
+# Upgrade Python package manager
+#     $ sudo pip install --upgrade pip
+#
+# Then you probably want to work from your local PC:
+#
+# Start by cloning the project from github:
+#      $ cd ~/Documents/
+#      $ git clone https://github.com/victor-iyiola/imaginary-ai.git
+#      $ cd imaginary-ai
+#
+# Then install these requirements:
+#     $ pip install --upgrade -r requirements.txt
+#
+# Finally, start the project:
+#     $ python __init__.py
+
+werkzeug==0.14.1
+flask==0.12.2
+beautifulsoup4==4.6.0
+scipy==1.0.0
+numpy==1.14.0
+pandas==0.22.0
+tensorflow==1.3.0
+keras==2.1.2
+cython==0.27.3
+Pillow==5.0.0
