@@ -28,7 +28,6 @@ Icon
 ### Python template
 # Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[cod]
 *$py.class
 
 # C extensions
@@ -56,4 +55,3 @@ instance/
 datasets/
 uploads/
 saved/
-elements.html
