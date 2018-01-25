@@ -59,4 +59,4 @@ $ python __init__.py
 
 ## Contributions
 
-This project is opened under MIT 2.0 license.
+This project is opened under [MIT 2.0 license](https://github.com/victor-iyiola/imaginary-ai/blob/master/LICENSE).
