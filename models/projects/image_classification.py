@@ -13,7 +13,7 @@
 import os.path
 import random
 
-from helpers.consts import DATASETS_DIR
+from helpers.consts import IMAGE_DATASET_DIR
 
 
 def __list_dir(directory, full_path=True):
@@ -27,7 +27,7 @@ def __get_random_image(class_path):
 
 
 def all_datasets(full_path=False):
-    return __list_dir(DATASETS_DIR, full_path=full_path)
+    return __list_dir(IMAGE_DATASET_DIR, full_path=full_path)
 
 
 def dataset_classes(dataset_dir, full_path=False):

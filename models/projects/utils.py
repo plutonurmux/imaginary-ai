@@ -11,11 +11,11 @@ import os.path
 
 from werkzeug.utils import secure_filename
 
-from helpers.consts import UPLOAD_DIR, STATIC_DIR, ALLOWED_EXTENSIONS
+from helpers.consts import UPLOAD_DIR, STATIC_DIR, ALLOWED_IMAGE_EXTENSIONS
 
 
 def allowed_file(filename):
-    return filename and filename.split('.')[-1] in ALLOWED_EXTENSIONS
+    return filename and filename.split('.')[-1] in ALLOWED_IMAGE_EXTENSIONS
 
 
 def maybe_download_or_upload(file, folder=''):
@@ -46,4 +46,4 @@ def upload_file(file, upload_folder=''):
         # Returns the upload directory starting from 'images/uploads/...'
         relative_path_to_static_dir = path.replace(STATIC_DIR, '')
         return relative_path_to_static_dir.strip('/')
-    raise Exception(f'Image extension can be one of {", ".join(ALLOWED_EXTENSIONS)}')
+    raise Exception(f'Image extension must be one of \"{", ".join(ALLOWED_IMAGE_EXTENSIONS)}\"')
