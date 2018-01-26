@@ -10,7 +10,7 @@
 
 from flask import render_template, request, flash
 # helper module for image classification
-# import models.projects.image_classification as img_class
+import models.projects.image_classification as img_class
 # helper module for image search
 import models.projects.image_search as img_search
 from views import app, back
@@ -44,7 +44,8 @@ def image_classification():
     Returns:
         [type] -- [description]
     """
-    return render_template('projects/image-classification.html')
+    data = {'datasets': img_class.all_datasets()}
+    return render_template('projects/image-classification.html', data=data)
 
 
 @app.route('/projects/generative-models/')
