@@ -8,7 +8,7 @@
   Copyright © 2018. Victor. All rights reserved.
 """
 
-from flask import render_template, request
+from flask import render_template, request, flash
 # helper module for image classification
 # import models.projects.image_classification as img_class
 # helper module for image search
@@ -81,7 +81,7 @@ def image_search():
             data = img_search.process(request)
             return render_template('projects/image-search.html', data=data)
         except Exception as e:
-            print(f'ERROR: {e}')
+            flash(e)
             return render_template('projects/image-search.html', error=e)
     # !- request.method == 'GET'
     return render_template('projects/image-search.html')

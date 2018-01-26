@@ -14,6 +14,7 @@
       Your dataset to be uploaded must be a <code>.zip</code> file & the
       directory must contain the class labels whereas the class labels holds all the images for that class.
     </blockquote>
+    {%- include '_includes/_flash_msg_warn.html' %}
   </div>
 
   <div class="row 200%">
@@ -71,27 +72,30 @@
         <div class="12u$">
           <h3>Dataset Options</h3>
           <form action="{{ url_for('image_classification') }}" method="post" enctype="multipart/form-data">
+            {#- Upload new dataset  #}
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <button type="submit" name="upload" class="button special fit icon fa-upload">Upload</button>
+              </div>
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="upload-dataset">
+                <label class="custom-file-label" for="upload-dataset">Upload new dataset</label>
+              </div>
+            </div>
+            <h5 style="text-align: center;">OR</h5>
+            {#- Select existing dataset #}
             <div class="select-wrapper">
               <select name="demo-category" id="demo-category" title="Available datasets">
-                <option hidden>- Select preferred dataset -</option>
+                <option hidden>- Select existing dataset -</option>
                 {#- {% for ds in data['datasets'] -%} #}
-                {#-
-              <option value="{{ ds }}">{{ ds|replace('_', ' ')|replace('-', ' ') }}</option>
-              #}
+                {#- <option value="{{ ds }}">{{ ds|replace('_', ' ')|replace('-', ' ') }}</option> #}
                 {#- {%- endfor %} #}
               </select>
             </div>
-            <ul class="actions">
+            {#- Train this dataset  #}
+            <ul class="actions fit">
               <li>
-                <button class="button small fit icon fa-cogs">
-                  Train this dataset
-                </button>
-              </li>
-              <li>
-                <label for="upload-dataset" title="Upload new dataset">
-                  <input type="file" value="Upload new dataset" accept="application/zip"
-                         id="upload-dataset" class="button small fit icon fa-file-zip-o">
-                </label>
+                <button type="submit" name="train" class="button fit icon fa-cogs">Train this dataset</button>
               </li>
             </ul>
           </form>

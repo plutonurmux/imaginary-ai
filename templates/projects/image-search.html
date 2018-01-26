@@ -16,10 +16,7 @@
     class label, because of the awesomeness of the InceptionV3 model.
   </p>
   {#- Display error #}
-  {% if error -%}
-    <p class="error icon fa-warning"> {{ error }}</p>
-  {%- endif %}
-
+  {%- include "_includes/_flah_msg_err.html" %}
   {#- Image form #}
   <form action="{{ url_for('image_search') }}" method="post" enctype="multipart/form-data" id="image-search-form">
     <div class="row uniform">

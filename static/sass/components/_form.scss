@@ -104,6 +104,53 @@ textarea {
   }
 }
 
+// custom input["file"] label
+label.custom-file-label {
+  content: 'lookup';
+  @include vendor('appearance', 'none');
+  @include vendor('transition', (
+    'background-color #{_duration(transition)} ease-in-out',
+    'box-shadow #{_duration(transition)} ease-in-out',
+    'color #{_duration(transition)} ease-in-out'
+  ));
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: inset 0 0 0 2px _palette(fg-bold);
+  color: _palette(fg-bold);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: _font(weight-bold);
+  height: 3.5em;
+  letter-spacing: _font(letter-spacing-alt);
+  line-height: 3.5em;
+  padding: 0 1.75em;
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  &:invalid {
+    box-shadow: none;
+  }
+  &:active, &:hover {
+    background-color: transparentize(_palette(highlight), 0.9);
+    box-shadow: inset 0 0 0 2px desaturate(darken(_palette(highlight), 15), 5);
+    color: desaturate(darken(_palette(highlight), 15), 5);
+  }
+  &:focus {
+    border-color: _palette(highlight);
+    box-shadow: 0 0 0 2px _palette(highlight);
+  }
+
+  &:after {
+    content: 'Browse';
+    height: 3.5em;
+    line-height: 3.5em;
+    padding: 0 1.75em;
+  }
+}
+
 input[type='file'] {
   display: none;
 }
@@ -132,12 +179,13 @@ input[type='file'] {
   }
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="tel"],
-input[type="search"],
 input[type="url"],
+input[type="tel"],
+input[type="text"],
+  //input[type="file"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
 select {
   height: _size(element-height);
 }
