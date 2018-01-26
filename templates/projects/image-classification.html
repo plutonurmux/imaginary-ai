@@ -72,32 +72,42 @@
         <div class="12u$">
           <h3>Dataset Options</h3>
           <form action="{{ url_for('image_classification') }}" method="post" enctype="multipart/form-data">
-            {#- Upload new dataset  #}
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <button type="submit" name="upload" class="button special fit icon fa-upload">Upload</button>
+            <div class="row uniform">
+              {#- Select existing dataset #}
+              <div class="12u$">
+                <div class="select-wrapper">
+                  <select name="demo-category" id="demo-category" title="Existing datasets">
+                    <option hidden>- Select existing dataset -</option>
+                    {% for ds in data['datasets'] %}
+                      <option value="{{ ds }}">{{ ds|replace('_', ' ')|replace('-', ' ')|capitalize }}</option>
+                    {%- endfor %}
+                  </select>
+                </div>
               </div>
-              <div class="custom-file">
-                <input type="file" class="custom-file-input" id="upload-dataset">
-                <label class="custom-file-label" for="upload-dataset">Upload new dataset</label>
+              <div class="12u" style="text-align: center;">
+                <h5 style="text-align: center;">OR</h5>
+              </div>
+              {#- Upload new dataset  #}
+              <div class="12u$">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <button type="submit" name="upload" class="button special fit icon fa-upload">Upload</button>
+                  </div>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="upload-dataset">
+                    <label class="custom-file-label" for="upload-dataset">Upload new dataset</label>
+                  </div>
+                </div>
+              </div>
+              {#- Train this dataset  #}
+              <div class="12u$">
+                <ul class="actions fit">
+                  <li>
+                    <button type="submit" name="train" class="button fit icon fa-cogs">Train this dataset</button>
+                  </li>
+                </ul>
               </div>
             </div>
-            <h5 style="text-align: center;">OR</h5>
-            {#- Select existing dataset #}
-            <div class="select-wrapper">
-              <select name="demo-category" id="demo-category" title="Available datasets">
-                <option hidden>- Select existing dataset -</option>
-                {% for ds in data['datasets'] %}
-                  <option value="{{ ds }}">{{ ds|replace('_', ' ')|replace('-', ' ')|capitalize }}</option>
-                {% endfor %}
-              </select>
-            </div>
-            {#- Train this dataset  #}
-            <ul class="actions fit">
-              <li>
-                <button type="submit" name="train" class="button fit icon fa-cogs">Train this dataset</button>
-              </li>
-            </ul>
           </form>
         </div>
         {#- Dataset contents #}
