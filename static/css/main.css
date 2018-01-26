@@ -1244,6 +1244,15 @@ body {
 
   .\-1u\28xxsmall\29 {
     margin-left: 8.3333333333%; } }
+/**
+  * @author Victor I. Afolabi
+  * A.I. engineer/researcher & Software engineer
+  * javafolabi@gmail.com
+
+  * Created on 04 January, 2018 @ 4:59 PM.
+
+  * Copyright (c) 2018. Victor. All rights reserved.
+	*/
 /* Basic */
 @-ms-viewport {
   width: device-width; }
@@ -1265,6 +1274,15 @@ body {
     -ms-transition: none !important;
     transition: none !important; }
 
+/**
+  * @author Victor I. Afolabi
+  * A.I. engineer/researcher & Software engineer
+  * javafolabi@gmail.com
+
+  * Created on 04 January, 2018 @ 4:59 PM.
+
+  * Copyright (c) 2018. Victor. All rights reserved.
+	*/
 /* Type */
 body, input, select, textarea {
   color: #ffffff;
@@ -1393,6 +1411,15 @@ hr {
 .align-right {
   text-align: right; }
 
+/**
+  * @author Victor I. Afolabi
+  * A.I. engineer/researcher & Software engineer
+  * javafolabi@gmail.com
+
+  * Created on 04 January, 2018 @ 4:59 PM.
+
+  * Copyright (c) 2018. Victor. All rights reserved.
+	*/
 /* Section/Article */
 section.special, article.special {
   text-align: center; }
@@ -1427,6 +1454,15 @@ header.major {
   header.major > p br {
     display: none; } }
 
+/**
+  * @author Victor I. Afolabi
+  * A.I. engineer/researcher & Software engineer
+  * javafolabi@gmail.com
+
+  * Created on 04 January, 2018 @ 4:59 PM.
+
+  * Copyright (c) 2018. Victor. All rights reserved.
+	*/
 /* Form */
 form {
   margin: 0 0 2em 0; }
@@ -1626,6 +1662,15 @@ input[type="radio"] + label:before {
   color: rgba(244, 244, 255, 0.2) !important;
   opacity: 1.0; }
 
+/**
+  * @author Victor I. Afolabi
+  * A.I. engineer/researcher & Software engineer
+  * javafolabi@gmail.com
+
+  * Created on 04 January, 2018 @ 4:59 PM.
+
+  * Copyright (c) 2018. Victor. All rights reserved.
+	*/
 /* Box */
 .box {
   border: solid 1px rgba(212, 212, 255, 0.1);
@@ -1640,6 +1685,15 @@ input[type="radio"] + label:before {
     border-radius: 0;
     padding: 0; }
 
+/**
+  * @author Victor I. Afolabi
+  * A.I. engineer/researcher & Software engineer
+  * javafolabi@gmail.com
+
+  * Created on 04 January, 2018 @ 4:59 PM.
+
+  * Copyright (c) 2018. Victor. All rights reserved.
+	*/
 /* Icon */
 .icon {
   text-decoration: none;
@@ -1674,6 +1728,15 @@ a.icon.alt:hover:before {
 a.icon.alt:active:before {
   background-color: #37a6cb; }
 
+/**
+  * @author Victor I. Afolabi
+  * A.I. engineer/researcher & Software engineer
+  * javafolabi@gmail.com
+
+  * Created on 04 January, 2018 @ 4:59 PM.
+
+  * Copyright (c) 2018. Victor. All rights reserved.
+	*/
 /* Image */
 .image {
   border: 0;
@@ -1713,6 +1776,15 @@ a.icon.alt:active:before {
   width: 300px;
   height: 300px; }
 
+/**
+  * @author Victor I. Afolabi
+  * A.I. engineer/researcher & Software engineer
+  * javafolabi@gmail.com
+
+  * Created on 04 January, 2018 @ 4:59 PM.
+
+  * Copyright (c) 2018. Victor. All rights reserved.
+	*/
 /* List */
 ol {
   list-style: decimal;
@@ -1835,6 +1907,15 @@ dl {
   dl dd {
     margin-left: 2em; }
 
+/**
+  * @author Victor I. Afolabi
+  * A.I. engineer/researcher & Software engineer
+  * javafolabi@gmail.com
+
+  * Created on 04 January, 2018 @ 4:59 PM.
+
+  * Copyright (c) 2018. Victor. All rights reserved.
+	*/
 /* Table */
 .table-wrapper {
   -webkit-overflow-scrolling: touch;
@@ -1876,6 +1957,15 @@ table {
     table.alt tfoot {
       border-top: 0; }
 
+/**
+  * @author Victor I. Afolabi
+  * A.I. engineer/researcher & Software engineer
+  * javafolabi@gmail.com
+
+  * Created on 04 January, 2018 @ 4:59 PM.
+
+  * Copyright (c) 2018. Victor. All rights reserved.
+	*/
 /* Button */
 input[type="submit"],
 input[type="reset"],
@@ -2057,6 +2147,15 @@ button,
     cursor: default;
     opacity: 0.25; }
 
+/**
+  * @author Victor I. Afolabi
+  * A.I. engineer/researcher & Software engineer
+  * javafolabi@gmail.com
+
+  * Created on 04 January, 2018 @ 4:59 PM.
+
+  * Copyright (c) 2018. Victor. All rights reserved.
+	*/
 /* Tiles */
 .tiles {
   display: -moz-flex;
@@ -2185,6 +2284,15 @@ button,
         height: 20em;
         width: 100% !important; } }
 
+/**
+  * @author Victor I. Afolabi
+  * A.I. engineer/researcher & Software engineer
+  * javafolabi@gmail.com
+
+  * Created on 04 January, 2018 @ 4:59 PM.
+
+  * Copyright (c) 2018. Victor. All rights reserved.
+	*/
 /* Contact Method */
 .contact-method {
   margin: 0 0 2em 0;
@@ -2197,6 +2305,15 @@ button,
   .contact-method h3 {
     margin: 0 0 0.5em 0; }
 
+/**
+  * @author Victor I. Afolabi
+  * A.I. engineer/researcher & Software engineer
+  * javafolabi@gmail.com
+
+  * Created on 04 January, 2018 @ 4:59 PM.
+
+  * Copyright (c) 2018. Victor. All rights reserved.
+	*/
 /* Spotlights */
 .spotlights {
   border-top: 0 !important; }
@@ -2289,6 +2406,15 @@ button,
     .spotlights > section > .content {
       padding: 3em 1.5em 1em 1.5em ; } }
 
+/**
+  * @author Victor I. Afolabi
+  * A.I. engineer/researcher & Software engineer
+  * javafolabi@gmail.com
+
+  * Created on 04 January, 2018 @ 4:59 PM.
+
+  * Copyright (c) 2018. Victor. All rights reserved.
+*/
 /* Header */
 @-moz-keyframes reveal-header {
   0% {
@@ -2636,6 +2762,15 @@ button,
       #banner.major {
         padding: 8em 0 4em 0 ; } }
 
+/**
+  * @author Victor I. Afolabi
+  * A.I. engineer/researcher & Software engineer
+  * javafolabi@gmail.com
+
+  * Created on 04 January, 2018 @ 4:59 PM.
+
+  * Copyright (c) 2018. Victor. All rights reserved.
+*/
 /* Main */
 #main {
   background-color: #2a2f4a; }
@@ -2656,6 +2791,15 @@ button,
     background-color: transparent;
     border-bottom: solid 1px rgba(212, 212, 255, 0.1); }
 
+/**
+  * @author Victor I. Afolabi
+  * A.I. engineer/researcher & Software engineer
+  * javafolabi@gmail.com
+
+  * Created on 04 January, 2018 @ 4:59 PM.
+
+  * Copyright (c) 2018. Victor. All rights reserved.
+	*/
 /* Contact */
 #contact {
   border-bottom: solid 1px rgba(212, 212, 255, 0.1);
@@ -2706,6 +2850,15 @@ button,
     #contact > .inner > :nth-child(2n - 1) {
       padding: 3em 0 1em 0 ; } }
 
+/**
+  * @author Victor I. Afolabi
+  * A.I. engineer/researcher & Software engineer
+  * javafolabi@gmail.com
+
+  * Created on 04 January, 2018 @ 4:59 PM.
+
+  * Copyright (c) 2018. Victor. All rights reserved.
+*/
 /* Footer */
 #footer .copyright {
   font-size: 0.8em;
@@ -2730,6 +2883,15 @@ button,
     padding-left: 0;
     line-height: inherit; } }
 
+/**
+  * @author Victor I. Afolabi
+  * A.I. engineer/researcher & Software engineer
+  * javafolabi@gmail.com
+
+  * Created on 04 January, 2018 @ 4:59 PM.
+
+  * Copyright (c) 2018. Victor. All rights reserved.
+*/
 /* Wrapper */
 #wrapper {
   -moz-transition: -moz-filter 0.35s ease, -webkit-filter 0.35s ease, opacity 0.375s ease-out;
@@ -2752,6 +2914,15 @@ button,
     #wrapper {
       padding-top: 2.75em; } }
 
+/**
+  * @author Victor I. Afolabi
+  * A.I. engineer/researcher & Software engineer
+  * javafolabi@gmail.com
+
+  * Created on 04 January, 2018 @ 4:59 PM.
+
+  * Copyright (c) 2018. Victor. All rights reserved.
+*/
 /* Menu */
 #menu {
   -moz-transition: -moz-transform 0.35s ease, opacity 0.35s ease, visibility 0.35s;
