@@ -362,11 +362,4 @@
 
   });
 
-  // footer icons
-  $('ul.icons li a').on('mouseover', function () {
-    $(this).removeClass('alt');
-  }).on('mouseout', function () {
-    $(this).addClass('alt');
-  });
-  
 })(jQuery);
