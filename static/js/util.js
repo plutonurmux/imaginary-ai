@@ -584,33 +584,7 @@
 
   };
 
-  /**
-   * +–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––+
-   * | Uploading from file
-   * +–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––+
-   */
-  $('#upload-file').on('change', function (e) {
-    var $upload_file = $('#upload-file');
-    set_upload_placeholder({input_file: $upload_file, input_id: 'image-url', value: e.target.value});
-    preview_upload($upload_file, 'preview');
-  });
-
-  /**
-   * +–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––+
-   * | Camera capture upload
-   * +–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––+
-   */
-  $('#camera-file').on('change', function (e) {
-    var $cam_file = $('#camera-file');
-    set_upload_placeholder({
-      input_file: $cam_file,
-      input_id: 'image-url',
-      value: e.target.value
-    });
-    preview_upload($cam_file, 'preview');
-  });
-
-  /**
+    /**
    * Display upload filename in an input box as a placeholder
    * @param params {object} [input_file, [input_id, [value, [attr,]]]]
    */
@@ -662,5 +636,31 @@
     }
 
   }
+
+  /**
+   * +–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––+
+   * | Uploading from file
+   * +–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––+
+   */
+  $('#upload-file').on('change', function (e) {
+    var $upload_file = $('#upload-file');
+    set_upload_placeholder({input_file: $upload_file, input_id: 'image-url', value: e.target.value});
+    preview_upload($upload_file, 'preview');
+  });
+
+  /**
+   * +–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––+
+   * | Camera capture upload
+   * +–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––+
+   */
+  $('#camera-file').on('change', function (e) {
+    var $cam_file = $('#camera-file');
+    set_upload_placeholder({
+      input_file: $cam_file,
+      input_id: 'image-url',
+      value: e.target.value
+    });
+    preview_upload($cam_file, 'preview');
+  });
 
 })(jQuery);
