@@ -15,7 +15,7 @@ const config = {
   entry: './js/src/index.jsx',
 
   output: {
-    path: './js/build',
+    path: __dirname + '/js/dist',
     filename: 'bundle.js',
   },
 

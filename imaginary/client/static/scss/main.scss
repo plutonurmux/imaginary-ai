@@ -1,10 +1,15 @@
+// external css files
+@import 'bootstrap.min.css';
+@import 'font-awesome.min.css';
+
+// google font
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic');
+
+// libs
 @import 'libs/vars';
 @import 'libs/functions';
 @import 'libs/mixins';
 @import 'libs/skel';
-@import 'bootstrap.min.css';
-@import 'font-awesome.min.css';
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic');
 
 @include skel-breakpoints((
   xlarge: '(max-width: 1680px)',

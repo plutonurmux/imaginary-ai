@@ -8,5 +8,7 @@
   Copyright © 2018. Victor. All rights reserved.
 """
 from imaginary.server.views.controllers import *
-from imaginary.server.views.apis import *
+from imaginary.server.views.projects import *
+from imaginary.server.views.research import *
 from imaginary.server.views.errors import *
+from imaginary.server.views.apis import *
