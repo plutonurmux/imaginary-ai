@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * @author Victor I. Afolabi
  *
@@ -6,7 +5,9 @@
  * javafolabi@gmail.com
  *
  * Created on 01 February, 2018 @ 2:18 PM.
- * Copyright © 2018. Victor. All rights reserved.
+ * Copyright (c) 2018. Victor. All rights reserved.
  */
+@import url(ext-css/bootstrap.min.css);
+@import url(ext-css/font-awesome.min.css);
 
 /*# sourceMappingURL=main.css.map */

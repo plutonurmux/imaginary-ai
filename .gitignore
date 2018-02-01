@@ -51,6 +51,9 @@ instance/
 !.vscode/launch.json
 !.vscode/extensions.json
 
+### Node template
+node_modules/
+
 ### Project specific
 datasets/
 uploads/
