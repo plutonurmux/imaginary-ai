@@ -53,6 +53,7 @@ instance/
 
 ### Node template
 node_modules/
+dist/
 
 ### Project specific
 datasets/

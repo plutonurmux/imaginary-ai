@@ -8,3 +8,10 @@
  * Copyright © 2018. Victor. All rights reserved.
  */
 
+import { combineReducers } from 'redux';
+
+const rootReducer = combineReducers({
+
+});
+
+export default rootReducer;

@@ -12,10 +12,10 @@ const webpack = require('webpack');
 
 const config = {
 
-  entry: __dirname + '/js/index.jsx',
+  entry: './js/index.jsx',
 
   output: {
-    path: __dirname + '/dist',
+    path: './dist',
     filename: 'bundle.js',
   },
 

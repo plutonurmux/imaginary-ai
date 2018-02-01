@@ -14,4 +14,5 @@ from imaginary.settings import STATIC_FOLDER, TEMPLATE_FOLDER, APP_NAME
 app = Flask(__name__, static_folder=STATIC_FOLDER, template_folder=TEMPLATE_FOLDER)
 app.config.from_object(f'{APP_NAME}.server.config.mode.Development')
 
+from imaginary.server.utils.back import back
 from imaginary.server.views import *

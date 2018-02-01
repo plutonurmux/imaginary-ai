@@ -13,14 +13,14 @@
 <head>
   <meta charset="UTF-8">
   <title>{% block title %}{% endblock %} &bull; Imaginary A.I.</title>
+  <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
 <body>
 
-{% block body %}
   <div class="container"></div>
-{% endblock %}
 
 <!-- scripts -->
-<script src="{{ url_for('static', filename='js/dist/bundle.js') }}"></script>
+<script src="{{ url_for('static', filename='dist/bundle.js') }}"></script>
 </body>
 </html>
