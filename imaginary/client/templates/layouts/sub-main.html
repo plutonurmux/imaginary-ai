@@ -1,0 +1,28 @@
+{%- extends 'layouts/main.html' %}
+
+{#- This layout uses: style2 #}
+{%- set style='style2' %}
+
+{% block body -%}
+  <!-- Banner -->
+  <section id="banner" class="{{ style }}">
+    <div class="inner">
+    <span class="image">
+      {% block image -%}
+        <img src="{{ url_for('static', filename='images/pic07.jpg') }}" alt=""/> {%- endblock %}
+    </span>
+      <header class="major">
+        <h1>{{ self.title() }}</h1>
+      </header>
+      <div class="content">
+        {% block description -%}{%- endblock %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Main -->
+  <div id="main">
+    {% block content -%} {%- endblock content %}
+  </div>
+
+{%- endblock body %}
