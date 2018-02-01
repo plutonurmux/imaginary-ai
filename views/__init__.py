@@ -29,8 +29,3 @@ from views.research import *
 @back.anchor
 def index():
     return render_template('index.html')
-
-
-@app.route('/elements/')
-def elements():
-    return render_template('elements.html')
