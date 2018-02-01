@@ -34,29 +34,49 @@ Resources: You'll find interesting datasets on [deeplearning.net](http://deeplea
 - [Pandas](https://pandas.pydata.org/) – ```pip install pandas```
 - [Cython](http://cython.org/) – ```pip install cython```
 
-```
-$ sudo pip install --upgrade pip
+## Setup
+
+Clone this repo 
+```commandline
+git clone https://github.com/victor-iyiola/imaginary-ai.git
 ```
 
-Then you probably want to work from your local PC:
+Or download the project [here](https://github.com/victor-iyiola/imaginary-ai/archive/fullstack.zip)
 
-Start by cloning the project from github:
-```
-$ cd ~/Documents/
-$ git clone https://github.com/victor-iyiola/imaginary-ai.git
-$ cd imaginary-ai
-``` 
-
-Then install these requirements:
-```
-$ pip install --upgrade -r requirements.txt
-```
-     
-Finally, start the project:
-```
-$ python __init__.py
+Then change your working directory as show below
+```commandline
+cd imaginary-ai
 ```
 
+Install python dependencies
+```commandline
+pip install --upgrade pip
+pip install --upgrade -r requirements.txt
+```
+
+Install npm dependencies
+```commandline
+cd flask_react_template/client/static
+npm install
+```
+
+After installing the dependencies. You can now start webpack (to compile all client files into a single javascript file. `bundle.js`)
+
+For development
+```commandline
+npm run watch
+```
+
+For Production
+```commandline
+npm run build
+```
+
+Excellent. Now it's time to start the Python (flask) web server.
+```
+cd <imaginary-ai>
+python run.py --debug=True
+```
 ## Contributions
 
-This project is opened under [MIT 2.0 license](https://github.com/victor-iyiola/imaginary-ai/blob/master/LICENSE).
+This project is opened under [MIT 2.0 license](https://github.com/victor-iyiola/imaginary-ai/blob/fullstack/LICENSE).
