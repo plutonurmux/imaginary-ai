@@ -19,7 +19,7 @@ class Projects extends Component {
 
   render() {
     return (
-      <div>
+      <div id="main">
        Projects page.
       </div>
     );

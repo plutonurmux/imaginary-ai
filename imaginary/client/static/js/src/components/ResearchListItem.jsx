@@ -13,9 +13,6 @@ import {Link} from 'react-router-dom';
 
 const ResearchListItem = (props) => {
 
-  // props.actions = props.actions || '';
-  // props.icon = props.icon || '';
-
   return (
     <div className="inner">
       <header className="major">

@@ -22,11 +22,9 @@
   </section>
 
   <!-- Main -->
-  <div id="main">
-    {% block content -%}
-      {# React container #}
-      <div id="app-root"></div>
-    {%- endblock content %}
-  </div>
+  {% block content -%}
+    {# React container #}
+    <div id="app-root"></div>
+  {%- endblock content %}
 
 {%- endblock body %}

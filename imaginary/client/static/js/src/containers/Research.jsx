@@ -16,7 +16,7 @@ import ResearchListItem from '../components/ResearchListItem';
 class Research extends Component {
   render() {
     return (
-      <div>
+      <div id="main">
         {/* Section One */}
         <section id="one">
           <ResearchListItem
