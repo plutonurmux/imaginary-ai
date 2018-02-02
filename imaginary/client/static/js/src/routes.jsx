@@ -13,7 +13,7 @@ import {Route, IndexRoute} from 'react-router';
 
 // containers
 import Home from './containers/Home';
-import Projects from './containers/Projects';
+import Projects from './containers/projects';
 import Research from './containers/research';
 
 

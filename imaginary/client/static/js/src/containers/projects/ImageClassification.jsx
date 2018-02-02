@@ -4,18 +4,18 @@
  * A.I. Engineer & Software developer
  * javafolabi@gmail.com
  *
- * Created on 02 February, 2018 @ 10:10 PM.
+ * Created on 02 February, 2018 @ 10:13 PM.
  * Copyright © 2018. Victor. All rights reserved.
  */
 
 import React from 'react';
 
-const ALanguageModel = () => {
+const ImageClassification = () => {
   return (
     <div id="main">
-      A language model.
+      Image classification.
     </div>
   );
 };
 
-export default ALanguageModel;
+export default ImageClassification;

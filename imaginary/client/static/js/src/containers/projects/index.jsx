@@ -11,8 +11,8 @@
 
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import InnerList from '../components/InnerList';
-import InnerListItem from '../components/InnerListItem';
+import InnerList from '../../components/InnerList';
+import InnerListItem from '../../components/InnerListItem';
 
 
 class Projects extends Component {
