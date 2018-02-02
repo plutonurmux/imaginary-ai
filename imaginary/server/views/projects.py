@@ -15,6 +15,11 @@ from imaginary.server import app, back
 @app.route('/projects/')
 @back.anchor
 def projects():
+    """
+    Projects page.
+
+    :return: HTML template.
+    """
     return render_template('projects/index.html')
 
 
