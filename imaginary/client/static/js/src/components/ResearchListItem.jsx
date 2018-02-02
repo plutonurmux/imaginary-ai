@@ -18,7 +18,7 @@ const ResearchListItem = (props) => {
       <header className="major">
         <h3>{props.title}</h3>
       </header>
-      <p>{props.description}</p>
+      {props.description}
       <ul className="actions">
         <li>
           <Link to={props.link} className={`button ${props.icon}`}>Learn more</Link>
