@@ -13,7 +13,7 @@ import {Link} from 'react-router-dom';
 
 import InnerListItem from './InnerListItem';
 
-const ResearchList = (props) => {
+const InnerList = (props) => {
   return (
     <section>
       <Link to={props.link} className="image">
@@ -26,4 +26,4 @@ const ResearchList = (props) => {
   );
 };
 
-export default ResearchList;
+export default InnerList;

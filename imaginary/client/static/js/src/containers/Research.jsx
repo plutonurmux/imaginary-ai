@@ -9,8 +9,8 @@
  */
 
 import React, {Component} from 'react';
-import ResearchList from '../components/InnerList';
-import ResearchListItem from '../components/InnerListItem';
+import InnerList from '../components/InnerList';
+import InnerListItem from '../components/InnerListItem';
 
 
 class Research extends Component {
@@ -19,7 +19,7 @@ class Research extends Component {
       <div id="main">
         {/* Section One */}
         <section id="one">
-          <ResearchListItem
+          <InnerListItem
             title="Deep Learning Research"
             actions={false} link="#"
             description={<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus
@@ -31,19 +31,19 @@ class Research extends Component {
         {/* Section Two */}
         <section id="two" className="spotlights">
           {/* A language model. */}
-          <ResearchList
+          <InnerList
             title="A Language Model"
-            image="../static/images/pic08.jpg"
+            image="/static/images/pic08.jpg"
             link="/research/a-language-model"
             description={<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus
               condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque
               lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>}
           />
           {/* Project Glass */}
-          <ResearchList
+          <InnerList
             title="Project Glass"
-            image="../static/images/pic08.jpg"
-            link="/research/a-language-model"
+            image="/static/images/pic08.jpg"
+            link="/research/project-glass"
             description={<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus
               condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque
               lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>}
@@ -53,10 +53,9 @@ class Research extends Component {
         {/* Section Three */}
         <section id="three">
           {/* Reinforcement learning Research */}
-          <ResearchListItem
+          <InnerListItem
             title="Reinforcement Learning Research"
-            link="/research/a-language-model"
-            icon="next"
+            icon="next" actions={false} link="#"
             description={<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna
               magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas
               laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat

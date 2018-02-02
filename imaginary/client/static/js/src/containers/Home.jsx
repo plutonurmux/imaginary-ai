@@ -12,7 +12,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import Banner from '../components/Banner';
 import HomeList from '../components/HomeList';
-import ResearchListItem from '../components/InnerListItem'
+import InnerListItem from '../components/InnerListItem'
 
 class Home extends Component {
 
@@ -73,7 +73,7 @@ class Home extends Component {
         <div id="main">
           <HomeList lists={this.state.project_list}/>
           <section id="two">
-            <ResearchListItem
+            <InnerListItem
               title="A Language Model"
               link="/research/a-language-model"
               icon="next"

@@ -24,6 +24,7 @@ def research():
 
 
 @app.route('/research/a-language-model/')
+@back.anchor
 def a_language_model():
     """
     A Language model research page.
@@ -31,3 +32,14 @@ def a_language_model():
     :return: HTML template.
     """
     return render_template('research/a-language-model.html')
+
+
+@app.route('/research/project-glass/')
+@back.anchor
+def project_glass():
+    """
+    Project Glass research page.
+
+    :return: HTML template.
+    """
+    return render_template('research/project-glass.html')
