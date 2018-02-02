@@ -14,7 +14,7 @@ import {Route, IndexRoute} from 'react-router';
 // containers
 import Home from './containers/Home';
 import Projects from './containers/Projects';
-import Research from './containers/Research';
+import Research from './containers/research';
 
 
 export default (
@@ -27,5 +27,6 @@ export default (
 
     {/* Research page. */}
     <Route path="/research" component={Research}/>
+
   </div>
 );

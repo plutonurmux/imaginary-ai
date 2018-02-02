@@ -9,8 +9,8 @@
  */
 
 import React, {Component} from 'react';
-import InnerList from '../components/InnerList';
-import InnerListItem from '../components/InnerListItem';
+import InnerList from '../../components/InnerList';
+import InnerListItem from '../../components/InnerListItem';
 
 
 class Research extends Component {
