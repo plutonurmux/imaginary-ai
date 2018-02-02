@@ -23,7 +23,10 @@
 
   <!-- Main -->
   <div id="main">
-    {% block content -%} {%- endblock content %}
+    {% block content -%}
+      {# React container #}
+      <div class="container-fluid"></div>
+    {%- endblock content %}
   </div>
 
 {%- endblock body %}

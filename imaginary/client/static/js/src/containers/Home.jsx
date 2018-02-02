@@ -33,7 +33,7 @@ class Home extends Component {
                 always wanted to build and do sth amazing and meaningful for the whole world...
               </p>
               <ul className="actions">
-                <li><Link to="/projects/a-language-model" className="button next">Learn More</Link></li>
+                <li><Link to="/research/a-language-model" className="button next">Learn More</Link></li>
               </ul>
             </div>
           </section>
