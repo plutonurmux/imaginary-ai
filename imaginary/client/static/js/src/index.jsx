@@ -39,7 +39,7 @@ ReactDOM.render(
     {/* ConnectedRouter will use the store from Provider automatically */}
     <ConnectedRouter history={history}>{routes}</ConnectedRouter>
   </Provider>,
-  document.querySelector('.container-fluid')
+  document.querySelector('#app-root')
 );
 
 
