@@ -72,6 +72,7 @@ class Home extends Component {
             <br/> and here's a side piece of my works</p>}/>
         <div id="main">
           <HomeList lists={this.state.project_list}/>
+
           <section id="two">
             <InnerListItem
               title="A Language Model"
