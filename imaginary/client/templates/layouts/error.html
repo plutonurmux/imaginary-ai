@@ -1,0 +1,12 @@
+{%- extends 'layouts/generic.html' %}
+
+{% block title -%}{{ self.heading() }}{%- endblock %}
+
+{% block heading -%}ERROR $ERR_NUMBER$: $ERR_TITLE${%- endblock %}
+
+{% block content -%}
+  <p>{{ error }}</p>
+  <ul class="actions">
+    <li><a href="{{ back.url() }}" class="button icon fa-arrow-left">Take me back</a></li>
+  </ul>
+{%- endblock %}

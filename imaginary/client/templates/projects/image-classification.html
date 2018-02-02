@@ -1,0 +1,173 @@
+{%- extends 'layouts/generic.html' %}
+
+{#- Page title #}
+{% block title -%}Image Classification{%- endblock %}
+
+{#- Page content #}
+{% block content -%}
+  <p>
+    You can upload your custom image dataset to train and evaluate performance. <br>
+  </p>
+  <div class="caution">
+    <h4><i class="fa fa fa-exclamation-circle"></i> CAUTION </h4>
+    <blockquote>
+      Your dataset to be uploaded must be a <code>.zip</code> file & the
+      directory must contain the class labels whereas the class labels holds all the images for that class.
+    </blockquote>
+    {%- include '_includes/_flash_msg_warn.html' %}
+  </div>
+
+  <div class="row 200%">
+    {#- Preview and scores #}
+    <div class="6u 12u$(medium)">
+      <div class="image fit" id="preview">
+        <h3>83.43% accuracy.</h3>
+        <img src="{{ url_for('static', filename='images/pic03.jpg') }}" alt="Preview image"/>
+      </div>
+      {#- Top results & accuracy #}
+      <h4>Top (5) Matches</h4>
+      <div class="table-wrapper">
+        <table class="alt">
+          <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Image Class</th>
+            <th>Score</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>1</td>
+            <td>Scorpion</td>
+            <td>83.64%</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Anchor</td>
+            <td>8.68%</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Beaver</td>
+            <td>3.75%</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Barrel</td>
+            <td>2.48%</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Ant</td>
+            <td>1.45%</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Datasets -->
+    <div class="6u$ 12u$(medium)">
+      <div class="row uniform">
+        {#-  Dataset options #}
+        <div class="12u$">
+          <h3>Dataset Options</h3>
+          <form action="{{ url_for('image_classification') }}" method="post" enctype="multipart/form-data">
+            <div class="row uniform">
+              {#- Select existing dataset #}
+              <div class="12u$">
+                <div class="select-wrapper">
+                  <select name="demo-category" id="demo-category" title="Existing datasets">
+                    <option hidden>- Select existing dataset -</option>
+                    {% for ds in data['datasets'] %}
+                      <option value="{{ ds }}">{{ ds|replace('_', ' ')|replace('-', ' ')|capitalize }}</option>
+                    {%- endfor %}
+                  </select>
+                </div>
+              </div>
+              <div class="12u" style="text-align: center;">
+                <h5 style="text-align: center;">OR</h5>
+              </div>
+              {#- Upload new dataset  #}
+              <div class="12u$">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <button type="submit" name="upload" class="button special fit icon fa-upload">Upload</button>
+                  </div>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="upload-dataset">
+                    <label class="custom-file-label" for="upload-dataset">Upload new dataset</label>
+                  </div>
+                </div>
+              </div>
+              {#- Train this dataset  #}
+              <div class="12u$">
+                <ul class="actions fit">
+                  <li>
+                    <button type="submit" name="train" class="button fit icon fa-cogs">Train this dataset</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </form>
+        </div>
+        {#- Dataset contents #}
+        <div class="12u$">
+          <h3>101 Objects Categories</h3>
+          <div class="box alt">
+            <div class="row 50% uniform">
+              <div class="4u">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic08.jpg') }}" alt=""/>
+            </span>
+              </div>
+              <div class="4u">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic09.jpg') }}" alt=""/>
+            </span>
+              </div>
+              <div class="4u$">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt=""/>
+            </span>
+              </div>
+              <!-- Break -->
+              <div class="4u">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt=""/>
+            </span>
+              </div>
+              <div class="4u">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic08.jpg') }}" alt=""/>
+            </span>
+              </div>
+              <div class="4u$">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic09.jpg') }}" alt=""/>
+            </span>
+              </div>
+              <!-- Break -->
+              <div class="4u">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic09.jpg') }}" alt=""/>
+            </span>
+              </div>
+              <div class="4u">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt=""/>
+            </span>
+              </div>
+              <div class="4u$">
+            <span class="image fit">
+              <img src="{{ url_for('static', filename='images/pic08.jpg') }}" alt=""/>
+            </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+{%- endblock %}
