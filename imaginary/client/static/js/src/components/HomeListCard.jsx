@@ -11,7 +11,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const ProjectListCard = (props) => {
+const HomeListCard = (props) => {
   return (
     <article>
       <span className="image">
@@ -25,4 +25,4 @@ const ProjectListCard = (props) => {
   )
 };
 
-export default ProjectListCard;
+export default HomeListCard;

@@ -11,7 +11,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import Banner from '../components/Banner';
-import ProjectList from '../components/ProjectList';
+import ProjectList from '../components/HomeList';
 import ResearchListItem from '../components/ResearchListItem'
 
 class Home extends Component {

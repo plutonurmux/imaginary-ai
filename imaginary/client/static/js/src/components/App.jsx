@@ -10,20 +10,12 @@
 
 import React, {Component} from 'react';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-
-  }
-
-  render() {
-    return (
-      <div>
-        Initial set up
-        {this.props.children}
-      </div>
-    );
-  }
-}
+const App = (props) => {
+  return (
+    <div id="main">
+      {props.children}
+    </div>
+  );
+};
 
 export default App;

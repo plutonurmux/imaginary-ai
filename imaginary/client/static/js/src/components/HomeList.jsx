@@ -10,9 +10,9 @@
 
 import React from 'react';
 
-import ProjectListCard from './ProjectListCard';
+import HomeListCard from './HomeListCard';
 
-const ProjectList = () => {
+const HomeList = () => {
 
   const project_list = [
     {
@@ -56,10 +56,10 @@ const ProjectList = () => {
   return (
     <section className='tiles' id='one'>
       {project_list.map((project) => {
-        return <ProjectListCard key={project.title} {...project} />
+        return <HomeListCard key={project.title} {...project} />
       })}
     </section>
   );
 };
 
-export default ProjectList;
+export default HomeList;
