@@ -11,7 +11,7 @@
 import { combineReducers } from 'redux';
 
 const rootReducer = combineReducers({
-
+  name: () => 'Victor',
 });
 
 export default rootReducer;
