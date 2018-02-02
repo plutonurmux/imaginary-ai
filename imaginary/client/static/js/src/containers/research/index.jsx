@@ -9,6 +9,7 @@
  */
 
 import React, {Component} from 'react';
+
 import InnerList from '../../components/InnerList';
 import InnerListItem from '../../components/InnerListItem';
 
@@ -19,6 +20,7 @@ class Research extends Component {
       <div id="main">
         {/* Section One */}
         <section id="one">
+          {/* Deep learning Research */}
           <InnerListItem
             title="Deep Learning Research"
             actions={false} link="#"

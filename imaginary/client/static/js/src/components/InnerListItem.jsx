@@ -19,7 +19,7 @@ const InnerListItem = (props) => {
     actions = (
       <ul className="actions">
         <li>
-          <Link to={props.link} className={`button ${props.icon}`}>Learn more</Link>
+          <Link to={props.link} className={`button ${props.icon || ''}`}>Learn more</Link>
         </li>
       </ul>
     );

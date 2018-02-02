@@ -20,6 +20,7 @@ class Projects extends Component {
   render() {
     return (
       <div id="main">
+        {/* Deep learning Projects */}
         <section id="one">
           <InnerListItem
             title="Deep Learning Projects"
@@ -49,7 +50,7 @@ class Projects extends Component {
           {/*Image Classification */}
           <InnerList
             title="Image Classification" image="/static/images/pic08.jpg"
-            link="/projects/image-classification" data_position="center center"
+            link="/projects/image-classification/" data_position="center center"
             description={<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus
               condimentumsem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem
               ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>}/>
@@ -77,6 +78,7 @@ class Projects extends Component {
             description={<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus
               condimentumsem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem
               ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>}/>
+
           {/*Auto Encoding */}
           <InnerList
             title="Auto Encoding" image="/static/images/pic10.jpg"
@@ -85,6 +87,7 @@ class Projects extends Component {
               condimentumsem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem
               ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>}/>
         </section>
+
         {/*Reinforcement Learning */}
         <section id="three">
           <InnerListItem
