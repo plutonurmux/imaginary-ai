@@ -18,6 +18,16 @@ def research():
     """
     Research home.
 
-    :return:
+    :return: HTML template.
     """
     return render_template('research/index.html')
+
+
+@app.route('/research/a-language-model/')
+def a_language_model():
+    """
+    A Language model research page.
+
+    :return: HTML template.
+    """
+    return render_template('research/a-language-model.html')
