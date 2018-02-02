@@ -23,9 +23,8 @@ class Research extends Component {
             title="Deep Learning Research"
             actions={false} link="#"
             description={<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus
-              condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque
-              lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>}
-          />
+              condimentumsem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem
+              ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>}/>
         </section>
 
         {/* Section Two */}
@@ -33,21 +32,17 @@ class Research extends Component {
           {/* A language model. */}
           <InnerList
             title="A Language Model"
-            image="/static/images/pic08.jpg"
-            link="/research/a-language-model"
+            image="/static/images/pic08.jpg" link="/research/a-language-model"
             description={<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus
-              condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque
-              lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>}
-          />
+              condimentumsem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem
+              ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>}/>
           {/* Project Glass */}
           <InnerList
             title="Project Glass"
-            image="/static/images/pic08.jpg"
-            link="/research/project-glass"
+            image="/static/images/pic09.jpg" link="/research/project-glass"
             description={<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus
-              condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque
-              lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>}
-          />
+              condimentumsem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem
+              ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>}/>
         </section>
 
         {/* Section Three */}
@@ -56,11 +51,9 @@ class Research extends Component {
           <InnerListItem
             title="Reinforcement Learning Research"
             icon="next" actions={false} link="#"
-            description={<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna
-              magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas
-              laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat
-              tincidunt.</p>}
-          />
+            description={<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus
+              condimentumsem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem
+              ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>}/>
         </section>
       </div>
     );

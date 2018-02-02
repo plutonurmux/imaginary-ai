@@ -17,7 +17,7 @@ const InnerList = (props) => {
   return (
     <section>
       <Link to={props.link} className="image">
-        <img src={props.image} alt={props.title} data-position="center center"/>
+        <img src={props.image} alt={props.title} data-position={props.data_position || 'center center'}/>
       </Link>
       <div className="content">
         <InnerListItem {...props} />
