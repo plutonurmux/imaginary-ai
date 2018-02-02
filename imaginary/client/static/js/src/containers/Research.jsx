@@ -4,26 +4,20 @@
  * A.I. Engineer & Software developer
  * javafolabi@gmail.com
  *
- * Created on 01 February, 2018 @ 2:20 PM.
+ * Created on 02 February, 2018 @ 2:52 AM.
  * Copyright © 2018. Victor. All rights reserved.
  */
 
 import React, {Component} from 'react';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-
-  }
-
+class Research extends Component {
   render() {
     return (
       <div>
-        Initial set up
-        {this.props.children}
+        Research page.
       </div>
     );
   }
 }
 
-export default App;
+export default Research;

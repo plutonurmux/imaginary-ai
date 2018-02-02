@@ -9,7 +9,7 @@
  */
 
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 
 const ProjectListCard = (props) => {
   return (
@@ -18,7 +18,7 @@ const ProjectListCard = (props) => {
         <img src={props.image} alt={props.title} />
       </span>
       <header className="major">
-        <h3><a href={props.link} className="link">{props.title}</a></h3>
+        <h3><Link to={props.link} className="link">{props.title}</Link></h3>
         {props.description}
       </header>
     </article>

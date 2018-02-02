@@ -14,14 +14,18 @@ import {Route, IndexRoute} from 'react-router';
 // containers
 import Home from './containers/Home';
 import Projects from './containers/Projects';
+import Research from './containers/Research';
 
 
 export default (
   <div>
+    {/* Home page.*/}
     <Route exact path="/" component={Home}/>
-    <Route path="/projects" component={Projects}>
-      <Route path="a-language-model" component={Projects}/>
-    </Route>
 
+    {/* Projects page.*/}
+    <Route path="/projects" component={Projects}/>
+
+    {/* Research page. */}
+    <Route path="/research" component={Research}/>
   </div>
 );

@@ -34,7 +34,6 @@ class Home extends Component {
               </p>
               <ul className="actions">
                 <li><Link to="/projects/a-language-model" className="button next">Learn More</Link></li>
-                {/*<li><a href="/research/a-language-model/" className="button next">Learn More</a></li>*/}
               </ul>
             </div>
           </section>
