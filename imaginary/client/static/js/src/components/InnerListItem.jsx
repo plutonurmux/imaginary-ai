@@ -11,7 +11,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const ResearchListItem = (props) => {
+const InnerListItem = (props) => {
 
   return (
     <div className="inner">
@@ -28,4 +28,4 @@ const ResearchListItem = (props) => {
   );
 };
 
-export default ResearchListItem;
+export default InnerListItem;

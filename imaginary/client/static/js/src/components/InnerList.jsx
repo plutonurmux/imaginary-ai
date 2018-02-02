@@ -11,7 +11,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import ResearchListItem from './ResearchListItem';
+import InnerListItem from './InnerListItem';
 
 const ResearchList = (props) => {
   return (
@@ -20,7 +20,7 @@ const ResearchList = (props) => {
         <img src={props.image} alt={props.title} data-position="center center"/>
       </Link>
       <div className="content">
-        <ResearchListItem {...props} />
+        <InnerListItem {...props} />
       </div>
     </section>
   );

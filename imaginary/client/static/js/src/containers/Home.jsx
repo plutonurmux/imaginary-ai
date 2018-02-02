@@ -12,7 +12,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import Banner from '../components/Banner';
 import HomeList from '../components/HomeList';
-import ResearchListItem from '../components/ResearchListItem'
+import ResearchListItem from '../components/InnerListItem'
 
 class Home extends Component {
 
