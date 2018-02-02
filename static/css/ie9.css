@@ -1,97 +1,45 @@
-/**
- * @author Victor I. Afolabi
- * A.I. engineer/researcher & Software engineer
- * javafolabi@gmail.com
- *
- * Created on 06 January, 2018 @ 12:37 PM.
- *
- * Copyright © 2018. Victor. All rights reserved.
- */
+/*
+Error: Invalid US-ASCII character "\xC2"
+        on line 13 of ie9.scss
 
-/* Spotlights */
+8:   * A.I. engineer/researcher & Software engineer
+9:   * javafolabi@gmail.com
+10: 
+11:   * Created on 04 January, 2018 @ 4:59 PM.
+12: 
+13:   * Copyright © 2018. Victor. All rights reserved.
+14: *\/
+15: 
+16: 
+17: /* Spotlights *\/
+18: 
 
-.spotlights > section:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.spotlights > section > .image {
-  float: left;
-}
-
-.spotlights > section > .content {
-  float: left;
-}
-
-/* Tiles */
-
-.tiles:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.tiles article {
-  padding: 8em 4em 6em 4em;
-  float: left;
-  height: auto;
-  max-height: none;
-  min-height: 0;
-}
-
-/* Header */
-
-#header .logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-#header nav {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-/* Banner */
-
-#banner {
-  padding: 7em 0 4em 0;
-  background-attachment: scroll;
-  height: auto;
-  max-height: none;
-  min-height: 0;
-}
-
-#banner > .inner .content {
-  display: block;
-}
-
-#banner > .inner .content > * {
-  margin: 0 0 2em;
-}
-
-#banner.major {
-  height: auto;
-  max-height: none;
-  min-height: 0;
-}
-
-/* Contact */
-
-#contact:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-#contact > .inner > * {
-  float: left;
-}
-
-/* Menu */
-
-#menu .inner {
-  margin: 0 auto;
-}
+Backtrace:
+ie9.scss:13
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/util.rb:1043:in `rescue in block in find_encoding_error'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/util.rb:1040:in `block in find_encoding_error'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/util.rb:1039:in `each'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/util.rb:1039:in `each_with_index'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/util.rb:1039:in `find_encoding_error'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/util.rb:767:in `check_sass_encoding'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/engine.rb:444:in `check_encoding!'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/engine.rb:400:in `_to_tree'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:209:in `each'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/plugin.rb:82:in `update_stylesheets'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/exec/base.rb:52:in `parse'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/exec/base.rb:19:in `parse!'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/bin/scss:13:in `<top (required)>'
+/usr/local/bin/scss:22:in `load'
+/usr/local/bin/scss:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid US-ASCII character \"\xC2\"\A         on line 13 of ie9.scss\A \A 8:   * A.I. engineer/researcher & Software engineer\A 9:   * javafolabi@gmail.com\A 10: \A 11:   * Created on 04 January, 2018 @ 4:59 PM.\A 12: \A 13:   * Copyright © 2018. Victor. All rights reserved.\A 14: */\A 15: \A 16: \A 17: /* Spotlights */\A 18: "; }

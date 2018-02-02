@@ -1,47 +1,45 @@
-/**
- * @author Victor I. Afolabi
- * A.I. engineer/researcher & Software engineer
- * javafolabi@gmail.com
- *
- * Created on 06 January, 2018 @ 12:36 PM.
- *
- * Copyright © 2018. Victor. All rights reserved.
- */
+/*
+Error: Invalid US-ASCII character "\xC2"
+        on line 13 of ie8.scss
 
-/* Button */
+8:   * A.I. engineer/researcher & Software engineer
+9:   * javafolabi@gmail.com
+10: 
+11:   * Created on 04 January, 2018 @ 4:59 PM.
+12: 
+13:   * Copyright © 2018. Victor. All rights reserved.
+14: *\/
+15: 
+16: /* Button *\/
+17: 
+18: 	.button {
 
-.button {
-  border: solid 2px !important;
-}
-
-.button.next {
-  padding-right: 1.75em;
-}
-
-.button.next:before, .button.next:after {
-  display: none;
-}
-
-/* Tiles */
-
-.tiles article {
-  width: 50%;
-  -ms-behavior: url("../js/ie/backgroundsize.min.htc");
-  background-size: cover;
-}
-
-/* Banner */
-
-#banner {
-  -ms-behavior: url("../js/ie/backgroundsize.min.htc");
-}
-
-#banner:after {
-  display: none;
-}
-
-/* Menu */
-
-#menu {
-  background: #242943;
-}
+Backtrace:
+ie8.scss:13
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/util.rb:1043:in `rescue in block in find_encoding_error'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/util.rb:1040:in `block in find_encoding_error'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/util.rb:1039:in `each'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/util.rb:1039:in `each_with_index'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/util.rb:1039:in `find_encoding_error'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/util.rb:767:in `check_sass_encoding'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/engine.rb:444:in `check_encoding!'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/engine.rb:400:in `_to_tree'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:209:in `each'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/plugin.rb:82:in `update_stylesheets'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/exec/base.rb:52:in `parse'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/exec/base.rb:19:in `parse!'
+/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/bin/scss:13:in `<top (required)>'
+/usr/local/bin/scss:22:in `load'
+/usr/local/bin/scss:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid US-ASCII character \"\xC2\"\A         on line 13 of ie8.scss\A \A 8:   * A.I. engineer/researcher & Software engineer\A 9:   * javafolabi@gmail.com\A 10: \A 11:   * Created on 04 January, 2018 @ 4:59 PM.\A 12: \A 13:   * Copyright © 2018. Victor. All rights reserved.\A 14: */\A 15: \A 16: /* Button */\A 17: \A 18: 	.button {"; }
