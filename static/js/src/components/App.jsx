@@ -9,11 +9,17 @@
  */
 
 import React, {Component} from 'react';
+import Header from './Layouts/Header';
+import Nav from './Layouts/Nav';
+import Footer from './Layouts/Footer';
 
 const App = (props) => {
   return (
-    <div id="main">
-      {props.children}
+    <div>
+      <Header {...props} />
+      <Nav/>
+      <div id="main">{props.children}</div>
+      <Footer/>
     </div>
   );
 };
