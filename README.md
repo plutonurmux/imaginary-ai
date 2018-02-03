@@ -4,7 +4,7 @@
 
 A portfolio-ish platform that helps visualize some of my interesting Artificial Intelligence projects and researches.
 
-![Imaginary A.I. homepage](static/images/imaginary-ai-homepage.png)
+![Imaginary A.I. homepage](imaginary/client/static/images/imaginary-ai-homepage.png)
 
 Deep Learning is a new area of Machine Learning research, which has been introduced with the objective of moving Machine Learning closer to one of its original goals: **Artificial Intelligence.**
 
