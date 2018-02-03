@@ -1,0 +1,27 @@
+{%- extends 'layouts/main.html' %}
+
+{% block body -%}
+
+  <!-- Main -->
+  <div id="main" class="alt">
+
+    <!-- One -->
+    <section id="one">
+      <div class="inner">
+        <header class="major">
+          <h1>{{ self.title() }}</h1>
+        </header>
+        <span class="image main">
+          {% block image -%}
+            <img src="{{ url_for('static', filename='images/pic11.jpg') }}" alt=""/>
+          {%- endblock %}
+        </span>
+        {% block content -%}
+          {# React conatiner #}
+          <div id="app-root"></div>
+        {%- endblock %}
+      </div>
+    </section>
+
+  </div>
+{%- endblock body %}

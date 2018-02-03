@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+  @author Victor I. Afolabi
+  A.I. engineer/researcher & Software engineer
+  javafolabi@gmail.com
+
+ Created on 13 January, 2018 @ 6:46 PM.
+
+ Copyright © 2018. Victor. All rights reserved.
+-->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#2a2f4a">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
+
+  <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json"> -->
+  <title>{{ title }} &bull; Imaginary A.I.</title>
+
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+</head>
+
+<body>
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+    <!-- Header -->
+    <header id="header" class="alt {{ style }}">
+      <a href="{{ url_for('index') }}" class="logo">
+        <strong>Imaginary A.I.</strong>
+        <span>by Victor</span>
+      </a>
+      <nav>
+        <a href="#menu">Menu</a>
+      </nav>
+    </header>
+
+    {%- include '_includes/nav.html' %}

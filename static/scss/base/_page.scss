@@ -1,0 +1,42 @@
+/**
+  * @author Victor I. Afolabi
+  * A.I. engineer/researcher & Software engineer
+  * javafolabi@gmail.com
+
+  * Created on 04 January, 2018 @ 4:59 PM.
+
+  * Copyright (c) 2018. Victor. All rights reserved.
+	*/
+
+/* Basic */
+
+// MSIE: Required for IEMobile.
+@-ms-viewport {
+  width: device-width;
+}
+
+// MSIE: Prevents scrollbar from overlapping content.
+body {
+  -ms-overflow-style: scrollbar;
+}
+
+// Ensures page width is always >=320px.
+@include breakpoint(xsmall) {
+  html, body {
+    min-width: 320px;
+  }
+}
+
+body {
+  background: _palette(bg);
+
+  // Prevents animation/transition "flicker" on page load.
+  // Automatically added/removed by js/main.js.
+  &.is-loading {
+    *, *:before, *:after {
+      @include vendor('animation', 'none !important');
+      @include vendor('transition', 'none !important');
+    }
+  }
+
+}

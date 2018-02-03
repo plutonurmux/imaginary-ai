@@ -1,0 +1,10 @@
+{% with title=self.title() -%}
+  {%- include '_includes/header.html' %}
+{%- endwith %}
+
+{% block body %}
+  {# React container #}
+  <div id="app-root"></div>
+{% endblock %}
+
+{%- include '_includes/footer.html' %}

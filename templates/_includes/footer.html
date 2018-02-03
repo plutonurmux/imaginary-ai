@@ -1,0 +1,119 @@
+
+<!-- Contact -->
+<section id="contact">
+  <div class="inner">
+    <section>
+      <form method="post" action="{{ url_for('contact_form') }}">
+        <div class="field half first">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" />
+        </div>
+        <div class="field half">
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" />
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="6"></textarea>
+        </div>
+        <ul class="actions">
+          <li>
+            <input type="submit" value="Send Message" class="special" />
+          </li>
+          <li>
+            <input type="reset" value="Clear" />
+          </li>
+        </ul>
+      </form>
+    </section>
+    <section class="split">
+      <section>
+        <div class="contact-method">
+          <span class="icon alt fa-envelope"></span>
+          <h3>Email</h3>
+          <a href="mailto:javafolabi@gmail.com">javafolabi@gmail.com</a>
+        </div>
+      </section>
+      <section>
+        <div class="contact-method">
+          <span class="icon alt fa-phone"></span>
+          <h3>Phone</h3>
+          <span>(+234) 814-120-5245</span>
+        </div>
+      </section>
+      <section>
+        <div class="contact-method">
+          <span class="icon alt fa-home"></span>
+          <h3>Address</h3>
+          <span>
+            #25, Segun Akinlade Street,
+            <br/> Off Akure High School Road,
+            <br/> Akure, Ondo State,
+            <br/> Nigeria.
+          </span>
+        </div>
+      </section>
+    </section>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="inner">
+    <ul class="icons">
+      <li>
+        <a href="https://twitter.com/victor_iyi" class="icon alt fa-twitter">
+          <span class="label">Twitter</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/victor.i.afolabi" class="icon alt fa-facebook">
+          <span class="label">Facebook</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/victor_iyiola/" class="icon alt fa-instagram">
+          <span class="label">Instagram</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://medium.com/@javafolabi/" class="icon alt fa-medium">
+          <span class="label">Medium</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/victor-iyiola" class="icon alt fa-github">
+          <span class="label">GitHub</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/victor-i-afolabi-84629b87/" class="icon alt fa-linkedin">
+          <span class="label">LinkedIn</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="copyright">
+      <li>&copy; 2018. Imaginary A.I.</li>
+      <li>Design:
+        <a href="https://github.com/victor-iyiola">Victor I. Afolabi</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+</div>
+
+<!-- Libraries -->
+<script src="{{ url_for('static', filename='js/libs/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/libs/jquery.scrolly.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/libs/jquery.scrollex.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/libs/bootstrap.min.js') }}"></script>
+<!-- Base scripts -->
+<script src="{{ url_for('static', filename='js/base/skel.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/base/util.js') }}"></script>
+<script src="{{ url_for('static', filename='js/base/main.js') }}"></script>
+<!-- bundled -->
+<script src="{{ url_for('static', filename='js/dist/bundle.js') }}"></script>
+</body>
+
+</html>

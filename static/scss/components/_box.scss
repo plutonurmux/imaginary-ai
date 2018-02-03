@@ -1,0 +1,29 @@
+/**
+  * @author Victor I. Afolabi
+  * A.I. engineer/researcher & Software engineer
+  * javafolabi@gmail.com
+
+  * Created on 04 January, 2018 @ 4:59 PM.
+
+  * Copyright (c) 2018. Victor. All rights reserved.
+	*/
+
+/* Box */
+
+.box {
+  border: solid 1px _palette(border);
+  margin-bottom: _size(element-margin);
+  padding: 1.5em;
+
+  > :last-child,
+  > :last-child > :last-child,
+  > :last-child > :last-child > :last-child {
+    margin-bottom: 0;
+  }
+
+  &.alt {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+}

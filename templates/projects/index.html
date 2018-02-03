@@ -1,0 +1,168 @@
+{%- extends 'layouts/sub-main.html' %}
+
+{#- Page title #}
+{% block title -%}My Projects{%- endblock %}
+
+{#- Page description #}
+{% block description -%}
+  <p>
+    I started working on some personal A.I. projects<br/>
+    mostly after learning some new concepts but also <br/>
+    during the process of learning and research.
+  </p>
+{%- endblock %}
+
+{#- Page content #}
+{#{% block content -%}#}
+{#  <!-- Deep Learning -->#}
+{#  <section id="one">#}
+{#    <div class="inner">#}
+{#      <header class="major">#}
+{#        <h2>Deep Learning Projects</h2>#}
+{#      </header>#}
+{#      <p>Deep Learning is a new area of Machine Learning research, which has been introduced with the objective of#}
+{#        moving Machine Learning closer to one of its original goals: <strong>Artificial Intelligence.</strong></p>#}
+{##}
+{#      <p>#}
+{#        After taking deep learning courses at MIT, Stanford Udacity and Coursera. I started working on projects to#}
+{#        reinforce some fundamentals and also have fun with the new area of ML research.</p>#}
+{##}
+{#      <p>Resources: You'll find interesting datasets on#}
+{#        <a target="_blank" href="http://deeplearning.net/datasets/">deeplearning.net</a> and#}
+{#        <a target="_blank" href="https://www.kaggle.com/datasets">kaggle.com</a>. Also find some useful blog posts on#}
+{#        <a target="_blank" href="https://www.pinchofintelligence.com/">pinchofintelligence.com</a>,#}
+{#        <a target="_blank" href="http://karpathy.github.io/">Andrej Karpathy</a>,#}
+{#        <a target="_blank" href="https://iamtrask.github.io/">Andrew Trask</a> and#}
+{#        <a target="_blank" href="http://colah.github.io/">Chris Olah's</a> blog posts.#}
+{#        To learn more about Neural Networks and it's various forms, your best bet is the#}
+{#        <a target="_blank" href="http://www.asimovinstitute.org/neural-network-zoo/">neural network zoo</a>#}
+{#      </p>#}
+{#    </div>#}
+{#  </section>#}
+{##}
+{#  <!-- Deep learning projects -->#}
+{#  <section id="two" class="spotlights">#}
+{#    <!-- Image Classification -->#}
+{#    <section>#}
+{#      <a href="{{ url_for('image_classification') }}" class="image">#}
+{#        <img src="{{ url_for('static', filename='images/pic08.jpg') }}" alt="" data-position="center center"/>#}
+{#      </a>#}
+{#      <div class="content">#}
+{#        <div class="inner">#}
+{#          <header class="major">#}
+{#            <h3>Image Classification</h3>#}
+{#          </header>#}
+{#          <p>#}
+{#            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem.#}
+{#            In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor.#}
+{#            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.#}
+{#          </p>#}
+{#          <ul class="actions">#}
+{#            <li><a href="{{ url_for('image_classification') }}" class="button">Learn more</a></li>#}
+{#          </ul>#}
+{#        </div>#}
+{#      </div>#}
+{#    </section>#}
+{#    <!-- Generative Models -->#}
+{#    <section>#}
+{#      <a href="{{ url_for('generative_models') }}" class="image">#}
+{#        <img src="{{ url_for('static', filename='images/pic09.jpg') }}" alt="" data-position="top center"/>#}
+{#      </a>#}
+{#      <div class="content">#}
+{#        <div class="inner">#}
+{#          <header class="major">#}
+{#            <h3>Generative Models</h3>#}
+{#          </header>#}
+{#          <p>#}
+{#            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem.#}
+{#            In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor.#}
+{#            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.#}
+{#          </p>#}
+{#          <ul class="actions">#}
+{#            <li><a href="{{ url_for('generative_models') }}" class="button">Learn more</a></li>#}
+{#          </ul>#}
+{#        </div>#}
+{#      </div>#}
+{#    </section>#}
+{#    <!-- Image Search -->#}
+{#    <section>#}
+{#      <a href="{{ url_for('image_search') }}" class="image">#}
+{#        <img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt="" data-position="25% 25%"/>#}
+{#      </a>#}
+{#      <div class="content">#}
+{#        <div class="inner">#}
+{#          <header class="major">#}
+{#            <h3>Image Search</h3>#}
+{#          </header>#}
+{#          <p>#}
+{#            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem.#}
+{#            In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor.#}
+{#            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.#}
+{#          </p>#}
+{#          <ul class="actions">#}
+{#            <li><a href="{{ url_for('image_search') }}" class="button">Learn more</a></li>#}
+{#          </ul>#}
+{#        </div>#}
+{#      </div>#}
+{#    </section>#}
+{#    <!-- A.I. Articles -->#}
+{#    <section>#}
+{#      <a href="{{ url_for('ai_articles') }}" class="image">#}
+{#        <img src="{{ url_for('static', filename='images/pic09.jpg') }}" alt="" data-position="top center"/>#}
+{#      </a>#}
+{#      <div class="content">#}
+{#        <div class="inner">#}
+{#          <header class="major">#}
+{#            <h3>A.I. Articles</h3>#}
+{#          </header>#}
+{#          <p>#}
+{#            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem.#}
+{#            In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor.#}
+{#            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.#}
+{#          </p>#}
+{#          <ul class="actions">#}
+{#            <li><a href="{{ url_for('ai_articles') }}" class="button">Learn more</a></li>#}
+{#          </ul>#}
+{#        </div>#}
+{#      </div>#}
+{#    </section>#}
+{#    <!-- Auto Encoding -->#}
+{#    <section>#}
+{#      <a href="{{ url_for('auto_encoding') }}" class="image">#}
+{#        <img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt="" data-position="25% 25%"/>#}
+{#      </a>#}
+{#      <div class="content">#}
+{#        <div class="inner">#}
+{#          <header class="major">#}
+{#            <h3>Auto Encoding</h3>#}
+{#          </header>#}
+{#          <p>#}
+{#            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem.#}
+{#            In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor.#}
+{#            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.#}
+{#          </p>#}
+{#          <ul class="actions">#}
+{#            <li><a href="{{ url_for('auto_encoding') }}" class="button">Learn more</a></li>#}
+{#          </ul>#}
+{#        </div>#}
+{#      </div>#}
+{#    </section>#}
+{#  </section>#}
+{##}
+{#  <!-- Reinforcement Learning -->#}
+{#  <section id="three">#}
+{#    <div class="inner">#}
+{#      <header class="major">#}
+{#        <h2>Reinforcement Learning Projects</h2>#}
+{#      </header>#}
+{#      <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc#}
+{#        rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel#}
+{#        lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis#}
+{#        libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>#}
+{#      <ul class="actions">#}
+{#        <li><a href="{{ url_for('reinforcement_learning') }}" class="button next">Get Started</a></li>#}
+{#      </ul>#}
+{#    </div>#}
+{#  </section>#}
+{##}
+{#{%- endblock %}#}
