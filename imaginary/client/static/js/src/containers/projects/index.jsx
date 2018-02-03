@@ -27,19 +27,17 @@ class Projects extends Component {
             link="#" actions={false}
             description={<div className="inner">
               <p>Deep Learning is a new area of Machine Learning research, which has been introduced with
-                the objective of moving Machine Learning closer to one of its original goals:
-                <strong> ArtificialIntelligence.</strong></p>
+                the objective of moving Machine Learning closer to one of its original goals: <strong>
+                  ArtificialIntelligence.</strong></p>
               <p>After taking deep learning courses at MIT, Stanford Udacity and Coursera. I started working on projects
                 to reinforce some fundamentals and also have fun with the new area of ML research.</p>
-              <p>Resources: You'll find interesting datasets on
-                <Link to="http://deeplearning.net/datasets/"> deeplearning.net</Link> and
-                <Link to="https://www.kaggle.com/datasets"> kaggle.com</Link>. Also find some useful blog posts on
-                <Link to="https://www.pinchofintelligence.com/"> pinchofintelligence.com</Link>,
-                <Link to="http://karpathy.github.io/"> Andrej Karpathy</Link>,
-                <Link to="https://iamtrask.github.io/"> Andrew Trask</Link> and
-                <Link to="http://colah.github.io/"> Chris Olah's</Link> blog posts. To learn more about Neural Networks
-                and it's various forms, your best bet is the
-                <Link to="http://www.asimovinstitute.org/neural-network-zoo/"> neural network zoo</Link>
+              <p>Resources: You'll find interesting datasets on <Link to="http://deeplearning.net/datasets/">
+                deeplearning.net</Link> and <Link to="https://www.kaggle.com/datasets">kaggle.com</Link>. Also find some
+                useful blog posts on <Link to="https://www.pinchofintelligence.com/">pinchofintelligence.com</Link>,
+                <Link to="http://karpathy.github.io/"> Andrej Karpathy</Link>, <Link to="https://iamtrask.github.io/">
+                  Andrew Trask</Link> and <Link to="http://colah.github.io/">Chris Olah's</Link> blog posts. To learn
+                more about Neural Networks and it's various forms, your best bet is the <Link
+                  to="http://www.asimovinstitute.org/neural-network-zoo/">neural network zoo</Link>
               </p>
             </div>}
           />
@@ -52,25 +50,25 @@ class Projects extends Component {
             title="Image Classification" image="/static/images/pic08.jpg"
             link="/projects/image-classification" data_position="center center"
             description={<p>Image classification analyzes the numerical properties of various image features and
-              organizes data into categories. Classification algorithms typically employ two phases of processing: <em>training</em>
-              and <em>testing.</em> In the initial training phase, characteristic properties of typical image features
-              are isolated and, based on these, a unique description of each classification category, i.e. <em>training
-                class</em>, is created. In the subsequent testing phase, these feature-space partitions are used to
-              classify image features.</p>}/>
+              organizes data into categories. Classification algorithms typically employ two phases of processing:
+              <em>training</em> and <em>testing.</em> In the initial training phase, characteristic properties of
+              typical image features are isolated and, based on these, a unique description of each classification
+              category, i.e. <em>training class</em>, is created. In the subsequent testing phase, these feature-space
+              partitions are used to classify image features.</p>}/>
 
           {/*Generative Models */}
           <InnerList
             title="Generative Models" image="/static/images/pic09.jpg"
             link="/projects/generative-models" data_position="top center"
-            description={<p>In <Link to="https://en.wikipedia.org/wiki/Probability" target="_blank">probability</Link>
+            description={<p>In <Link to="https://en.wikipedia.org/wiki/Probability" target="_blank">probability </Link>
               and <Link to="https://en.wikipedia.org/wiki/Statistics" target="_blank">statistics,</Link> a generative
-              model is a model for generating all values for a phenomenon, both those that
-              can be observed in the world and "target" variables that can only be computed from those observed. By
-              contrast, discriminative models provide a model only for the target variable(s), generating them by
-              analyzing the observed variables. In simple terms, <Link
-                to="https://en.wikipedia.org/wiki/Discriminative_model" target="_blank">discriminative models</Link>
-              infer outputs based on inputs, while generative models generate both inputs and outputs, typically given
-              some <Link to="https://en.wikipedia.org/wiki/Latent_variable" target="_blank">hidden parameters.</Link>
+              model is a model for generating all values for a phenomenon, both those that can be observed in the world
+              and "target" variables that can only be computed from those observed. By contrast, discriminative models
+              provide a model only for the target variable(s), generating them by analyzing the observed variables. In
+              simple terms, <Link to="https://en.wikipedia.org/wiki/Discriminative_model" target="_blank">discriminative
+                models</Link> infer outputs based on inputs, while generative models generate both inputs and outputs,
+              typically given some <Link to="https://en.wikipedia.org/wiki/Latent_variable" target="_blank">hidden
+                parameters.</Link>
             </p>}/>
 
           {/*Image Search*/}
