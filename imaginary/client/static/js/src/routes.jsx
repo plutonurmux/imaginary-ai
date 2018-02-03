@@ -32,15 +32,15 @@ export default (
     <Route exact path="/" component={Home}/>
 
     {/* Projects page.*/}
-    <Route exact path="/projects" component={Projects}/>
-    <Route path="/projects/image-classification" component={ImageClassification}/>
-    <Route path="/projects/generative-models" component={GenerativeModels}/>
-    <Route path="/projects/image-search" component={ImageSearch}/>
-
+    <Route exact path="/projects" component={Projects}>
+      <Route path="/projects/image-classification" component={ImageClassification}/>
+      <Route path="/projects/generative-models" component={GenerativeModels}/>
+      <Route path="/projects/image-search" component={ImageSearch}/>
+    </Route>
     {/* Research page. */}
-    <Route exact path="/research" component={Research}/>
-    <Route path="/research/a-language-model" component={ALanguageModel}/>
-    <Route path="/research/project-glass" component={ProjectGlass}/>
-
+    <Route path="/research" component={Research}>
+      <Route path="/research/a-language-model" component={ALanguageModel}/>
+      <Route path="/research/project-glass" component={ProjectGlass}/>
+    </Route>
   </div>
 );
