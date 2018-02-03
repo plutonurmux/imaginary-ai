@@ -15,7 +15,7 @@ const HomeListCard = (props) => {
   return (
     <article>
       <span className="image">
-        <img src={props.image} alt={props.title} />
+        <img src={props.image} alt={props.title}/>
       </span>
       <header className="major">
         <h3><Link to={props.link} className="link">{props.title}</Link></h3>

@@ -12,25 +12,17 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 const InnerListItem = (props) => {
-  let actions;
-  if (props.actions === false) {
-    actions = ''
-  } else {
-    actions = (
-      <ul className="actions">
-        <li>
-          <Link to={props.link} className={`button ${props.icon || ''}`}>Learn more</Link>
-        </li>
-      </ul>
-    );
-  }
   return (
     <div className="inner">
       <header className="major">
         <h3>{props.title}</h3>
       </header>
       {props.description}
-      {actions}
+      {props.link ? <ul className="actions">
+        <li>
+          <Link to={props.link} className={`button ${props.icon || ''}`}>Learn more</Link>
+        </li>
+      </ul> : null}
     </div>
   );
 };

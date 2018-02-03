@@ -16,8 +16,8 @@ const HomeList = (props) => {
 
   return (
     <section className='tiles' id='one'>
-      {props.lists.map((project) => {
-        return <HomeListCard key={project.title} {...project} />
+      {props.lists.map((item) => {
+        return <HomeListCard key={item.title} {...item} />
       })}
     </section>
   );

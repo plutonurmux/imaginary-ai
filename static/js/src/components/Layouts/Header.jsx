@@ -13,7 +13,7 @@ import {Link} from 'react-router-dom';
 
 const Header = (props) =>
   <header id="header" className={`alt ${props.style || ''}`}>
-    <Link to="/" class="logo">
+    <Link to="/" className="logo">
       <strong>Imaginary A.I.</strong>
       <span>by Victor</span>
     </Link>

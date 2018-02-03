@@ -13,18 +13,25 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import InnerList from '../../components/InnerList';
 import InnerListItem from '../../components/InnerListItem';
-
+import Banner from '../../components/Banner';
 
 class Projects extends Component {
 
   render() {
     return (
       <div id="main">
+
+        <Banner
+          heading="My projects"
+          image="/static/images/pic01.jpg"
+          description={<p>I started working on some personal A.I. projects<br/>
+            mostly after learning some new concepts but also <br/>
+            during the process of learning and research.</p>}/>
+
         {/* Deep learning Projects */}
         <section id="one">
           <InnerListItem
             title="Deep Learning Projects"
-            link="#" actions={false}
             description={<div className="inner">
               <p>Deep Learning is a new area of Machine Learning research, which has been introduced with
                 the objective of moving Machine Learning closer to one of its original goals: <strong>
@@ -76,17 +83,18 @@ class Projects extends Component {
             title="Image Search" image="/static/images/pic09.jpg"
             link="/projects/image-search" data_position="25% 25%"
             description={<p>A computer system for browsing, searching and retrieving images from a large
-              <Link to="https://en.wikipedia.org/wiki/Database" target="_blank">database</Link> of
-              <Link to="https://en.wikipedia.org/wiki/Digital_image" target="_blank">digital images.</Link> Most
-              traditional and common methods of image retrieval utilize some method of adding <Link
-                to="https://en.wikipedia.org/wiki/Metadata" target="_blank">metadata</Link> such as captioning,
-              keywords, or descriptions to the images so that retrieval can be performed over the annotation words.
-              Manual image annotation is time-consuming, laborious and expensive; to address this, there has been a
-              large amount of research done on <Link to="https://en.wikipedia.org/wiki/Automatic_image_annotation"
-                                                     target="_blank">automatic image annotation.</Link> Additionally,
-              the increase in social <Link to="https://en.wikipedia.org/wiki/Web_application" target="_blank">web
+              database of <Link to="https://en.wikipedia.org/wiki/Digital_image" target="_blank">digital images. </Link>
+              Most traditional and common methods of image retrieval utilize some method of adding <Link
+                to="https://en.wikipedia.org/wiki/Metadata" target="_blank">metadata</Link> such as
+              captioning, keywords, or descriptions to the images so that retrieval can be performed over the annotation
+              words. Manual image annotation is time-consuming, laborious and expensive; to address this, there has been
+              a large amount of research done on <Link to="https://en.wikipedia.org/wiki/Automatic_image_annotation"
+                                                       target="_blank">automatic image annotation.</Link> Additionally,
+              the increase in social <Link to="https://en.wikipedia.org/wiki/Web_application"
+                                           target="_blank">web
                 applications</Link> and the <Link to="https://en.wikipedia.org/wiki/Semantic_web" target="_blank">
-                semantic web</Link> have inspired the development of several web-based image annotation tools.</p>}/>
+                semantic web</Link> have inspired the development of several web-based
+              image annotation tools.</p>}/>
 
           {/*A.I. Articles */}
           <InnerList
