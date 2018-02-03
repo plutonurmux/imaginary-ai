@@ -22,7 +22,7 @@ class Home extends Component {
       project_list: [
         {
           title: 'Image Classification',
-          link: 'projects/image-classification/',
+          link: '/projects/image-classification',
           image: '/static/images/pic01.jpg',
           'description': <p>Image classification with <span>Convolutional Neural Networks</span></p>
         },
