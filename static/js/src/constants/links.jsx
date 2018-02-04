@@ -10,6 +10,14 @@
 
 import React from 'react';
 
+
+/*
+ * +-------------------------------------------------------------------------------------+
+ * | +---------------------------------------------------------------------------------+ |
+ * | | List of projects to be displayed in the Home page.
+ * | +---------------------------------------------------------------------------------+ |
+ * +-------------------------------------------------------------------------------------+
+ */
 export const PROJECT_LIST = [
   {
     title: 'Image Classification',
@@ -47,5 +55,46 @@ export const PROJECT_LIST = [
     link: '/projects/reinforcement-learning/',
     image: '/static/images/pic06.jpg',
     description: <p>Checkout this A.I. agent that learns through the process of <span>Trial &amp; Error</span></p>
+  },
+];
+
+
+/*
+ * +-------------------------------------------------------------------------------------+
+ * | +---------------------------------------------------------------------------------+ |
+ * | | Footer icons
+ * | +---------------------------------------------------------------------------------+ |
+ * +-------------------------------------------------------------------------------------+
+ */
+export const FOOTER_LINKS = [
+  {
+    label: 'Twitter',
+    icon: 'fa-twitter',
+    link: 'https://twitter.com/victor_iyi'
+  },
+  {
+    label: 'Facebook',
+    icon: 'fa-facebook',
+    link: 'https://www.facebook.com/victor.i.afolabi'
+  },
+  {
+    label: 'Instagram',
+    icon: 'fa-instagram',
+    link: 'https://www.instagram.com/victor_iyiola/'
+  },
+  {
+    label: 'Medium',
+    icon: 'fa-medium',
+    link: 'https://medium.com/@javafolabi/'
+  },
+  {
+    label: 'GitHub',
+    icon: 'fa-github',
+    link: 'https://github.com/victor-iyiola'
+  },
+  {
+    label: 'LinkedIn',
+    icon: 'fa-linkedin',
+    link: 'https://www.linkedin.com/in/victor-i-afolabi-84629b87/'
   },
 ];

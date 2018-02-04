@@ -10,11 +10,11 @@
 
 import React, {Component} from 'react';
 
-import Banner from '../components/Banner';
-import HomeList from '../components/HomeList';
-import InnerListItem from '../components/InnerListItem'
+import Banner from '../../components/Banner';
+import HomeList from '../../components/HomeList';
+import InnerListItem from '../../components/InnerListItem'
 
-import {PROJECT_LIST} from "../constants/links";
+import {PROJECT_LIST} from "../../constants/links";
 
 class Home extends Component {
 

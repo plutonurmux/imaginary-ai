@@ -14,8 +14,9 @@ import {Switch, Route} from 'react-router-dom';
 import Header from '../../components/Layouts/Header';
 import Nav from '../../components/Layouts/Nav';
 import Footer from '../../components/Layouts/Footer';
+import Contact from '../../components/Contact/index';
 
-import Home from '../Home';
+import Home from '../Home/index';
 import Projects from '../Projects';
 import Research from '../Research';
 
@@ -27,16 +28,17 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div id="main">
         <Header style="style2"/>
         <Nav/>
         <div id="main">
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/projects" component={Projects} />
-            <Route path="/research" component={Research} />
+            <Route exact path="/" component={Home}/>
+            <Route path="/projects" component={Projects}/>
+            <Route path="/research" component={Research}/>
           </Switch>
         </div>
+        <Contact/>
         <Footer/>
       </div>
     );

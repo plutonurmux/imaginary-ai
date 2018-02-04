@@ -41,6 +41,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('wrapper')
 );
-
-
-
