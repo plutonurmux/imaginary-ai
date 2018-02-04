@@ -10,7 +10,7 @@
 
 
 import React, {Component} from 'react';
-import {Route} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 
 import ImageClassification from './ImageClassification';
 import GenerativeModels from './GenerativeModels';
@@ -18,16 +18,16 @@ import ImageSearch from './ImageSearch';
 import ProjectsIndex from "./ProjectsIndex";
 
 const Projects = (props) =>
-  <div id="main">
+  <Switch>
     <Route exact path={props.match.url}
            render={() => <ProjectsIndex {...props}/>}/>
     {/* Projects */}
     <Route path={`${props.match.path}/image-classification`}
-           render={({match}) => <ImageClassification {...props} />}/>
+           render={(props) => <ImageClassification {...props} />}/>
     <Route path={`${props.match.path}/generative-models`}
-           render={({match}) => <GenerativeModels {...props} />}/>
+           render={(props) => <GenerativeModels {...props} />}/>
     <Route path={`${props.match.path}/image-search`}
-           render={({match}) => <ImageSearch {...props}/>}/>
-  </div>;
+           render={(props) => <ImageSearch {...props}/>}/>
+  </Switch>;
 
 export default Projects;

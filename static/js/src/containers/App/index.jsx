@@ -31,13 +31,11 @@ class App extends Component {
       <div id="main">
         <Header style="style2"/>
         <Nav/>
-        <div id="main" className="alt">
-          <Switch>
-            <Route exact path="/" component={Home}/>
-            <Route path="/projects" component={Projects}/>
-            <Route path="/research" component={Research}/>
-          </Switch>
-        </div>
+        <Switch>
+          <Route exact path="/" component={Home}/>
+          <Route path="/projects" component={Projects}/>
+          <Route path="/research" component={Research}/>
+        </Switch>
         <Contact/>
         <Footer/>
       </div>

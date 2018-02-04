@@ -11,7 +11,7 @@
 import React, {Component} from 'react';
 
 import Banner from '../../components/Banner';
-import HomeList from '../../components/HomeList';
+import HomeListCard from '../../components/HomeListCard';
 import InnerListItem from '../../components/InnerListItem'
 
 import {PROJECT_LIST} from "../../constants/links";
@@ -23,21 +23,20 @@ const Home = (props) =>
       heading="Hi, my name is Victor"
       description={<p>I'm an Artificial Intelligence Engineer and researcher
         <br/> and here's a side piece of my works</p>}/>
-    <div id="main">
-      <HomeList lists={PROJECT_LIST}/>
-
-      <section id="two">
-        <InnerListItem
-          title="A Language Model"
-          link="/research/a-language-model" icon="next"
-          description={<p>I discovered something which might lead to a major breakthrough in the field of A.I. and
-            NLP <em>(Natural Language Processing)...</em> I did some math to see how it improves existing models
-            and it was pretty damn good. It's on the topic of AI developing some abstract representation of
-            concepts. I'm sorry if this doesn't makes sense but it's really a cool concepts which is what humans do
-            unconsciously. I've always wanted to build and do sth amazing and meaningful for the whole world...</p>}
-        />
-      </section>
-    </div>
+    <section id="one" className="tiles">
+      {PROJECT_LIST.map(item => <HomeListCard key={item.title} {...item} />)}
+    </section>
+    <section id="two">
+      <InnerListItem
+        title="A Language Model"
+        link="/research/a-language-model" icon="next"
+        description={<p>I discovered something which might lead to a major breakthrough in the field of A.I. and
+          NLP <em>(Natural Language Processing)...</em> I did some math to see how it improves existing models
+          and it was pretty damn good. It's on the topic of AI developing some abstract representation of
+          concepts. I'm sorry if this doesn't makes sense but it's really a cool concepts which is what humans do
+          unconsciously. I've always wanted to build and do sth amazing and meaningful for the whole world...</p>}
+      />
+    </section>
   </div>;
 
 export default Home;

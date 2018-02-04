@@ -29,7 +29,7 @@ const Banner = (props) =>
         {props.link && props.link_text ?
           <ul className="actions">
             <li>
-              <Link onClick={() => false} to={props.link} className={`button ${props.style || ''}`}>
+              <Link to={props.link} className={`button ${props.style || ''}`}>
                 {props.link_text}
               </Link>
             </li>

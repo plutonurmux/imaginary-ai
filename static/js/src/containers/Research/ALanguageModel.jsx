@@ -10,11 +10,13 @@
 
 import React from 'react';
 
+import Generic from "../../components/Layouts/Generic";
+
 const ALanguageModel = () => {
   return (
-    <div id="main">
+    <Generic title="A Language Model">
       A language model.
-    </div>
+    </Generic>
   );
 };
 

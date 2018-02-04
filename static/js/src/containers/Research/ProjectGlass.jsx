@@ -10,11 +10,13 @@
 
 import React from 'react';
 
+import Generic from "../../components/Layouts/Generic";
+
 const ProjectGlass = () => {
   return (
-    <div id="main">
+    <Generic title="Project Glass">
       Project Glass!
-    </div>
+    </Generic>
   );
 };
 
