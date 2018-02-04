@@ -4,7 +4,7 @@
 
 A portfolio-ish platform that helps visualize some of my interesting Artificial Intelligence projects and researches.
 
-![Imaginary A.I. homepage](imaginary/client/static/images/imaginary-ai-homepage.png)
+![Imaginary A.I. homepage](static/images/imaginary-ai-homepage.png)
 
 Deep Learning is a new area of Machine Learning research, which has been introduced with the objective of moving Machine Learning closer to one of its original goals: **Artificial Intelligence.**
 
@@ -24,15 +24,22 @@ Resources: You'll find interesting datasets on [deeplearning.net](http://deeplea
 ## Research
 
 - A language model
+- Project Glass
+- Exploration Exploitation Explanation
 
 ## Dependencies
 
-- [Python ^3.6.4](http://python.org/)
-- [Flask](http://flask.pocoo.org/) – ```pip install flask```
-- [Keras](http://keras.io/) – ```pip install keras```
-- [Numpy](http://www.numpy.org/) – ```pip install numpy```
-- [Pandas](https://pandas.pydata.org/) – ```pip install pandas```
-- [Cython](http://cython.org/) – ```pip install cython```
+- Language
+  - [Python ^3.6.4](http://python.org/)
+  - [Node](https://nodejs.org) 
+  - [NPM](https://www.npmjs.com)
+ 
+- Other Dependencies
+  - [Flask](http://flask.pocoo.org/) – ```pip install flask```
+  - [Keras](http://keras.io/) – ```pip install keras```
+  - [Numpy](http://www.numpy.org/) – ```pip install numpy```
+  - [Pandas](https://pandas.pydata.org/) – ```pip install pandas```
+  - [Cython](http://cython.org/) – ```pip install cython```
 
 ## Setup
 
@@ -56,7 +63,7 @@ pip install --upgrade -r requirements.txt
 
 Install npm dependencies
 ```commandline
-cd flask_react_template/client/static
+cd static
 npm install
 ```
 
