@@ -14,17 +14,17 @@
 {#      Your dataset to be uploaded must be a <code>.zip</code> file & the#}
 {#      directory must contain the class labels whereas the class labels holds all the images for that class.#}
 {#    </blockquote>#}
-    {#- {%- include '_includes/_flash_msg_warn.html' %} #}
+{#    - {%- include '_includes/_flash_msg_warn.html' %} #}
 {#  </div>#}
 {##}
 {#  <div class="row 200%">#}
-    {#- Preview and scores #}
+{#    - Preview and scores #}
 {#    <div class="6u 12u$(medium)">#}
 {#      <div class="image fit" id="preview">#}
 {#        <h3>83.43% accuracy.</h3>#}
 {#        <img src="{{ url_for('static', filename='images/pic03.jpg') }}" alt="Preview image"/>#}
 {#      </div>#}
-      {#- Top results & accuracy #}
+{#      - Top results & accuracy #}
 {#      <h4>Top (5) Matches</h4>#}
 {#      <div class="table-wrapper">#}
 {#        <table class="alt">#}
@@ -68,12 +68,12 @@
 {#    <!-- Datasets -->#}
 {#    <div class="6u$ 12u$(medium)">#}
 {#      <div class="row uniform">#}
-        {#-  Dataset options #}
+{#        -  Dataset options #}
 {#        <div class="12u$">#}
 {#          <h3>Dataset Options</h3>#}
 {#          <form action="{{ url_for('image_classification') }}" method="post" enctype="multipart/form-data">#}
 {#            <div class="row uniform">#}
-              {#- Select existing dataset #}
+{#              - Select existing dataset #}
 {#              <div class="12u$">#}
 {#                <div class="select-wrapper">#}
 {#                  <select name="demo-category" id="demo-category" title="Existing datasets">#}
@@ -87,7 +87,7 @@
 {#              <div class="12u" style="text-align: center;">#}
 {#                <h5 style="text-align: center;">OR</h5>#}
 {#              </div>#}
-              {#- Upload new dataset  #}
+{#              - Upload new dataset  #}
 {#              <div class="12u$">#}
 {#                <div class="input-group mb-3">#}
 {#                  <div class="input-group-prepend">#}
@@ -99,7 +99,7 @@
 {#                  </div>#}
 {#                </div>#}
 {#              </div>#}
-              {#- Train this dataset  #}
+{#              - Train this dataset  #}
 {#              <div class="12u$">#}
 {#                <ul class="actions fit">#}
 {#                  <li>#}
@@ -110,7 +110,7 @@
 {#            </div>#}
 {#          </form>#}
 {#        </div>#}
-        {#- Dataset contents #}
+{#        - Dataset contents #}
 {#        <div class="12u$">#}
 {#          <h3>101 Objects Categories</h3>#}
 {#          <div class="box alt">#}
