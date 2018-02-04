@@ -19,7 +19,7 @@
 #
 # Install npm dependencies
 # ```commandline
-#   $ cd flask_react_template/client/static
+#   $ cd static
 #   $ npm install
 # ```
 #
