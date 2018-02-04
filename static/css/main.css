@@ -1516,16 +1516,16 @@ textarea {
   -ms-appearance: none;
   appearance: none;
   background: rgba(212, 212, 255, 0.035);
-  resize: none;
-  border: none;
+  border: 0;
   border-radius: 0;
   color: inherit;
   display: block;
+  height: 200px;
   outline: 0;
   padding: 0 1em;
+  resize: none;
   text-decoration: none;
-  width: 100%;
-  height: 200px; }
+  width: 100%; }
   input[type="text"]:invalid,
   input[type="password"]:invalid,
   input[type="email"]:invalid,
@@ -1546,8 +1546,25 @@ textarea {
     border-color: #9bf1ff;
     box-shadow: 0 0 0 2px #9bf1ff; }
 
+input[type='file'] {
+  display: none; }
+
+.form-control {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -moz-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  background: rgba(212, 212, 255, 0.035); }
+  .form-control:focus {
+    background-color: transparent;
+    border-color: #9bf1ff;
+    box-shadow: 0 0 0 0 #9bf1ff; }
+
 label.custom-file-label {
-  content: 'lookup';
   -moz-appearance: none;
   -webkit-appearance: none;
   -ms-appearance: none;
@@ -1563,7 +1580,7 @@ label.custom-file-label {
   color: #ffffff;
   cursor: pointer;
   display: inline-block;
-  font-size: 0.8em;
+  font-size: .8em;
   font-weight: 600;
   height: 3.5em;
   letter-spacing: 0.25em;
@@ -1587,9 +1604,6 @@ label.custom-file-label {
     height: 3.5em;
     line-height: 3.5em;
     padding: 0 1.75em; }
-
-input[type='file'] {
-  display: none; }
 
 .select-wrapper {
   text-decoration: none;
