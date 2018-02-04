@@ -17,8 +17,8 @@ const FileForm = (props) =>
               type="submit" name={props.name}>{props.value}</button>
     </div>
     <div className="custom-file">
-      <input type="file" className="custom-file-input" id={`${props.name}-file`}/>
-      <label className="custom-file-label" htmlFor={`${props.name}-file`}>{props.hint || ''}</label>
+      <input type="file" className="custom-file-input" name={props.inputName} id={`${props.inputName}-file`}/>
+      <label className="custom-file-label" htmlFor={`${props.inputName}-file`}>{props.hint || ''}</label>
     </div>
   </div>;
 

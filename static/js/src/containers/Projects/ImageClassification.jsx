@@ -59,7 +59,7 @@ class ImageClassification extends Component {
                 <SelectUploadForm
                   title="Dataset Options"
                   options={[{value: '101-dataset', text: '101 Dataset'}, {value: 'pokemon', text: 'Pokemon'}]}
-                  trainName="train" uploadName="upload"/>
+                  trainName="train" uploadName="upload" inputName="dataset"/>
                 {/* Dataset contents */}
                 <div className="12u$">
                   <h3>101 Objects Categories</h3>
