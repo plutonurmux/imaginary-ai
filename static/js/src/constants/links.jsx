@@ -23,20 +23,20 @@ export const PROJECT_LIST = [
     title: 'Image Classification',
     link: '/projects/image-classification',
     image: '/static/images/pic01.jpg',
-    'description': <p>Image classification with <span>Convolutional Neural Networks</span></p>
+    description: <p>Image classification with <span>Convolutional Neural Networks</span></p>
   },
   {
     title: 'Generative Models',
     link: '/projects/generative-models/',
     image: '/static/images/pic02.jpg',
-    'description': <p>Generate photo realistic images with <span>Generative Adversarial Networks</span></p>
+    description: <p>Generate photo realistic images with <span>Generative Adversarial Networks</span></p>
   },
   {
     title: 'Image Search',
     link: '/projects/image-search/',
     image: '/static/images/pic03.jpg',
-    'description': <p>Let's see how we can search the web by image after we know what's in it. Thanks to <span>Convolutional Neural Network</span>
-    </p>
+    description: <p>Let's see how we can search the web by image after we know what's in it. Thanks to
+      <span>Convolutional Neural Network</span></p>
   },
   {
     title: 'A.I. Article',

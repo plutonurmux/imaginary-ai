@@ -11,18 +11,15 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const HomeListCard = (props) => {
-  return (
-    <article>
+const HomeListCard = ({image, title, link, description}) =>
+  <article>
       <span className="image">
-        <img src={props.image} alt={props.title}/>
+        <img src={image} alt={title}/>
       </span>
-      <header className="major">
-        <h3><Link to={props.link} className="link">{props.title}</Link></h3>
-        {props.description}
-      </header>
-    </article>
-  )
-};
+    <header className="major">
+      <h3><Link to={link} className="link">{title}</Link></h3>
+      {description}
+    </header>
+  </article>;
 
 export default HomeListCard;

@@ -16,39 +16,28 @@ import InnerListItem from '../../components/InnerListItem'
 
 import {PROJECT_LIST} from "../../constants/links";
 
-class Home extends Component {
+const Home = (props) =>
+  <div id="main">
+    <Banner
+      link="#one" link_text="Get Started" style="next scrolly"
+      heading="Hi, my name is Victor"
+      description={<p>I'm an Artificial Intelligence Engineer and researcher
+        <br/> and here's a side piece of my works</p>}/>
+    <div id="main">
+      <HomeList lists={PROJECT_LIST}/>
 
-  constructor(props) {
-    super(props);
-
-  }
-
-  render() {
-    return (
-      <div id="main">
-        <Banner
-          link="#one" link_text="Get Started" style="next scrolly"
-          heading="Hi, my name is Victor"
-          description={<p>I'm an Artificial Intelligence Engineer and researcher
-            <br/> and here's a side piece of my works</p>}/>
-        <div id="main">
-          <HomeList lists={PROJECT_LIST}/>
-
-          <section id="two">
-            <InnerListItem
-              title="A Language Model"
-              link="/research/a-language-model" icon="next"
-              description={<p>I discovered something which might lead to a major breakthrough in the field of A.I. and
-                NLP <em>(Natural Language Processing)...</em> I did some math to see how it improves existing models
-                and it was pretty damn good. It's on the topic of AI developing some abstract representation of
-                concepts. I'm sorry if this doesn't makes sense but it's really a cool concepts which is what humans do
-                unconsciously. I've always wanted to build and do sth amazing and meaningful for the whole world...</p>}
-            />
-          </section>
-        </div>
-      </div>
-    );
-  }
-}
+      <section id="two">
+        <InnerListItem
+          title="A Language Model"
+          link="/research/a-language-model" icon="next"
+          description={<p>I discovered something which might lead to a major breakthrough in the field of A.I. and
+            NLP <em>(Natural Language Processing)...</em> I did some math to see how it improves existing models
+            and it was pretty damn good. It's on the topic of AI developing some abstract representation of
+            concepts. I'm sorry if this doesn't makes sense but it's really a cool concepts which is what humans do
+            unconsciously. I've always wanted to build and do sth amazing and meaningful for the whole world...</p>}
+        />
+      </section>
+    </div>
+  </div>;
 
 export default Home;

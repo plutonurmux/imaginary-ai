@@ -11,33 +11,31 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const Banner = (props) => {
-  return (
-    <section id="banner" className={`${props.image ? 'style2' : 'major'}`}>
-      <div className="inner">
-        {/* Background image. */}
-        {props.image ?
-          <span className="image">
+
+const Banner = (props) =>
+  <section id="banner" className={`${props.image ? 'style2' : 'major'}`}>
+    <div className="inner">
+      {/* Background image. */}
+      {props.image ?
+        <span className="image">
             <img src={props.image} alt={props.alt || ''}/>
           </span> : null}
-        <header className="major">
-          <h1>{props.heading}</h1>
-        </header>
-        <div className="content">
-          {props.description}
-          {/* Button */}
-          {props.link ?
-            <ul className="actions">
-              <li>
-                <Link to={props.link} className={`button ${props.style || ''}`}>
-                  {props.link_text}
-                </Link>
-              </li>
-            </ul> : null}
-        </div>
+      <header className="major">
+        <h1>{props.heading}</h1>
+      </header>
+      <div className="content">
+        {props.description}
+        {/* Button */}
+        {props.link && props.link_text ?
+          <ul className="actions">
+            <li>
+              <Link onClick={() => false} to={props.link} className={`button ${props.style || ''}`}>
+                {props.link_text}
+              </Link>
+            </li>
+          </ul> : null}
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>;
 
 export default Banner;

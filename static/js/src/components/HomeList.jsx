@@ -12,15 +12,11 @@ import React from 'react';
 
 import HomeListCard from './HomeListCard';
 
-const HomeList = (props) => {
-
-  return (
-    <section className='tiles' id='one'>
-      {props.lists.map((item) => {
-        return <HomeListCard key={item.title} {...item} />
-      })}
-    </section>
-  );
-};
+const HomeList = ({lists}) =>
+  <section className='tiles' id='one'>
+    {lists.map((item) => {
+      return <HomeListCard key={item.title} {...item} />
+    })}
+  </section>;
 
 export default HomeList;
