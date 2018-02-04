@@ -8,14 +8,22 @@
  * Copyright © 2018. Victor. All rights reserved.
  */
 
-import React from 'react';
+import React, {Component} from 'react';
+import Generic from "../../components/Layouts/Generic";
 
-const GenerativeModels = () => {
-  return (
-    <div id="main">
-      Generative Models.
-    </div>
-  )
-};
+class GenerativeModels extends Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <Generic title="Generative Models">
+        Generative Models
+      </Generic>
+    );
+  }
+}
 
 export default GenerativeModels;

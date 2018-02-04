@@ -8,14 +8,21 @@
  * Copyright © 2018. Victor. All rights reserved.
  */
 
-import React from 'react';
+import React, {Component} from 'react';
+import Generic from "../../components/Layouts/Generic";
 
-const ImageSearch = () => {
-  return (
-    <div id="main">
-      Image search.
-    </div>
-  );
-};
+class ImageSearch extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <Generic title="Image Search">
+        Image search.
+      </Generic>
+    );
+  }
+}
 
 export default ImageSearch;
