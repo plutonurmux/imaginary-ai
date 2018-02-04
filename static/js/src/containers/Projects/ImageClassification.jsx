@@ -26,7 +26,12 @@ class ImageClassification extends Component {
   render() {
     return (
       <Generic title="Image Classification">
-        <p>You can upload your custom image dataset to train and evaluate performance.</p>
+        <p>Image classification analyzes the numerical properties of various image features and
+          organizes data into categories. Classification algorithms typically employ two phases of processing:
+          <em>training</em> and <em>testing.</em> In the initial training phase, characteristic properties of
+          typical image features are isolated and, based on these, a unique description of each classification
+          category, i.e. <em>training class</em>, is created. In the subsequent testing phase, these feature-space
+          partitions are used to classify image features.</p>
         <div className="caution">
           <h4><i className="fa fa fa-exclamation-circle"/> CAUTION </h4>
           <blockquote>
