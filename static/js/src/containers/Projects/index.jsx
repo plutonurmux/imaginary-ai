@@ -15,6 +15,10 @@ import {Route, Switch} from 'react-router-dom';
 import ImageClassification from './ImageClassification';
 import GenerativeModels from './GenerativeModels';
 import ImageSearch from './ImageSearch';
+import AIArticles from './AIArticles';
+import AutoEncoding from './AutoEncoding';
+import ReinforcementLearning from './ReinforcementLearning';
+
 import ProjectsIndex from "./ProjectsIndex";
 
 const Projects = (props) =>
@@ -28,6 +32,12 @@ const Projects = (props) =>
            render={(props) => <GenerativeModels {...props} />}/>
     <Route path={`${props.match.path}/image-search`}
            render={(props) => <ImageSearch {...props}/>}/>
+    <Route path={`${props.match.path}/ai-articles`}
+           render={(props) => <AIArticles {...props}/>}/>
+    <Route path={`${props.match.path}/auto-encoding`}
+           render={(props) => <AutoEncoding {...props}/>}/>
+    <Route path={`${props.match.path}/reinforcement-learning`}
+           render={(props) => <ReinforcementLearning {...props}/>}/>
   </Switch>;
 
 export default Projects;

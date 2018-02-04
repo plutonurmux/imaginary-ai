@@ -71,8 +71,7 @@ const ProjectsIndex = ({match}) =>
           simple terms, <Link to="https://en.wikipedia.org/wiki/Discriminative_model" target="_blank">discriminative
             models</Link> infer outputs based on inputs, while generative models generate both inputs and outputs,
           typically given some <Link to="https://en.wikipedia.org/wiki/Latent_variable" target="_blank">hidden
-            parameters.</Link>
-        </p>}/>
+            parameters.</Link></p>}/>
 
       {/*Image Search*/}
       <InnerList
@@ -99,8 +98,10 @@ const ProjectsIndex = ({match}) =>
         description={<p>The <Link to="https://en.wikipedia.org/wiki/Turing_test" target="_blank">Turing test,</Link>
           developed by Alan Turing in 1950, is a test of a machine's ability to <Link
             to="https://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank">exhibit intelligent
-            behavior</Link> equivalent to, or indistinguishable from, that of a human. Turing proposed that a human
-          evaluator would <Link to="https://en.wikipedia.org/wiki/Natural_language_understanding" target="_blank">judge
+            behavior</Link> equivalent to, or
+          indistinguishable from, that of a human. Turing proposed that a human evaluator
+          would <Link
+            to="https://en.wikipedia.org/wiki/Natural_language_understanding" target="_blank">judge
             natural language conversations</Link> between a human and a machine designed to generate
           human-like responses. The evaluator would be aware that one of the two partners in conversation is a
           machine, and all participants would be separated from one another. The conversation would be limited to a
@@ -128,8 +129,7 @@ const ProjectsIndex = ({match}) =>
     <section id="three">
       <InnerListItem
         title="Reinforcement Learning Projects"
-        link={`${match.url}/reinforcement-learning`}
-        icon="next"
+        link={`${match.url}/reinforcement-learning`} icon="next"
         description={<p><strong>Reinforcement learning (RL)</strong> is an area of <Link
           to="https://en.wikipedia.org/wiki/Machine_learning" target="_blank">machine learning</Link> inspired by
           <Link to="https://en.wikipedia.org/wiki/Behaviorism" target="_blank">behaviourist psychology, </Link>
