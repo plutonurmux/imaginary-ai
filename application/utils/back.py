@@ -1,11 +1,11 @@
 """
   @author Victor I. Afolabi
-  
+
   A.I. Engineer & Software developer
   javafolabi@gmail.com
-  
+
   Created on 01 February, 2018 @ 2:39 PM.
-  Copyright © 2018. Victor. All rights reserved.
+  Copyright (c) 2018. Victor. All rights reserved.
 """
 
 # This snippet is in public domain.
@@ -50,6 +50,5 @@ with app.app_context():
         @staticmethod
         def redirect(default=default_view, cookie=cookie):
             return redirect(back.url(default, cookie))
-
 
     back = Back()
