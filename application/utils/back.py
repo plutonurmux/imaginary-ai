@@ -17,7 +17,7 @@ from functools import wraps
 
 from flask import session, redirect, current_app, request, url_for
 
-from imaginary.server import app
+from ..app import app
 
 with app.app_context():
     class Back(object):
