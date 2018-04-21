@@ -1,11 +1,11 @@
 """
   @author Victor I. Afolabi
-  
+
   A.I. Engineer & Software developer
   javafolabi@gmail.com
-  
+
   Created on 01 February, 2018 @ 2:39 PM.
-  Copyright © 2018. Victor. All rights reserved.
+  Copyright (c) 2018. Victor. All rights reserved.
 """
 
 # This snippet is in public domain.
@@ -18,7 +18,6 @@ from functools import wraps
 from flask import session, redirect, current_app, request, url_for
 
 from ..app import app
-
 
 with app.app_context():
     class Back(object):

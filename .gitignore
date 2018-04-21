@@ -28,6 +28,7 @@ Icon
 ### Python template
 # Byte-compiled / optimized / DLL files
 __pycache__/
+*.py[cod]
 *$py.class
 
 # C extensions
@@ -46,10 +47,10 @@ instance/
 
 ### VisualStudioCode template
 .vscode
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+# !.vscode/settings.json
+# !.vscode/tasks.json
+# !.vscode/launch.json
+# !.vscode/extensions.json
 
 ### Node template
 node_modules/
@@ -59,3 +60,5 @@ dist/
 datasets/
 uploads/
 saved/
+dist/
+node_modules

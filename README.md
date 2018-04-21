@@ -48,7 +48,7 @@ Clone this repo
 git clone https://github.com/victor-iyiola/imaginary-ai.git
 ```
 
-Or download the project [here](https://github.com/victor-iyiola/imaginary-ai/archive/fullstack.zip)
+Or download the project [here](https://github.com/victor-iyiola/imaginary-ai/archive/master.zip)
 
 Then change your working directory as show below
 ```commandline
@@ -86,4 +86,4 @@ python run.py --debug=True
 ```
 ## Contributions
 
-This project is opened under [MIT 2.0 license](https://github.com/victor-iyiola/imaginary-ai/blob/fullstack/LICENSE).
+This project is opened under [MIT 2.0 license](https://github.com/victor-iyiola/imaginary-ai/blob/master/LICENSE).

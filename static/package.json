@@ -4,6 +4,7 @@
   "description": "Visualization of Artificial intelligence project and research work by Victor I. Afolabi.",
   "main": "index.jsx",
   "scripts": {
+    "start": "webpack --progress -d --config webpack.config.js --watch",
     "build": "webpack --progress -p --config webpack.config.js",
     "dev-build": "webpack --progress -d --config webpack.config.js",
     "watch": "webpack --progress -d --config webpack.config.js --watch",
