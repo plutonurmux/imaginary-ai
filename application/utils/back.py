@@ -52,5 +52,4 @@ with app.app_context():
         def redirect(default=default_view, cookie=cookie):
             return redirect(back.url(default, cookie))
 
-
     back = Back()
