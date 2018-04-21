@@ -11,3 +11,5 @@ from .app import app
 
 from .controllers import *
 from .apis import *
+
+__all__ = ["app"]
