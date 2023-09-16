@@ -1,7 +1,5 @@
 # Imaginary A.I.
 
-> by _[Victor I. Afolabi](https://github.com/victor-iyiola/)_
-
 A portfolio-ish platform that helps visualize some of my interesting Artificial Intelligence projects and researches.
 
 ![Imaginary A.I. homepage](static/images/imaginary-ai-homepage.png)
